@@ -522,31 +522,45 @@ def chat():
     conn.close()
 
     tasks_context = "\n".join([
-        f"- [{t['status']}] {t['title']} (by {t['assigned_by']})"
+        f"- [id:{t['id']}] [{t['status']}] {t['title']} (by {t['assigned_by']})"
         for t in tasks
     ]) if tasks else "No tasks yet."
 
     system_prompt = f"""You are the AI assistant for "Make Arjo Work" - a shared task tracker where people assign work to Arjo.
 
-Current tasks:
+## Current Tasks
 {tasks_context}
 
-You help users:
-- Discuss and plan what tasks to assign to Arjo
-- Break down complex work into actionable tasks
-- Check on Arjo's current workload
-- Create tasks when they're ready
+## Your Capabilities
+You can fully manage Arjo's tasks. Use these action blocks:
 
-Commands users can say:
-- "clear" or "/clear" - you respond suggesting they clear the chat
-- "compact" or "/compact" - you respond suggesting they compact/summarize history
-
-When creating a task, output this exact format:
-```task
-{{"title": "Task title", "description": "Details"}}
+**Add a task:**
+```action
+{{"action": "add", "title": "Task title", "description": "Optional details"}}
 ```
 
-Be concise and direct. This is a CLI-style interface - no fluff."""
+**Update a task (change title, description, or status):**
+```action
+{{"action": "update", "id": 1, "title": "New title", "status": "in_progress"}}
+```
+Status options: pending, in_progress, done
+
+**Delete a task:**
+```action
+{{"action": "delete", "id": 1}}
+```
+
+**Mark task done:**
+```action
+{{"action": "done", "id": 1}}
+```
+
+## Guidelines
+- Be concise and direct - this is a CLI interface
+- Use **bold** and `code` for emphasis
+- When users want to modify tasks, do it immediately with an action block
+- You can perform multiple actions in one response
+- Always confirm what you did after an action"""
 
     # Build Gemini messages
     gemini_messages = []
@@ -587,37 +601,93 @@ Be concise and direct. This is a CLI-style interface - no fluff."""
         )
         conn.commit()
 
-        # Check for task creation
-        task_created = None
-        if '```task' in ai_response:
-            try:
-                task_json = ai_response.split('```task')[1].split('```')[0].strip()
-                task_data = json.loads(task_json)
+        # Process all action blocks
+        actions_performed = []
+        import re
+        action_blocks = re.findall(r'```action\s*(.*?)\s*```', ai_response, re.DOTALL)
 
-                if USE_CLOUD_SQL:
-                    cursor = execute_query(conn,
-                        'INSERT INTO tasks (title, description, assigned_by) VALUES (?, ?, ?) RETURNING id',
-                        (task_data.get('title'), task_data.get('description', ''), session.get('email', 'Unknown'))
+        for action_json in action_blocks:
+            try:
+                action_data = json.loads(action_json.strip())
+                action_type = action_data.get('action')
+
+                if action_type == 'add':
+                    if USE_CLOUD_SQL:
+                        cursor = execute_query(conn,
+                            'INSERT INTO tasks (title, description, assigned_by) VALUES (?, ?, ?) RETURNING id',
+                            (action_data.get('title'), action_data.get('description', ''), session.get('email', 'Unknown'))
+                        )
+                        task_id = cursor.fetchone()[0]
+                    else:
+                        cursor = execute_query(conn,
+                            'INSERT INTO tasks (title, description, assigned_by) VALUES (?, ?, ?)',
+                            (action_data.get('title'), action_data.get('description', ''), session.get('email', 'Unknown'))
+                        )
+                        task_id = cursor.lastrowid
+                    cursor = execute_query(conn, 'SELECT * FROM tasks WHERE id = ?', (task_id,))
+                    task = fetchone(cursor)
+                    conn.commit()
+                    actions_performed.append({
+                        'type': 'added',
+                        'task': dict(task._data) if hasattr(task, '_data') else dict(task)
+                    })
+
+                elif action_type == 'update':
+                    task_id = action_data.get('id')
+                    cursor = execute_query(conn, 'SELECT * FROM tasks WHERE id = ?', (task_id,))
+                    task = fetchone(cursor)
+                    if task:
+                        title = action_data.get('title', task['title'])
+                        description = action_data.get('description', task['description'])
+                        status = action_data.get('status', task['status'])
+                        execute_query(conn,
+                            'UPDATE tasks SET title = ?, description = ?, status = ?, updated_at = ? WHERE id = ?',
+                            (title, description, status, datetime.now(), task_id)
+                        )
+                        conn.commit()
+                        cursor = execute_query(conn, 'SELECT * FROM tasks WHERE id = ?', (task_id,))
+                        updated = fetchone(cursor)
+                        actions_performed.append({
+                            'type': 'updated',
+                            'task': dict(updated._data) if hasattr(updated, '_data') else dict(updated)
+                        })
+
+                elif action_type == 'done':
+                    task_id = action_data.get('id')
+                    execute_query(conn,
+                        'UPDATE tasks SET status = ?, updated_at = ? WHERE id = ?',
+                        ('done', datetime.now(), task_id)
                     )
-                    task_id = cursor.fetchone()[0]
-                else:
-                    cursor = execute_query(conn,
-                        'INSERT INTO tasks (title, description, assigned_by) VALUES (?, ?, ?)',
-                        (task_data.get('title'), task_data.get('description', ''), session.get('email', 'Unknown'))
-                    )
-                    task_id = cursor.lastrowid
-                cursor = execute_query(conn, 'SELECT * FROM tasks WHERE id = ?', (task_id,))
-                task = fetchone(cursor)
-                conn.commit()
-                task_created = dict(task._data) if hasattr(task, '_data') else dict(task)
+                    conn.commit()
+                    cursor = execute_query(conn, 'SELECT * FROM tasks WHERE id = ?', (task_id,))
+                    task = fetchone(cursor)
+                    if task:
+                        actions_performed.append({
+                            'type': 'done',
+                            'task': dict(task._data) if hasattr(task, '_data') else dict(task)
+                        })
+
+                elif action_type == 'delete':
+                    task_id = action_data.get('id')
+                    cursor = execute_query(conn, 'SELECT * FROM tasks WHERE id = ?', (task_id,))
+                    task = fetchone(cursor)
+                    if task:
+                        task_dict = dict(task._data) if hasattr(task, '_data') else dict(task)
+                        execute_query(conn, 'DELETE FROM tasks WHERE id = ?', (task_id,))
+                        conn.commit()
+                        actions_performed.append({
+                            'type': 'deleted',
+                            'task': task_dict
+                        })
+
             except Exception as e:
-                print(f"Failed to create task: {e}")
+                print(f"Failed to process action: {e}")
 
         conn.close()
 
         return jsonify({
             "response": ai_response,
-            "task_created": task_created
+            "actions": actions_performed
         })
 
     except requests.Timeout:
