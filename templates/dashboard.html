@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make Arjo Work</title>
+    <link rel="icon" type="image/png" href="/static/favicon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -11,17 +12,17 @@
             --bg: #1a1a1a;
             --bg-secondary: #242424;
             --bg-tertiary: #2d2d2d;
-            --text: #e5e5e5;
-            --text-dim: #888;
-            --text-dimmer: #666;
+            --text: #ffffff;
+            --text-user: #c8c8c8;
+            --text-system: #707070;
             --accent: #10b981;
-            --accent-dim: #059669;
             --border: #333;
-            --user: #6366f1;
+            --user-marker: #6366f1;
             --pending: #f59e0b;
             --progress: #3b82f6;
             --done: #10b981;
         }
+
 
         body {
             font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
@@ -56,15 +57,22 @@
             align-items: center;
             gap: 16px;
             font-size: 12px;
-            color: var(--text-dim);
+            color: var(--text-system);
         }
 
         .nav-link {
-            color: var(--text-dim);
+            color: var(--text-system);
             text-decoration: none;
+            display: flex;
+            align-items: center;
         }
 
         .nav-link:hover { color: var(--text); }
+
+        .nav-link svg {
+            width: 16px;
+            height: 16px;
+        }
 
         /* Layout */
         .layout {
@@ -87,24 +95,15 @@
             overflow-y: auto;
             padding: 16px;
             font-size: 13px;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        .terminal-output::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .terminal-output::-webkit-scrollbar-track {
-            background: var(--bg);
-        }
-
-        .terminal-output::-webkit-scrollbar-thumb {
-            background: var(--border);
-            border-radius: 4px;
-        }
+        .terminal-output::-webkit-scrollbar { width: 8px; }
+        .terminal-output::-webkit-scrollbar-track { background: var(--bg); }
+        .terminal-output::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
 
         .line {
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             animation: fadeIn 0.15s ease;
         }
 
@@ -113,38 +112,109 @@
             to { opacity: 1; }
         }
 
+        /* User message - slightly muted */
         .line-user {
-            color: var(--text);
+            color: var(--text-user);
         }
 
         .line-user::before {
             content: '› ';
-            color: var(--user);
+            color: var(--user-marker);
             font-weight: bold;
         }
 
+        /* Assistant message - full white with markdown */
         .line-assistant {
-            color: var(--text-dim);
+            color: var(--text);
             padding-left: 18px;
-            white-space: pre-wrap;
             word-break: break-word;
         }
 
-        .line-system {
-            color: var(--text-dimmer);
-            font-style: italic;
-            padding-left: 18px;
+        .line-assistant strong {
+            color: #fff;
+            font-weight: 600;
         }
 
-        .line-task {
+        .line-assistant em {
+            font-style: italic;
+            color: #d4d4d4;
+        }
+
+        .line-assistant code {
+            font-family: inherit;
+            background: var(--bg-secondary);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #e879f9;
+        }
+
+        .line-assistant pre {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 12px;
+            margin: 8px 0;
+            overflow-x: auto;
+            color: #d4d4d4;
+        }
+
+        .line-assistant pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+
+        .line-assistant ul, .line-assistant ol {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+
+        .line-assistant li {
+            margin: 4px 0;
+        }
+
+        .line-assistant a {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .line-assistant blockquote {
+            border-left: 3px solid var(--border);
+            padding-left: 12px;
+            margin: 8px 0;
+            color: var(--text-user);
+        }
+
+        .line-assistant .para-break {
+            display: block;
+            height: 8px;
+        }
+
+        /* System message - gray */
+        .line-system {
+            color: var(--text-system);
+            padding-left: 18px;
+            font-style: italic;
+        }
+
+        /* Action cards */
+        .action-card {
             background: var(--bg-secondary);
             border-left: 3px solid var(--accent);
             padding: 10px 14px;
-            margin: 8px 0 8px 18px;
+            margin: 8px 0 16px 18px;
             border-radius: 0 6px 6px 0;
         }
 
-        .line-task-label {
+        .action-card.deleted {
+            border-left-color: #ef4444;
+        }
+
+        .action-card.updated {
+            border-left-color: var(--progress);
+        }
+
+        .action-label {
             font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -152,13 +222,17 @@
             margin-bottom: 4px;
         }
 
-        .line-task-title {
+        .action-card.deleted .action-label { color: #ef4444; }
+        .action-card.updated .action-label { color: var(--progress); }
+
+        .action-title {
             color: var(--text);
             font-weight: 500;
         }
 
+        /* Typing indicator - gray */
         .typing {
-            color: var(--text-dimmer);
+            color: var(--text-system);
             padding-left: 18px;
         }
 
@@ -173,8 +247,9 @@
             60%, 100% { content: '...'; }
         }
 
+        /* Welcome */
         .welcome {
-            color: var(--text-dim);
+            color: var(--text-system);
             padding: 32px 0;
         }
 
@@ -191,7 +266,7 @@
         }
 
         .welcome-cmd {
-            color: var(--text-dimmer);
+            color: var(--text-system);
             margin: 4px 0;
         }
 
@@ -209,6 +284,45 @@
             padding: 12px 16px;
             background: var(--bg-secondary);
             border-top: 1px solid var(--border);
+            position: relative;
+        }
+
+        /* Command hints dropdown */
+        .hints {
+            display: none;
+            position: absolute;
+            bottom: 100%;
+            left: 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 4px 0;
+            min-width: 200px;
+            box-shadow: 0 -4px 12px rgba(0,0,0,0.3);
+        }
+
+        .hints.active { display: block; }
+
+        .hint {
+            padding: 8px 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        .hint:hover, .hint.selected {
+            background: var(--bg-tertiary);
+        }
+
+        .hint-cmd {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .hint-desc {
+            color: var(--text-system);
+            font-size: 11px;
         }
 
         .prompt {
@@ -228,9 +342,7 @@
             outline: none;
         }
 
-        .input::placeholder {
-            color: var(--text-dimmer);
-        }
+        .input::placeholder { color: var(--text-system); }
 
         /* Tasks Panel */
         .tasks {
@@ -241,30 +353,35 @@
         }
 
         .tasks-header {
-            padding: 12px 16px;
+            padding: 16px;
             border-bottom: 1px solid var(--border);
         }
 
         .tasks-title {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--text-dim);
-            margin-bottom: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 16px;
         }
 
         .tasks-stats {
             display: flex;
-            gap: 20px;
+            gap: 8px;
         }
 
         .stat {
+            flex: 1;
+            background: var(--bg);
+            border-radius: 8px;
+            padding: 12px;
             text-align: center;
         }
 
         .stat-value {
-            font-size: 20px;
-            font-weight: 600;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 4px;
         }
 
         .stat-value.pending { color: var(--pending); }
@@ -272,10 +389,11 @@
         .stat-value.done { color: var(--done); }
 
         .stat-label {
-            font-size: 10px;
-            color: var(--text-dimmer);
+            font-size: 9px;
+            color: var(--text-system);
             text-transform: uppercase;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.5px;
+            font-weight: 500;
         }
 
         .tasks-filters {
@@ -290,15 +408,13 @@
             font-size: 11px;
             font-family: inherit;
             background: transparent;
-            color: var(--text-dimmer);
+            color: var(--text-system);
             border: 1px solid transparent;
             border-radius: 4px;
             cursor: pointer;
         }
 
-        .filter:hover {
-            color: var(--text-dim);
-        }
+        .filter:hover { color: var(--text-user); }
 
         .filter.active {
             background: var(--bg-tertiary);
@@ -322,9 +438,7 @@
             transition: all 0.1s;
         }
 
-        .task:hover {
-            border-color: var(--text-dimmer);
-        }
+        .task:hover { border-color: var(--text-system); }
 
         .task-row {
             display: flex;
@@ -335,7 +449,7 @@
         .task-check {
             width: 16px;
             height: 16px;
-            border: 2px solid var(--text-dimmer);
+            border: 2px solid var(--text-system);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -346,30 +460,12 @@
             transition: all 0.1s;
         }
 
-        .task-check:hover {
-            border-color: var(--done);
-        }
+        .task-check:hover { border-color: var(--done); }
+        .task-check.checked { background: var(--done); border-color: var(--done); }
+        .task-check svg { width: 10px; height: 10px; color: var(--bg); opacity: 0; }
+        .task-check.checked svg { opacity: 1; }
 
-        .task-check.checked {
-            background: var(--done);
-            border-color: var(--done);
-        }
-
-        .task-check svg {
-            width: 10px;
-            height: 10px;
-            color: var(--bg);
-            opacity: 0;
-        }
-
-        .task-check.checked svg {
-            opacity: 1;
-        }
-
-        .task-info {
-            flex: 1;
-            min-width: 0;
-        }
+        .task-info { flex: 1; min-width: 0; }
 
         .task-title {
             font-size: 12px;
@@ -379,13 +475,13 @@
         }
 
         .task.done .task-title {
-            color: var(--text-dimmer);
+            color: var(--text-system);
             text-decoration: line-through;
         }
 
         .task-meta {
             font-size: 10px;
-            color: var(--text-dimmer);
+            color: var(--text-system);
         }
 
         .task-status {
@@ -405,113 +501,23 @@
         .empty-tasks {
             text-align: center;
             padding: 32px 16px;
-            color: var(--text-dimmer);
+            color: var(--text-system);
             font-size: 12px;
         }
 
-        /* Modal */
-        .modal-overlay {
+        /* Task description expand */
+        .task-description {
             display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.7);
-            z-index: 100;
-            align-items: center;
-            justify-content: center;
+            padding: 8px 12px 4px 38px;
+            font-size: 12px;
+            color: var(--text-user);
+            line-height: 1.5;
+            border-top: 1px solid var(--border);
+            margin-top: 8px;
         }
 
-        .modal-overlay.active { display: flex; }
-
-        .modal {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            width: 100%;
-            max-width: 360px;
-            margin: 16px;
-        }
-
-        .modal-header {
-            padding: 16px;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .modal-title {
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        .modal-close {
-            background: none;
-            border: none;
-            color: var(--text-dim);
-            cursor: pointer;
-            padding: 4px;
-        }
-
-        .modal-body { padding: 16px; }
-
-        .form-group { margin-bottom: 14px; }
-
-        .form-group label {
+        .task.expanded .task-description {
             display: block;
-            font-size: 11px;
-            color: var(--text-dim);
-            margin-bottom: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 8px 10px;
-            font-size: 12px;
-            font-family: inherit;
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            color: var(--text);
-            outline: none;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            border-color: var(--accent);
-        }
-
-        .form-group textarea { min-height: 60px; resize: vertical; }
-
-        .modal-actions {
-            display: flex;
-            gap: 8px;
-            padding: 0 16px 16px;
-        }
-
-        .btn {
-            flex: 1;
-            padding: 8px 14px;
-            font-size: 12px;
-            font-family: inherit;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .btn-secondary {
-            background: var(--bg);
-            color: var(--text);
-            border: 1px solid var(--border);
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--bg);
         }
 
         @media (max-width: 768px) {
@@ -523,10 +529,11 @@
 </head>
 <body>
     <nav class="nav">
-        <div class="nav-brand">make-arjo-work</div>
+        <div class="nav-brand">{{ user.email }}</div>
         <div class="nav-right">
-            <span>{{ user.email }}</span>
-            <a href="/logout" class="nav-link">logout</a>
+            <a href="/logout" class="nav-link" title="Logout">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            </a>
         </div>
     </nav>
 
@@ -534,15 +541,25 @@
         <div class="terminal">
             <div class="terminal-output" id="output">
                 <div class="welcome">
-                    <h2>make-arjo-work v1.0</h2>
-                    <p>Talk to assign tasks to Arjo. Shared memory across all users.</p>
+                    <h2>Make Arjo Work v1.0</h2>
+                    <p>Talk to manage Arjo's tasks. The agent can add, update, complete, and delete tasks.</p>
                     <div class="welcome-cmd"><code>/clear</code> - clear chat history</div>
-                    <div class="welcome-cmd"><code>/compact</code> - summarize old messages</div>
-                    <div class="welcome-cmd"><code>/tasks</code> - show current tasks</div>
+                    <div class="welcome-cmd"><code>/tasks</code> - show all tasks</div>
+                    <p style="margin-top: 12px;">Type <code>/</code> for command hints.</p>
                 </div>
             </div>
 
             <div class="terminal-input">
+                <div class="hints" id="hints">
+                    <div class="hint" data-cmd="/clear">
+                        <span class="hint-cmd">/clear</span>
+                        <span class="hint-desc">clear chat history</span>
+                    </div>
+                    <div class="hint" data-cmd="/tasks">
+                        <span class="hint-cmd">/tasks</span>
+                        <span class="hint-desc">show all tasks</span>
+                    </div>
+                </div>
                 <span class="prompt">›</span>
                 <input type="text" class="input" id="input" placeholder="Type a message..." autofocus>
             </div>
@@ -578,39 +595,6 @@
         </div>
     </div>
 
-    <div class="modal-overlay" id="modal">
-        <div class="modal">
-            <div class="modal-header">
-                <span class="modal-title">Edit Task</span>
-                <button class="modal-close" onclick="closeModal()">×</button>
-            </div>
-            <form id="task-form">
-                <div class="modal-body">
-                    <input type="hidden" id="task-id">
-                    <div class="form-group">
-                        <label>Title</label>
-                        <input type="text" id="title" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Description</label>
-                        <textarea id="description"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>Status</label>
-                        <select id="status">
-                            <option value="pending">pending</option>
-                            <option value="in_progress">in progress</option>
-                            <option value="done">done</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-actions">
-                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
-                </div>
-            </form>
-        </div>
-    </div>
 
     <script>
         let tasks = [];
@@ -619,27 +603,108 @@
 
         const input = document.getElementById('input');
         const output = document.getElementById('output');
+        const hints = document.getElementById('hints');
+        const hintItems = hints.querySelectorAll('.hint');
+        let selectedHint = -1;
 
-        // Load chat history on start
         loadHistory();
         loadTasks();
 
+        // Handle input changes for hints
+        input.addEventListener('input', () => {
+            const val = input.value;
+            if (val.startsWith('/')) {
+                const filter = val.toLowerCase();
+                let visibleCount = 0;
+                hintItems.forEach(h => {
+                    const cmd = h.dataset.cmd;
+                    if (cmd.startsWith(filter)) {
+                        h.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        h.style.display = 'none';
+                    }
+                });
+                if (visibleCount > 0) {
+                    hints.classList.add('active');
+                    selectedHint = -1;
+                    updateHintSelection();
+                } else {
+                    hints.classList.remove('active');
+                }
+            } else {
+                hints.classList.remove('active');
+            }
+        });
+
+        // Handle keyboard navigation
         input.addEventListener('keydown', e => {
+            if (hints.classList.contains('active')) {
+                const visible = Array.from(hintItems).filter(h => h.style.display !== 'none');
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    selectedHint = Math.min(selectedHint + 1, visible.length - 1);
+                    updateHintSelection();
+                    return;
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    selectedHint = Math.max(selectedHint - 1, -1);
+                    updateHintSelection();
+                    return;
+                } else if (e.key === 'Tab' && visible.length > 0) {
+                    e.preventDefault();
+                    const idx = selectedHint >= 0 ? selectedHint : 0;
+                    input.value = visible[idx].dataset.cmd;
+                    hints.classList.remove('active');
+                    return;
+                } else if (e.key === 'Escape') {
+                    hints.classList.remove('active');
+                    return;
+                }
+            }
+            // Enter sends message (even if hints showing but nothing selected)
             if (e.key === 'Enter' && !isLoading) {
+                hints.classList.remove('active');
                 sendMessage();
             }
         });
+
+        // Auto-focus input when typing anywhere
+        document.addEventListener('keydown', e => {
+            // Ignore if already in input, or modal is open, or modifier keys
+            if (document.activeElement === input) return;
+            if (document.getElementById('modal').classList.contains('active')) return;
+            if (e.ctrlKey || e.metaKey || e.altKey) return;
+            // Ignore special keys
+            if (['Escape', 'Tab', 'Enter', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+            // Focus and let the key through
+            input.focus();
+        });
+
+        // Click on hint
+        hintItems.forEach(h => {
+            h.addEventListener('click', () => {
+                input.value = h.dataset.cmd;
+                hints.classList.remove('active');
+                input.focus();
+            });
+        });
+
+        function updateHintSelection() {
+            const visible = Array.from(hintItems).filter(h => h.style.display !== 'none');
+            hintItems.forEach(h => h.classList.remove('selected'));
+            if (selectedHint >= 0 && visible[selectedHint]) {
+                visible[selectedHint].classList.add('selected');
+            }
+        }
 
         async function loadHistory() {
             try {
                 const res = await fetch('/api/chat/history');
                 const history = await res.json();
-
                 if (history.length > 0) {
                     output.innerHTML = '';
-                    history.forEach(msg => {
-                        addLine(msg.role, msg.content);
-                    });
+                    history.forEach(msg => addLine(msg.role, msg.content));
                 }
             } catch (err) {
                 console.error('Failed to load history:', err);
@@ -650,37 +715,38 @@
             const text = input.value.trim();
             if (!text || isLoading) return;
 
-            // Handle local commands
             if (text === '/clear') {
                 await fetch('/api/chat/clear', { method: 'POST' });
-                output.innerHTML = '<div class="line line-system">Chat cleared.</div>';
+                output.innerHTML = '';
+                addLine('system', 'Chat cleared.');
                 input.value = '';
-                return;
-            }
-
-            if (text === '/compact') {
-                await fetch('/api/chat/compact', { method: 'POST' });
-                addLine('system', 'Chat history compacted.');
-                input.value = '';
-                loadHistory();
                 return;
             }
 
             if (text === '/tasks') {
-                const taskList = tasks.map(t => `[${t.status}] ${t.title}`).join('\n') || 'No tasks.';
-                addLine('system', taskList);
+                const pending = tasks.filter(t => t.status === 'pending').length;
+                const active = tasks.filter(t => t.status === 'in_progress').length;
+                const done = tasks.filter(t => t.status === 'done').length;
+                let summary = `**Tasks:** ${pending} pending, ${active} active, ${done} done\n\n`;
+                if (tasks.length === 0) {
+                    summary += 'No tasks yet.';
+                } else {
+                    tasks.forEach(t => {
+                        const status = { pending: '○', in_progress: '◐', done: '●' }[t.status];
+                        summary += `${status} #${t.id} ${t.title}\n`;
+                    });
+                }
+                addLine('assistant', summary.trim());
                 input.value = '';
                 return;
             }
 
-            // Clear welcome if first message
             const welcome = output.querySelector('.welcome');
             if (welcome) welcome.remove();
 
             addLine('user', text);
             input.value = '';
 
-            // Show typing
             const typingEl = document.createElement('div');
             typingEl.className = 'typing';
             typingEl.textContent = 'thinking';
@@ -702,12 +768,15 @@
                 if (data.error) {
                     addLine('system', `Error: ${data.error}`);
                 } else {
-                    // Clean response (remove task JSON)
-                    let response = data.response.replace(/```task[\s\S]*?```/g, '').trim();
+                    // Remove action blocks from display
+                    let response = data.response.replace(/```action[\s\S]*?```/g, '').trim();
                     addLine('assistant', response);
 
-                    if (data.task_created) {
-                        addTaskLine(data.task_created);
+                    // Show action cards
+                    if (data.actions && data.actions.length > 0) {
+                        data.actions.forEach(action => {
+                            addActionCard(action);
+                        });
                         loadTasks();
                     }
                 }
@@ -723,30 +792,93 @@
         function addLine(role, content) {
             const el = document.createElement('div');
             el.className = `line line-${role}`;
-            el.textContent = content;
+
+            if (role === 'assistant') {
+                el.innerHTML = renderMarkdown(content);
+            } else {
+                el.textContent = content;
+            }
+
             output.appendChild(el);
             scrollToBottom();
         }
 
-        function addTaskLine(task) {
+        function addActionCard(action) {
             const el = document.createElement('div');
-            el.className = 'line-task';
+            el.className = `action-card ${action.type}`;
+
+            const labels = {
+                added: 'Task Added',
+                updated: 'Task Updated',
+                done: 'Task Completed',
+                deleted: 'Task Deleted'
+            };
+
             el.innerHTML = `
-                <div class="line-task-label">✓ Task Created</div>
-                <div class="line-task-title">${escapeHtml(task.title)}</div>
+                <div class="action-label">${labels[action.type] || action.type}</div>
+                <div class="action-title">${escapeHtml(action.task.title)}</div>
             `;
             output.appendChild(el);
             scrollToBottom();
         }
 
-        function scrollToBottom() {
-            output.scrollTop = output.scrollHeight;
+        function renderMarkdown(text) {
+            let html = escapeHtml(text);
+
+            // Code blocks (must be first)
+            html = html.replace(/```(\w*)\n?([\s\S]*?)```/g, '<pre><code>$2</code></pre>');
+
+            // Inline code
+            html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+            // Bold
+            html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+
+            // Italic
+            html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+
+            // Unordered lists - mark with placeholder to avoid newline issues
+            html = html.replace(/^[\-\*] (.+)$/gm, '[[UL_ITEM]]$1[[/UL_ITEM]]');
+
+            // Ordered lists - mark with placeholder
+            html = html.replace(/^\d+\. (.+)$/gm, '[[OL_ITEM]]$1[[/OL_ITEM]]');
+
+            // Blockquotes
+            html = html.replace(/^&gt; (.+)$/gm, '<blockquote>$1</blockquote>');
+
+            // Paragraph breaks (double newline) - use spacer span
+            html = html.replace(/\n\n+/g, '<span class="para-break"></span>');
+            // Single line breaks
+            html = html.replace(/\n/g, '<br>');
+
+            // Clean up extra breaks in pre
+            html = html.replace(/<pre><code>([\s\S]*?)<\/code><\/pre>/g, (match, code) => {
+                return '<pre><code>' + code.replace(/<br>/g, '\n') + '</code></pre>';
+            });
+
+            // Now convert list placeholders to proper HTML (after br conversion)
+            html = html.replace(/\[\[UL_ITEM\]\](.+?)\[\[\/UL_ITEM\]\]/g, '<li>$1</li>');
+            html = html.replace(/\[\[OL_ITEM\]\](.+?)\[\[\/OL_ITEM\]\]/g, '<li class="ol">$1</li>');
+
+            // Wrap consecutive list items
+            html = html.replace(/(<li>.*?<\/li>(<br>)?)+/g, match => {
+                return '<ul>' + match.replace(/<br>/g, '') + '</ul>';
+            });
+            html = html.replace(/(<li class="ol">.*?<\/li>(<br>)?)+/g, match => {
+                return '<ol>' + match.replace(/<br>/g, '').replace(/ class="ol"/g, '') + '</ol>';
+            });
+
+            return html;
         }
 
         function escapeHtml(text) {
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
+        }
+
+        function scrollToBottom() {
+            output.scrollTop = output.scrollHeight;
         }
 
         // Tasks
@@ -771,7 +903,7 @@
             }
 
             list.innerHTML = filtered.map(task => `
-                <div class="task ${task.status === 'done' ? 'done' : ''}" onclick="editTask(${task.id})">
+                <div class="task ${task.status === 'done' ? 'done' : ''}" data-id="${task.id}" onclick="toggleDescription(${task.id})">
                     <div class="task-row">
                         <div class="task-check ${task.status === 'done' ? 'checked' : ''}" onclick="event.stopPropagation(); toggleTask(${task.id}, ${task.status !== 'done'})">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -781,11 +913,12 @@
                         <div class="task-info">
                             <div class="task-title">${escapeHtml(task.title)}</div>
                             <div class="task-meta">
-                                ${task.assigned_by} · ${formatDate(task.created_at)}
+                                #${task.id} · ${task.assigned_by} · ${formatDate(task.created_at)}
                                 <span class="task-status ${task.status}">${formatStatus(task.status)}</span>
                             </div>
                         </div>
                     </div>
+                    ${task.description ? `<div class="task-description">${escapeHtml(task.description)}</div>` : ''}
                 </div>
             `).join('');
         }
@@ -819,35 +952,10 @@
             loadTasks();
         }
 
-        function editTask(id) {
-            const task = tasks.find(t => t.id === id);
-            if (!task) return;
-            document.getElementById('task-id').value = task.id;
-            document.getElementById('title').value = task.title;
-            document.getElementById('description').value = task.description || '';
-            document.getElementById('status').value = task.status;
-            document.getElementById('modal').classList.add('active');
+        function toggleDescription(id) {
+            const taskEl = document.querySelector(`.task[data-id="${id}"]`);
+            if (taskEl) taskEl.classList.toggle('expanded');
         }
-
-        function closeModal() {
-            document.getElementById('modal').classList.remove('active');
-        }
-
-        document.getElementById('task-form').addEventListener('submit', async e => {
-            e.preventDefault();
-            const id = document.getElementById('task-id').value;
-            await fetch(`/api/tasks/${id}`, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    title: document.getElementById('title').value,
-                    description: document.getElementById('description').value,
-                    status: document.getElementById('status').value
-                })
-            });
-            closeModal();
-            loadTasks();
-        });
 
         document.querySelectorAll('.filter').forEach(btn => {
             btn.addEventListener('click', () => {
@@ -858,13 +966,13 @@
             });
         });
 
-        document.getElementById('modal').addEventListener('click', e => {
-            if (e.target.classList.contains('modal-overlay')) closeModal();
+        // Hide hints when clicking outside
+        document.addEventListener('click', e => {
+            if (!hints.contains(e.target) && e.target !== input) {
+                hints.classList.remove('active');
+            }
         });
 
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape') closeModal();
-        });
     </script>
 </body>
 </html>

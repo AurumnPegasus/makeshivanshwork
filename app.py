@@ -1,4 +1,5 @@
 import os
+import re
 import sqlite3
 import secrets
 import smtplib
@@ -269,7 +270,7 @@ def login():
         conn.close()
 
         send_magic_link(email, token)
-        return render_template('login.html', success=True)
+        return render_template('login.html', success=True, email=email)
 
     return render_template('login.html')
 
@@ -458,37 +459,6 @@ def clear_chat():
     return jsonify({'success': True})
 
 
-# Compact chat (summarize old messages)
-@app.route('/api/chat/compact', methods=['POST'])
-@login_required
-def compact_chat():
-    conn = get_db()
-    cursor = execute_query(conn, 'SELECT role, content FROM chat_history ORDER BY id ASC')
-    messages = fetchall(cursor)
-
-    if len(messages) < 10:
-        conn.close()
-        return jsonify({'message': 'Not enough messages to compact'})
-
-    # Keep last 5 messages, summarize the rest
-    old_messages = messages[:-5]
-
-    summary_text = "Previous conversation summary:\n"
-    for m in old_messages:
-        prefix = "User" if m['role'] == 'user' else "Assistant"
-        content = m['content']
-        summary_text += f"{prefix}: {content[:100]}...\n" if len(content) > 100 else f"{prefix}: {content}\n"
-
-    # Clear old and insert summary
-    execute_query(conn, 'DELETE FROM chat_history WHERE id NOT IN (SELECT id FROM chat_history ORDER BY id DESC LIMIT 5)')
-    execute_query(conn,
-        'INSERT INTO chat_history (role, content, user_email) VALUES (?, ?, ?)',
-        ('system', summary_text, 'system')
-    )
-    conn.commit()
-    conn.close()
-
-    return jsonify({'success': True, 'message': 'Chat compacted'})
 
 
 # Chat with Gemini AI
@@ -522,7 +492,7 @@ def chat():
     conn.close()
 
     tasks_context = "\n".join([
-        f"- [id:{t['id']}] [{t['status']}] {t['title']} (by {t['assigned_by']})"
+        f"- [#{t['id']}] [{t['status']}] {t['title']} (by {t['assigned_by']})"
         for t in tasks
     ]) if tasks else "No tasks yet."
 
@@ -603,7 +573,6 @@ Status options: pending, in_progress, done
 
         # Process all action blocks
         actions_performed = []
-        import re
         action_blocks = re.findall(r'```action\s*(.*?)\s*```', ai_response, re.DOTALL)
 
         for action_json in action_blocks:

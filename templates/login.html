@@ -4,228 +4,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make Arjo Work</title>
+    <link rel="icon" type="image/png" href="/static/favicon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { height: 100%; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
-            background: #fafafa;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+            background: #fff;
             color: #1d1d1f;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
             -webkit-font-smoothing: antialiased;
         }
 
         .container {
             width: 100%;
-            max-width: 400px;
+            max-width: 320px;
             padding: 32px;
-        }
-
-        .logo {
             text-align: center;
-            margin-bottom: 48px;
         }
 
-        .logo h1 {
-            font-size: 32px;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            color: #1d1d1f;
-            margin-bottom: 8px;
-        }
-
-        .logo p {
-            font-size: 16px;
-            color: #6e6e73;
-            letter-spacing: -0.01em;
-        }
-
-        .card {
-            background: #fff;
-            border: 1px solid rgba(0,0,0,0.08);
-            border-radius: 16px;
-            padding: 32px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        }
-
-        .form-group {
+        .avatar {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            object-fit: cover;
             margin-bottom: 24px;
         }
 
-        .form-group label {
-            display: block;
-            font-size: 14px;
-            font-weight: 500;
-            color: #1d1d1f;
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.03em;
             margin-bottom: 8px;
         }
 
-        .form-group input {
-            width: 100%;
-            padding: 14px 16px;
-            font-size: 16px;
-            font-family: inherit;
-            background: #fafafa;
-            border: 1px solid rgba(0,0,0,0.12);
-            border-radius: 10px;
-            color: #1d1d1f;
-            outline: none;
-            transition: all 0.15s ease;
+        .subtitle {
+            font-size: 15px;
+            color: #86868b;
+            margin-bottom: 40px;
         }
 
-        .form-group input::placeholder { color: #8e8e93; }
-        .form-group input:focus {
-            background: #fff;
-            border-color: #1d1d1f;
+        .avatar {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
+
+        form {
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 16px;
+            font-size: 17px;
+            font-family: inherit;
+            background: #f5f5f7;
+            border: none;
+            border-radius: 12px;
+            color: #1d1d1f;
+            outline: none;
+            margin-bottom: 12px;
+            transition: all 0.2s;
+        }
+
+        input::placeholder { color: #86868b; }
+        input:focus { background: #e8e8ed; }
 
         button {
             width: 100%;
-            padding: 14px 24px;
-            font-size: 16px;
+            padding: 16px;
+            font-size: 17px;
             font-weight: 500;
             font-family: inherit;
             background: #1d1d1f;
             color: #fff;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             cursor: pointer;
-            transition: all 0.15s ease;
+            transition: all 0.2s;
         }
 
         button:hover { background: #000; }
         button:active { transform: scale(0.98); }
 
-        .footer {
-            text-align: center;
-            margin-top: 24px;
+        .hint {
+            margin-top: 16px;
             font-size: 13px;
-            color: #8e8e93;
+            color: #636366;
         }
 
-        .message {
-            padding: 14px 16px;
+        .error {
+            background: rgba(255, 69, 58, 0.15);
+            color: #ff453a;
+            padding: 12px 16px;
             border-radius: 10px;
-            margin-bottom: 24px;
             font-size: 14px;
+            margin-bottom: 20px;
             text-align: center;
         }
 
-        .message.error {
-            background: #fef2f2;
-            color: #dc2626;
-            border: 1px solid #fecaca;
+        /* Success state */
+        .success {
+            padding: 20px 0;
         }
 
-        .success-state {
-            text-align: center;
-            padding: 24px 0;
-        }
-
-        .success-state .icon {
-            width: 56px;
-            height: 56px;
-            margin: 0 auto 20px;
-            background: #f0fdf4;
+        .success .check {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 24px;
             border-radius: 50%;
+            background: #1d1d1f;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .success-state .icon svg {
-            width: 28px;
-            height: 28px;
-            color: #22c55e;
+        .success .check svg {
+            width: 32px;
+            height: 32px;
+            color: #fff;
         }
 
-        .success-state h2 {
-            font-size: 20px;
+        .success h2 {
+            font-size: 24px;
             font-weight: 600;
             margin-bottom: 8px;
         }
 
-        .success-state p {
-            color: #6e6e73;
+        .success p {
             font-size: 15px;
+            color: #86868b;
             line-height: 1.5;
         }
 
-        .cli-hint {
-            margin-top: 32px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(0,0,0,0.06);
-            text-align: center;
+        .success .email {
+            color: #1d1d1f;
+            font-weight: 500;
         }
 
-        .cli-hint p {
-            font-size: 13px;
-            color: #8e8e93;
-            margin-bottom: 8px;
-        }
-
-        .cli-hint code {
-            font-family: 'SF Mono', Menlo, monospace;
-            font-size: 12px;
-            color: #6e6e73;
-            background: #f5f5f7;
-            padding: 6px 10px;
-            border-radius: 6px;
-            display: inline-block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .card { animation: fadeIn 0.3s ease; }
+
+        .container { animation: fadeUp 0.4s ease-out; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">
-            <h1>Make Arjo Work</h1>
-            <p>Task accountability, simplified.</p>
-        </div>
+        <img class="avatar" src="/static/arjo.png" alt="Arjo">
+        <h1>Make Arjo Work</h1>
 
-        <div class="card">
-            {% if success %}
-            <div class="success-state">
-                <div class="icon">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                </div>
-                <h2>Check your email</h2>
-                <p>We sent a magic link to sign you in.<br>It expires in 15 minutes.</p>
+        {% if success %}
+        <p class="subtitle">He's not going to manage himself.</p>
+        <div class="success">
+            <div class="check">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
             </div>
-            {% else %}
-            {% if error %}
-            <div class="message error">{{ error }}</div>
-            {% endif %}
-
-            <form method="POST">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" autofocus>
-                </div>
-                <button type="submit">Continue</button>
-            </form>
-
-            <div class="footer">
-                No password needed. We'll send you a link.
-            </div>
-            {% endif %}
+            <h2>Check your inbox</h2>
+            <p>We sent a link to<br><span class="email">{{ email }}</span></p>
         </div>
+        {% else %}
+        <p class="subtitle">He's not going to manage himself.</p>
 
-        <div class="cli-hint">
-            <p>Prefer the command line?</p>
-            <code>curl -X POST makearjowork.com/api/tasks</code>
-        </div>
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        <form method="POST">
+            <input type="email" name="email" placeholder="Email" required autocomplete="email" autofocus>
+            <button type="submit">Continue</button>
+        </form>
+        <p class="hint">No password needed.</p>
+        {% endif %}
     </div>
 </body>
 </html>
