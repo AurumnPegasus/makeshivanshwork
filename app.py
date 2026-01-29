@@ -12,7 +12,16 @@ from functools import wraps
 from flask import Flask, request, jsonify, render_template, redirect, session, url_for, g
 from werkzeug.security import generate_password_hash
 import hashlib
+import base64
 from dotenv import load_dotenv
+
+# Google Calendar imports (optional - graceful fallback if not installed)
+try:
+    from google.oauth2 import service_account
+    from googleapiclient.discovery import build
+    GOOGLE_CALENDAR_AVAILABLE = True
+except ImportError:
+    GOOGLE_CALENDAR_AVAILABLE = False
 
 load_dotenv()
 
@@ -234,6 +243,49 @@ def execute_function_call(func_call, conn, user_email):
     return {'type': 'error', 'message': f'Unknown function: {name}'}
 
 
+def get_calendar_events():
+    """Fetch events from Google Calendar for next 5 days"""
+    if not GOOGLE_CALENDAR_AVAILABLE:
+        return []
+
+    creds_b64 = os.environ.get('GOOGLE_CALENDAR_CREDENTIALS')
+    if not creds_b64:
+        return []
+
+    try:
+        creds_json = json.loads(base64.b64decode(creds_b64))
+        creds = service_account.Credentials.from_service_account_info(
+            creds_json, scopes=['https://www.googleapis.com/auth/calendar.readonly']
+        )
+        service = build('calendar', 'v3', credentials=creds)
+
+        now = datetime.utcnow()
+        time_min = now.isoformat() + 'Z'
+        time_max = (now + timedelta(days=5)).isoformat() + 'Z'
+
+        events = service.events().list(
+            calendarId=os.environ.get('GOOGLE_CALENDAR_ID', 'primary'),
+            timeMin=time_min,
+            timeMax=time_max,
+            singleEvents=True,
+            orderBy='startTime'
+        ).execute()
+
+        return [{
+            'id': f"cal_{e['id'][:8]}",
+            'title': e.get('summary', 'Untitled Event'),
+            'description': e.get('description', ''),
+            'status': 'EVENT',
+            'event_start': e['start'].get('dateTime', e['start'].get('date')),
+            'event_end': e['end'].get('dateTime', e['end'].get('date')),
+            'assigned_by': 'calendar',
+            'created_at': e.get('created', now.isoformat())
+        } for e in events.get('items', [])]
+    except Exception as e:
+        print(f"Calendar fetch error: {e}")
+        return []
+
+
 class PgRowWrapper:
     """Wrapper to make psycopg2 rows dict-accessible like sqlite3.Row"""
     def __init__(self, row, columns):
@@ -449,6 +501,9 @@ def login():
         if not email:
             return render_template('login.html', error='Email is required')
 
+        if not email.endswith('@fydy.ai'):
+            return render_template('login.html', error='Only @fydy.ai emails are allowed')
+
         # Create magic link
         token = secrets.token_urlsafe(32)
         expires_at = datetime.now() + timedelta(minutes=15)
@@ -528,17 +583,22 @@ def get_tasks():
     status = request.args.get('status')
     conn = get_db()
 
-    if status:
+    if status and status != 'pending':
         cursor = execute_query(conn,
             'SELECT * FROM tasks WHERE status = ? ORDER BY created_at DESC',
-            (status,)
-        )
+            (status,))
     else:
         cursor = execute_query(conn, 'SELECT * FROM tasks ORDER BY created_at DESC')
-    tasks = fetchall(cursor)
 
+    tasks = [task_to_dict(t) for t in fetchall(cursor)]
     conn.close()
-    return jsonify([dict(t._data) if hasattr(t, '_data') else dict(t) for t in tasks])
+
+    # Include calendar events for 'all' or 'pending' filter
+    if not status or status == 'pending':
+        events = get_calendar_events()
+        tasks = events + tasks  # Events first
+
+    return jsonify(tasks)
 
 
 @app.route('/api/tasks', methods=['POST'])

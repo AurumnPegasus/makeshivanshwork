@@ -497,6 +497,9 @@
         .task-status.pending { background: rgba(245, 158, 11, 0.2); color: var(--pending); }
         .task-status.in_progress { background: rgba(59, 130, 246, 0.2); color: var(--progress); }
         .task-status.done { background: rgba(16, 185, 129, 0.2); color: var(--done); }
+        .task-status.EVENT { background: rgba(99, 102, 241, 0.2); color: #6366f1; }
+        .task.event { border-left: 3px solid #6366f1; }
+        .task.event .task-check { background: rgba(99, 102, 241, 0.1); border-color: #6366f1; }
 
         .empty-tasks {
             text-align: center;
@@ -896,32 +899,45 @@
 
         function renderTasks() {
             const list = document.getElementById('tasks-list');
-            const filtered = currentFilter === 'all' ? tasks : tasks.filter(t => t.status === currentFilter);
+            let filtered;
+            if (currentFilter === 'all') {
+                filtered = tasks;
+            } else if (currentFilter === 'pending') {
+                // Include both pending tasks and calendar events
+                filtered = tasks.filter(t => t.status === 'pending' || t.status === 'EVENT');
+            } else {
+                filtered = tasks.filter(t => t.status === currentFilter);
+            }
 
             if (filtered.length === 0) {
                 list.innerHTML = '<div class="empty-tasks">No tasks</div>';
                 return;
             }
 
-            list.innerHTML = filtered.map(task => `
-                <div class="task ${task.status === 'done' ? 'done' : ''}" data-id="${task.id}" onclick="toggleDescription(${task.id})">
+            list.innerHTML = filtered.map(task => {
+                const isEvent = task.status === 'EVENT';
+                const eventTime = isEvent && task.event_start ? formatEventTime(task.event_start) : '';
+                const taskId = isEvent ? `'${task.id}'` : task.id;
+
+                return `
+                <div class="task ${task.status === 'done' ? 'done' : ''} ${isEvent ? 'event' : ''}" data-id="${task.id}" onclick="toggleDescription(${taskId})">
                     <div class="task-row">
-                        <div class="task-check ${task.status === 'done' ? 'checked' : ''}" onclick="event.stopPropagation(); toggleTask(${task.id}, ${task.status !== 'done'})">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="task-check ${task.status === 'done' ? 'checked' : ''}" ${isEvent ? '' : `onclick="event.stopPropagation(); toggleTask(${task.id}, ${task.status !== 'done'})"`}>
+                            ${isEvent ? '📅' : `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
-                            </svg>
+                            </svg>`}
                         </div>
                         <div class="task-info">
                             <div class="task-title">${escapeHtml(task.title)}</div>
                             <div class="task-meta">
-                                #${task.id} · ${task.assigned_by} · ${formatDate(task.created_at)}
+                                ${isEvent ? eventTime : `#${task.id} · ${task.assigned_by} · ${formatDate(task.created_at)}`}
                                 <span class="task-status ${task.status}">${formatStatus(task.status)}</span>
                             </div>
                         </div>
                     </div>
                     ${task.description ? `<div class="task-description">${escapeHtml(task.description)}</div>` : ''}
-                </div>
-            `).join('');
+                </div>`;
+            }).join('');
         }
 
         function updateStats() {
@@ -940,8 +956,21 @@
             return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         }
 
+        function formatEventTime(dateStr) {
+            const date = new Date(dateStr);
+            const now = new Date();
+            const isToday = date.toDateString() === now.toDateString();
+            const tomorrow = new Date(now.getTime() + 86400000);
+            const isTomorrow = date.toDateString() === tomorrow.toDateString();
+            const time = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+
+            if (isToday) return `Today at ${time}`;
+            if (isTomorrow) return `Tomorrow at ${time}`;
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) + ` at ${time}`;
+        }
+
         function formatStatus(status) {
-            return { pending: 'pending', in_progress: 'active', done: 'done' }[status] || status;
+            return { pending: 'pending', in_progress: 'active', done: 'done', EVENT: 'event' }[status] || status;
         }
 
         async function toggleTask(id, done) {
