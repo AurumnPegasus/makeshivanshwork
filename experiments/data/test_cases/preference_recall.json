@@ -1,0 +1,758 @@
+[
+  {
+    "query": "What should you remember about my preferences?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer"
+    ],
+    "difficulty": "hard",
+    "id": "preference_000",
+    "relevant_message_ids": [
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "c517b764-c132-40c9-9a64-811649e7e62d",
+      "56e90012-db2f-45e2-bc6b-0605b038d440",
+      "fa9e2e69-c706-4eb8-ae89-cfe6ff9eeaf6",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "7cf95950-a0fa-49c1-a450-140a1743eaee",
+      "017bbf49-1ae5-485f-bccb-6e71f0786150",
+      "32eecdfb-8590-47b7-bfd8-a8b6f21b07c7"
+    ]
+  },
+  {
+    "query": "What do I like about product roadmap?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "like",
+      "product roadmap"
+    ],
+    "difficulty": "medium",
+    "id": "preference_001",
+    "relevant_message_ids": [
+      "c7459eea-bef4-4393-a1c2-6cf11f55b52d",
+      "29b292b1-ec55-45e0-89b0-f44ffee41a1b",
+      "cd7d37c8-4da8-469b-89e5-5c94408b839c",
+      "73a82569-21b4-4618-9a31-6bc10956fbf3",
+      "318bdd5d-48db-4b25-82d5-24e7aea4a9a0",
+      "5ce30569-1c66-4e28-ad2c-843a79e5ab8a",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "3e772e70-1a37-427a-ab20-1da6b87b789f",
+      "2b49e874-f121-4c9b-864e-8d5d7f253bf3",
+      "27761536-b5fa-4916-adb7-4a15007b6fdd",
+      "bfcc35f2-4f19-4aa4-a17e-863f2f98826f",
+      "3f9046c1-ccd0-4e97-a6e5-2520e62bd433",
+      "0dbe3c2b-7e06-4f30-80cc-b1345251f7a2",
+      "0ad8824d-0c16-4464-a471-309f48c8ccfc",
+      "15c48c4a-6b7d-49ad-b6c3-9c91550469ee",
+      "fdeaa7e7-73a4-4179-a1db-ef9b34f07c04",
+      "7529ebb2-441b-4ddf-b1ec-185bf7188e94",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "9c2c03a5-7224-42df-b677-6550aeae060e",
+      "c1ace6bd-16ed-42b5-891b-7e30c676bcc0"
+    ]
+  },
+  {
+    "query": "What's my usual approach to scheduling meetings?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "async communication"
+    ],
+    "difficulty": "medium",
+    "id": "preference_002",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What do I prefer for presentations?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer",
+      "bullet points"
+    ],
+    "difficulty": "medium",
+    "id": "preference_003",
+    "relevant_message_ids": [
+      "9f32f039-5a6b-401a-b278-976676e047a3",
+      "761ab59f-92e5-4520-96c0-563aef1508a5",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "2b49e874-f121-4c9b-864e-8d5d7f253bf3",
+      "27761536-b5fa-4916-adb7-4a15007b6fdd",
+      "bfcc35f2-4f19-4aa4-a17e-863f2f98826f",
+      "d8ab6f6f-f364-46a6-81ae-11b2b62d88d5",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "5e06a8a0-9fb2-412a-8f17-04a21d0abad3",
+      "5b1a6d52-0316-4a91-993d-034fe9f7c7a3",
+      "8504996d-332a-4cd1-85f6-923a276fbddd",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "5ab73953-9e94-411c-94df-04d4a7cfcf77",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "0983c891-e3f8-4d7e-863f-8069f247cf0f",
+      "d1f22990-a2dd-4746-a1b1-4a4c04b4b535",
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03"
+    ]
+  },
+  {
+    "query": "What's my usual approach to scheduling meetings?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "brief emails"
+    ],
+    "difficulty": "medium",
+    "id": "preference_004",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What do I like about security?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "like",
+      "security"
+    ],
+    "difficulty": "medium",
+    "id": "preference_005",
+    "relevant_message_ids": [
+      "c7459eea-bef4-4393-a1c2-6cf11f55b52d",
+      "29b292b1-ec55-45e0-89b0-f44ffee41a1b",
+      "cd7d37c8-4da8-469b-89e5-5c94408b839c",
+      "73a82569-21b4-4618-9a31-6bc10956fbf3",
+      "318bdd5d-48db-4b25-82d5-24e7aea4a9a0",
+      "5ce30569-1c66-4e28-ad2c-843a79e5ab8a",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "3e772e70-1a37-427a-ab20-1da6b87b789f",
+      "2b49e874-f121-4c9b-864e-8d5d7f253bf3",
+      "27761536-b5fa-4916-adb7-4a15007b6fdd",
+      "bfcc35f2-4f19-4aa4-a17e-863f2f98826f",
+      "3f9046c1-ccd0-4e97-a6e5-2520e62bd433",
+      "0dbe3c2b-7e06-4f30-80cc-b1345251f7a2",
+      "0ad8824d-0c16-4464-a471-309f48c8ccfc",
+      "15c48c4a-6b7d-49ad-b6c3-9c91550469ee",
+      "fdeaa7e7-73a4-4179-a1db-ef9b34f07c04",
+      "7529ebb2-441b-4ddf-b1ec-185bf7188e94",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "9c2c03a5-7224-42df-b677-6550aeae060e",
+      "c1ace6bd-16ed-42b5-891b-7e30c676bcc0"
+    ]
+  },
+  {
+    "query": "What do I like about database?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "like",
+      "database"
+    ],
+    "difficulty": "medium",
+    "id": "preference_006",
+    "relevant_message_ids": [
+      "c7459eea-bef4-4393-a1c2-6cf11f55b52d",
+      "29b292b1-ec55-45e0-89b0-f44ffee41a1b",
+      "cd7d37c8-4da8-469b-89e5-5c94408b839c",
+      "73a82569-21b4-4618-9a31-6bc10956fbf3",
+      "318bdd5d-48db-4b25-82d5-24e7aea4a9a0",
+      "5ce30569-1c66-4e28-ad2c-843a79e5ab8a",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "3e772e70-1a37-427a-ab20-1da6b87b789f",
+      "2b49e874-f121-4c9b-864e-8d5d7f253bf3",
+      "27761536-b5fa-4916-adb7-4a15007b6fdd",
+      "bfcc35f2-4f19-4aa4-a17e-863f2f98826f",
+      "3f9046c1-ccd0-4e97-a6e5-2520e62bd433",
+      "0dbe3c2b-7e06-4f30-80cc-b1345251f7a2",
+      "0ad8824d-0c16-4464-a471-309f48c8ccfc",
+      "15c48c4a-6b7d-49ad-b6c3-9c91550469ee",
+      "fdeaa7e7-73a4-4179-a1db-ef9b34f07c04",
+      "7529ebb2-441b-4ddf-b1ec-185bf7188e94",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "9c2c03a5-7224-42df-b677-6550aeae060e",
+      "c1ace6bd-16ed-42b5-891b-7e30c676bcc0"
+    ]
+  },
+  {
+    "query": "What do I like about AI agents?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "like",
+      "AI agents"
+    ],
+    "difficulty": "medium",
+    "id": "preference_007",
+    "relevant_message_ids": [
+      "c7459eea-bef4-4393-a1c2-6cf11f55b52d",
+      "29b292b1-ec55-45e0-89b0-f44ffee41a1b",
+      "cd7d37c8-4da8-469b-89e5-5c94408b839c",
+      "73a82569-21b4-4618-9a31-6bc10956fbf3",
+      "318bdd5d-48db-4b25-82d5-24e7aea4a9a0",
+      "5ce30569-1c66-4e28-ad2c-843a79e5ab8a",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "3e772e70-1a37-427a-ab20-1da6b87b789f",
+      "2b49e874-f121-4c9b-864e-8d5d7f253bf3",
+      "27761536-b5fa-4916-adb7-4a15007b6fdd",
+      "bfcc35f2-4f19-4aa4-a17e-863f2f98826f",
+      "3f9046c1-ccd0-4e97-a6e5-2520e62bd433",
+      "0dbe3c2b-7e06-4f30-80cc-b1345251f7a2",
+      "0ad8824d-0c16-4464-a471-309f48c8ccfc",
+      "15c48c4a-6b7d-49ad-b6c3-9c91550469ee",
+      "fdeaa7e7-73a4-4179-a1db-ef9b34f07c04",
+      "7529ebb2-441b-4ddf-b1ec-185bf7188e94",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "9c2c03a5-7224-42df-b677-6550aeae060e",
+      "c1ace6bd-16ed-42b5-891b-7e30c676bcc0"
+    ]
+  },
+  {
+    "query": "What do I prefer for code reviews?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer",
+      "bullet points"
+    ],
+    "difficulty": "medium",
+    "id": "preference_008",
+    "relevant_message_ids": [
+      "9f32f039-5a6b-401a-b278-976676e047a3",
+      "761ab59f-92e5-4520-96c0-563aef1508a5",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "2b49e874-f121-4c9b-864e-8d5d7f253bf3",
+      "27761536-b5fa-4916-adb7-4a15007b6fdd",
+      "bfcc35f2-4f19-4aa4-a17e-863f2f98826f",
+      "d8ab6f6f-f364-46a6-81ae-11b2b62d88d5",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "5e06a8a0-9fb2-412a-8f17-04a21d0abad3",
+      "5b1a6d52-0316-4a91-993d-034fe9f7c7a3",
+      "8504996d-332a-4cd1-85f6-923a276fbddd",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "5ab73953-9e94-411c-94df-04d4a7cfcf77",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "0983c891-e3f8-4d7e-863f-8069f247cf0f",
+      "d1f22990-a2dd-4746-a1b1-4a4c04b4b535",
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03"
+    ]
+  },
+  {
+    "query": "What do I prefer for scheduling meetings?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer",
+      "bullet points"
+    ],
+    "difficulty": "medium",
+    "id": "preference_009",
+    "relevant_message_ids": [
+      "9f32f039-5a6b-401a-b278-976676e047a3",
+      "761ab59f-92e5-4520-96c0-563aef1508a5",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "2b49e874-f121-4c9b-864e-8d5d7f253bf3",
+      "27761536-b5fa-4916-adb7-4a15007b6fdd",
+      "bfcc35f2-4f19-4aa4-a17e-863f2f98826f",
+      "d8ab6f6f-f364-46a6-81ae-11b2b62d88d5",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "5e06a8a0-9fb2-412a-8f17-04a21d0abad3",
+      "5b1a6d52-0316-4a91-993d-034fe9f7c7a3",
+      "8504996d-332a-4cd1-85f6-923a276fbddd",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "5ab73953-9e94-411c-94df-04d4a7cfcf77",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "0983c891-e3f8-4d7e-863f-8069f247cf0f",
+      "d1f22990-a2dd-4746-a1b1-4a4c04b4b535",
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03"
+    ]
+  },
+  {
+    "query": "What do I prefer for writing reports?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer",
+      "bullet points"
+    ],
+    "difficulty": "medium",
+    "id": "preference_010",
+    "relevant_message_ids": [
+      "9f32f039-5a6b-401a-b278-976676e047a3",
+      "761ab59f-92e5-4520-96c0-563aef1508a5",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "2b49e874-f121-4c9b-864e-8d5d7f253bf3",
+      "27761536-b5fa-4916-adb7-4a15007b6fdd",
+      "bfcc35f2-4f19-4aa4-a17e-863f2f98826f",
+      "d8ab6f6f-f364-46a6-81ae-11b2b62d88d5",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "5e06a8a0-9fb2-412a-8f17-04a21d0abad3",
+      "5b1a6d52-0316-4a91-993d-034fe9f7c7a3",
+      "8504996d-332a-4cd1-85f6-923a276fbddd",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "5ab73953-9e94-411c-94df-04d4a7cfcf77",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "0983c891-e3f8-4d7e-863f-8069f247cf0f",
+      "d1f22990-a2dd-4746-a1b1-4a4c04b4b535",
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03"
+    ]
+  },
+  {
+    "query": "What should you remember about my preferences?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer"
+    ],
+    "difficulty": "hard",
+    "id": "preference_011",
+    "relevant_message_ids": [
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "c517b764-c132-40c9-9a64-811649e7e62d",
+      "56e90012-db2f-45e2-bc6b-0605b038d440",
+      "fa9e2e69-c706-4eb8-ae89-cfe6ff9eeaf6",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "7cf95950-a0fa-49c1-a450-140a1743eaee",
+      "017bbf49-1ae5-485f-bccb-6e71f0786150",
+      "32eecdfb-8590-47b7-bfd8-a8b6f21b07c7"
+    ]
+  },
+  {
+    "query": "What do I like about memory systems?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "like",
+      "memory systems"
+    ],
+    "difficulty": "medium",
+    "id": "preference_012",
+    "relevant_message_ids": [
+      "c7459eea-bef4-4393-a1c2-6cf11f55b52d",
+      "29b292b1-ec55-45e0-89b0-f44ffee41a1b",
+      "cd7d37c8-4da8-469b-89e5-5c94408b839c",
+      "73a82569-21b4-4618-9a31-6bc10956fbf3",
+      "318bdd5d-48db-4b25-82d5-24e7aea4a9a0",
+      "5ce30569-1c66-4e28-ad2c-843a79e5ab8a",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "3e772e70-1a37-427a-ab20-1da6b87b789f",
+      "2b49e874-f121-4c9b-864e-8d5d7f253bf3",
+      "27761536-b5fa-4916-adb7-4a15007b6fdd",
+      "bfcc35f2-4f19-4aa4-a17e-863f2f98826f",
+      "3f9046c1-ccd0-4e97-a6e5-2520e62bd433",
+      "0dbe3c2b-7e06-4f30-80cc-b1345251f7a2",
+      "0ad8824d-0c16-4464-a471-309f48c8ccfc",
+      "15c48c4a-6b7d-49ad-b6c3-9c91550469ee",
+      "fdeaa7e7-73a4-4179-a1db-ef9b34f07c04",
+      "7529ebb2-441b-4ddf-b1ec-185bf7188e94",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "9c2c03a5-7224-42df-b677-6550aeae060e",
+      "c1ace6bd-16ed-42b5-891b-7e30c676bcc0"
+    ]
+  },
+  {
+    "query": "What's my usual approach to code reviews?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "morning meetings"
+    ],
+    "difficulty": "medium",
+    "id": "preference_013",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What do I like about testing?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "like",
+      "testing"
+    ],
+    "difficulty": "medium",
+    "id": "preference_014",
+    "relevant_message_ids": [
+      "c7459eea-bef4-4393-a1c2-6cf11f55b52d",
+      "29b292b1-ec55-45e0-89b0-f44ffee41a1b",
+      "cd7d37c8-4da8-469b-89e5-5c94408b839c",
+      "73a82569-21b4-4618-9a31-6bc10956fbf3",
+      "318bdd5d-48db-4b25-82d5-24e7aea4a9a0",
+      "5ce30569-1c66-4e28-ad2c-843a79e5ab8a",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "3e772e70-1a37-427a-ab20-1da6b87b789f",
+      "2b49e874-f121-4c9b-864e-8d5d7f253bf3",
+      "27761536-b5fa-4916-adb7-4a15007b6fdd",
+      "bfcc35f2-4f19-4aa4-a17e-863f2f98826f",
+      "3f9046c1-ccd0-4e97-a6e5-2520e62bd433",
+      "0dbe3c2b-7e06-4f30-80cc-b1345251f7a2",
+      "0ad8824d-0c16-4464-a471-309f48c8ccfc",
+      "15c48c4a-6b7d-49ad-b6c3-9c91550469ee",
+      "fdeaa7e7-73a4-4179-a1db-ef9b34f07c04",
+      "7529ebb2-441b-4ddf-b1ec-185bf7188e94",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "9c2c03a5-7224-42df-b677-6550aeae060e",
+      "c1ace6bd-16ed-42b5-891b-7e30c676bcc0"
+    ]
+  },
+  {
+    "query": "What do I prefer for writing reports?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer",
+      "morning meetings"
+    ],
+    "difficulty": "medium",
+    "id": "preference_015",
+    "relevant_message_ids": [
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "c517b764-c132-40c9-9a64-811649e7e62d",
+      "56e90012-db2f-45e2-bc6b-0605b038d440",
+      "fa9e2e69-c706-4eb8-ae89-cfe6ff9eeaf6",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "7cf95950-a0fa-49c1-a450-140a1743eaee",
+      "017bbf49-1ae5-485f-bccb-6e71f0786150",
+      "32eecdfb-8590-47b7-bfd8-a8b6f21b07c7"
+    ]
+  },
+  {
+    "query": "What do I prefer for scheduling meetings?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer",
+      "brief emails"
+    ],
+    "difficulty": "medium",
+    "id": "preference_016",
+    "relevant_message_ids": [
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "c517b764-c132-40c9-9a64-811649e7e62d",
+      "56e90012-db2f-45e2-bc6b-0605b038d440",
+      "fa9e2e69-c706-4eb8-ae89-cfe6ff9eeaf6",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "7cf95950-a0fa-49c1-a450-140a1743eaee",
+      "017bbf49-1ae5-485f-bccb-6e71f0786150",
+      "32eecdfb-8590-47b7-bfd8-a8b6f21b07c7"
+    ]
+  },
+  {
+    "query": "What do I like about AI agents?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "like",
+      "AI agents"
+    ],
+    "difficulty": "medium",
+    "id": "preference_017",
+    "relevant_message_ids": [
+      "c7459eea-bef4-4393-a1c2-6cf11f55b52d",
+      "29b292b1-ec55-45e0-89b0-f44ffee41a1b",
+      "cd7d37c8-4da8-469b-89e5-5c94408b839c",
+      "73a82569-21b4-4618-9a31-6bc10956fbf3",
+      "318bdd5d-48db-4b25-82d5-24e7aea4a9a0",
+      "5ce30569-1c66-4e28-ad2c-843a79e5ab8a",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "3e772e70-1a37-427a-ab20-1da6b87b789f",
+      "2b49e874-f121-4c9b-864e-8d5d7f253bf3",
+      "27761536-b5fa-4916-adb7-4a15007b6fdd",
+      "bfcc35f2-4f19-4aa4-a17e-863f2f98826f",
+      "3f9046c1-ccd0-4e97-a6e5-2520e62bd433",
+      "0dbe3c2b-7e06-4f30-80cc-b1345251f7a2",
+      "0ad8824d-0c16-4464-a471-309f48c8ccfc",
+      "15c48c4a-6b7d-49ad-b6c3-9c91550469ee",
+      "fdeaa7e7-73a4-4179-a1db-ef9b34f07c04",
+      "7529ebb2-441b-4ddf-b1ec-185bf7188e94",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "9c2c03a5-7224-42df-b677-6550aeae060e",
+      "c1ace6bd-16ed-42b5-891b-7e30c676bcc0"
+    ]
+  },
+  {
+    "query": "What should you remember about my preferences?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer"
+    ],
+    "difficulty": "hard",
+    "id": "preference_018",
+    "relevant_message_ids": [
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "c517b764-c132-40c9-9a64-811649e7e62d",
+      "56e90012-db2f-45e2-bc6b-0605b038d440",
+      "fa9e2e69-c706-4eb8-ae89-cfe6ff9eeaf6",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "7cf95950-a0fa-49c1-a450-140a1743eaee",
+      "017bbf49-1ae5-485f-bccb-6e71f0786150",
+      "32eecdfb-8590-47b7-bfd8-a8b6f21b07c7"
+    ]
+  },
+  {
+    "query": "What do I like about database?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "like",
+      "database"
+    ],
+    "difficulty": "medium",
+    "id": "preference_019",
+    "relevant_message_ids": [
+      "c7459eea-bef4-4393-a1c2-6cf11f55b52d",
+      "29b292b1-ec55-45e0-89b0-f44ffee41a1b",
+      "cd7d37c8-4da8-469b-89e5-5c94408b839c",
+      "73a82569-21b4-4618-9a31-6bc10956fbf3",
+      "318bdd5d-48db-4b25-82d5-24e7aea4a9a0",
+      "5ce30569-1c66-4e28-ad2c-843a79e5ab8a",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "3e772e70-1a37-427a-ab20-1da6b87b789f",
+      "2b49e874-f121-4c9b-864e-8d5d7f253bf3",
+      "27761536-b5fa-4916-adb7-4a15007b6fdd",
+      "bfcc35f2-4f19-4aa4-a17e-863f2f98826f",
+      "3f9046c1-ccd0-4e97-a6e5-2520e62bd433",
+      "0dbe3c2b-7e06-4f30-80cc-b1345251f7a2",
+      "0ad8824d-0c16-4464-a471-309f48c8ccfc",
+      "15c48c4a-6b7d-49ad-b6c3-9c91550469ee",
+      "fdeaa7e7-73a4-4179-a1db-ef9b34f07c04",
+      "7529ebb2-441b-4ddf-b1ec-185bf7188e94",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "9c2c03a5-7224-42df-b677-6550aeae060e",
+      "c1ace6bd-16ed-42b5-891b-7e30c676bcc0"
+    ]
+  },
+  {
+    "query": "What's my usual approach to code reviews?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "async communication"
+    ],
+    "difficulty": "medium",
+    "id": "preference_020",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What should you remember about my preferences?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer"
+    ],
+    "difficulty": "hard",
+    "id": "preference_021",
+    "relevant_message_ids": [
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "c517b764-c132-40c9-9a64-811649e7e62d",
+      "56e90012-db2f-45e2-bc6b-0605b038d440",
+      "fa9e2e69-c706-4eb8-ae89-cfe6ff9eeaf6",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "7cf95950-a0fa-49c1-a450-140a1743eaee",
+      "017bbf49-1ae5-485f-bccb-6e71f0786150",
+      "32eecdfb-8590-47b7-bfd8-a8b6f21b07c7"
+    ]
+  },
+  {
+    "query": "What do I prefer for code reviews?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer",
+      "async communication"
+    ],
+    "difficulty": "medium",
+    "id": "preference_022",
+    "relevant_message_ids": [
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "c517b764-c132-40c9-9a64-811649e7e62d",
+      "56e90012-db2f-45e2-bc6b-0605b038d440",
+      "fa9e2e69-c706-4eb8-ae89-cfe6ff9eeaf6",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "7cf95950-a0fa-49c1-a450-140a1743eaee",
+      "017bbf49-1ae5-485f-bccb-6e71f0786150",
+      "32eecdfb-8590-47b7-bfd8-a8b6f21b07c7"
+    ]
+  },
+  {
+    "query": "What should you remember about my preferences?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer"
+    ],
+    "difficulty": "hard",
+    "id": "preference_023",
+    "relevant_message_ids": [
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "c517b764-c132-40c9-9a64-811649e7e62d",
+      "56e90012-db2f-45e2-bc6b-0605b038d440",
+      "fa9e2e69-c706-4eb8-ae89-cfe6ff9eeaf6",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "7cf95950-a0fa-49c1-a450-140a1743eaee",
+      "017bbf49-1ae5-485f-bccb-6e71f0786150",
+      "32eecdfb-8590-47b7-bfd8-a8b6f21b07c7"
+    ]
+  },
+  {
+    "query": "What should you remember about my preferences?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer"
+    ],
+    "difficulty": "hard",
+    "id": "preference_024",
+    "relevant_message_ids": [
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "c517b764-c132-40c9-9a64-811649e7e62d",
+      "56e90012-db2f-45e2-bc6b-0605b038d440",
+      "fa9e2e69-c706-4eb8-ae89-cfe6ff9eeaf6",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "7cf95950-a0fa-49c1-a450-140a1743eaee",
+      "017bbf49-1ae5-485f-bccb-6e71f0786150",
+      "32eecdfb-8590-47b7-bfd8-a8b6f21b07c7"
+    ]
+  },
+  {
+    "query": "What's my usual approach to code reviews?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "brief emails"
+    ],
+    "difficulty": "medium",
+    "id": "preference_025",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What do I like about testing?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "like",
+      "testing"
+    ],
+    "difficulty": "medium",
+    "id": "preference_026",
+    "relevant_message_ids": [
+      "c7459eea-bef4-4393-a1c2-6cf11f55b52d",
+      "29b292b1-ec55-45e0-89b0-f44ffee41a1b",
+      "cd7d37c8-4da8-469b-89e5-5c94408b839c",
+      "73a82569-21b4-4618-9a31-6bc10956fbf3",
+      "318bdd5d-48db-4b25-82d5-24e7aea4a9a0",
+      "5ce30569-1c66-4e28-ad2c-843a79e5ab8a",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "3e772e70-1a37-427a-ab20-1da6b87b789f",
+      "2b49e874-f121-4c9b-864e-8d5d7f253bf3",
+      "27761536-b5fa-4916-adb7-4a15007b6fdd",
+      "bfcc35f2-4f19-4aa4-a17e-863f2f98826f",
+      "3f9046c1-ccd0-4e97-a6e5-2520e62bd433",
+      "0dbe3c2b-7e06-4f30-80cc-b1345251f7a2",
+      "0ad8824d-0c16-4464-a471-309f48c8ccfc",
+      "15c48c4a-6b7d-49ad-b6c3-9c91550469ee",
+      "fdeaa7e7-73a4-4179-a1db-ef9b34f07c04",
+      "7529ebb2-441b-4ddf-b1ec-185bf7188e94",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "9c2c03a5-7224-42df-b677-6550aeae060e",
+      "c1ace6bd-16ed-42b5-891b-7e30c676bcc0"
+    ]
+  },
+  {
+    "query": "What do I prefer for writing reports?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer",
+      "async communication"
+    ],
+    "difficulty": "medium",
+    "id": "preference_027",
+    "relevant_message_ids": [
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "c517b764-c132-40c9-9a64-811649e7e62d",
+      "56e90012-db2f-45e2-bc6b-0605b038d440",
+      "fa9e2e69-c706-4eb8-ae89-cfe6ff9eeaf6",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "7cf95950-a0fa-49c1-a450-140a1743eaee",
+      "017bbf49-1ae5-485f-bccb-6e71f0786150",
+      "32eecdfb-8590-47b7-bfd8-a8b6f21b07c7"
+    ]
+  },
+  {
+    "query": "What's my usual approach to presentations?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "async communication"
+    ],
+    "difficulty": "medium",
+    "id": "preference_028",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What do I prefer for scheduling meetings?",
+    "type": "preference_recall",
+    "expected_keywords": [
+      "prefer",
+      "brief emails"
+    ],
+    "difficulty": "medium",
+    "id": "preference_029",
+    "relevant_message_ids": [
+      "24b12db2-1673-48ee-9813-fcc2d8c07f03",
+      "5e5999a8-dc5a-45d7-9467-ccf13532a2ef",
+      "427d77e6-6bc7-483c-9276-c30ba850da29",
+      "8edbb591-a7a1-4eef-b242-e0a03335d87a",
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "c517b764-c132-40c9-9a64-811649e7e62d",
+      "56e90012-db2f-45e2-bc6b-0605b038d440",
+      "fa9e2e69-c706-4eb8-ae89-cfe6ff9eeaf6",
+      "a797ef54-af30-4c2c-b22e-6e84ff118918",
+      "801c4ad2-d8a2-4368-aa4b-3a0c1b34520d",
+      "a192b2f6-8212-46dc-9aa8-7a7e9c7beaba",
+      "7cf95950-a0fa-49c1-a450-140a1743eaee",
+      "017bbf49-1ae5-485f-bccb-6e71f0786150",
+      "32eecdfb-8590-47b7-bfd8-a8b6f21b07c7"
+    ]
+  }
+]

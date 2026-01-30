@@ -1,0 +1,219 @@
+[
+  {
+    "system_name": "Raw Context Baseline",
+    "system_version": "1.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 0.0050067901611328125,
+    "latency_p95_ms": 0.005245208740234375,
+    "latency_p99_ms": 0.010967254638671875,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 100,
+    "evaluation_time_seconds": 0.0009789466857910156,
+    "timestamp": "2026-01-30T11:28:19.137898"
+  },
+  {
+    "system_name": "flat_vector",
+    "system_version": "1.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 0.008106231689453125,
+    "latency_p95_ms": 0.009298324584960938,
+    "latency_p99_ms": 0.014066696166992188,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 100,
+    "evaluation_time_seconds": 0.001104116439819336,
+    "timestamp": "2026-01-30T11:28:19.139033"
+  },
+  {
+    "system_name": "Multi-Vector Memory",
+    "system_version": "1.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 0.012874603271484375,
+    "latency_p95_ms": 0.014066696166992188,
+    "latency_p99_ms": 0.02002716064453125,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 100,
+    "evaluation_time_seconds": 0.0038449764251708984,
+    "timestamp": "2026-01-30T11:28:19.142903"
+  },
+  {
+    "system_name": "Vector + Graph Memory",
+    "system_version": "1.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 0.010013580322265625,
+    "latency_p95_ms": 0.0171661376953125,
+    "latency_p99_ms": 0.03504753112792969,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 100,
+    "evaluation_time_seconds": 0.002370119094848633,
+    "timestamp": "2026-01-30T11:28:19.145299"
+  },
+  {
+    "system_name": "Hypergraph Memory",
+    "system_version": "1.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 0.012159347534179688,
+    "latency_p95_ms": 0.018835067749023438,
+    "latency_p99_ms": 0.031948089599609375,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 100,
+    "evaluation_time_seconds": 0.0035910606384277344,
+    "timestamp": "2026-01-30T11:28:19.148916"
+  },
+  {
+    "system_name": "Hierarchical Memory",
+    "system_version": "1.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 0.008106231689453125,
+    "latency_p95_ms": 0.010967254638671875,
+    "latency_p99_ms": 0.017881393432617188,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 100,
+    "evaluation_time_seconds": 0.0026612281799316406,
+    "timestamp": "2026-01-30T11:28:19.151621"
+  },
+  {
+    "system_name": "Ultimate Hybrid Memory (ASM v2)",
+    "system_version": "2.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 0.0030994415283203125,
+    "latency_p95_ms": 0.051021575927734375,
+    "latency_p99_ms": 0.06723403930664062,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 100,
+    "evaluation_time_seconds": 0.003248929977416992,
+    "timestamp": "2026-01-30T11:28:19.154901"
+  }
+]

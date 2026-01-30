@@ -1,0 +1,6116 @@
+{
+  "name": "knowledge_worker",
+  "domain": "knowledge_worker",
+  "num_sessions": 45,
+  "total_messages": 450,
+  "unique_entities": 19,
+  "unique_topics": 55,
+  "date_range": {
+    "start": "2026-01-01T16:31:52.338957",
+    "end": "2026-01-30T18:53:52.338957"
+  },
+  "messages": [
+    {
+      "id": "16549615-0cb7-4688-8ebb-d4713574ecdd",
+      "content": "Who are the key players in debugging?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_22",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-01T16:31:52.338957",
+      "entities": [],
+      "topics": [
+        "debugging"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "eb68fa85-2035-4510-9b08-eb346760b0a2",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_22",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-01T16:32:52.338957",
+      "entities": [],
+      "topics": [
+        "debugging"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "fd8a138c-a12d-4c64-a351-48428b3969ec",
+      "content": "How might we improve Dashboard v2?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_22",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-01T16:33:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "4edd6f01-5189-4bd9-a41f-e7f6144be393",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_22",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-01T16:37:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "4f689fee-7a30-454c-9a30-5f9b39bdd771",
+      "content": "What's the latest on security?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_22",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-01T16:40:52.338957",
+      "entities": [],
+      "topics": [
+        "security"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "04c96a1f-8ae2-4b35-aad1-5e9b8edf30d5",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_22",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-01T16:44:52.338957",
+      "entities": [],
+      "topics": [
+        "security"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "069ceee8-1bc2-4579-b4b8-36ea53d01d86",
+      "content": "Analyze the latency trends",
+      "role": "user",
+      "session_id": "knowledge_worker_session_22",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-01T16:47:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "1175ca0c-e842-4292-889e-1cb60c5561d0",
+      "content": "Comparing across segments, I see...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_22",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-01T16:51:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "fb645fcd-93f7-4da4-8dfd-1dda339fc660",
+      "content": "Who are the key players in A/B testing?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_22",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-01T16:54:52.338957",
+      "entities": [],
+      "topics": [
+        "A/B testing"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "d44c7d55-0f8e-4a9e-9147-17b722078af1",
+      "content": "Here's what I found about A/B testing...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_22",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-01T16:58:52.338957",
+      "entities": [],
+      "topics": [
+        "A/B testing"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "658dfcce-344c-4f00-92e8-c5db58a588b1",
+      "content": "Make this more concise: the implementation details of the system",
+      "role": "user",
+      "session_id": "knowledge_worker_session_33",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-02T16:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "dba17f72-af10-41e7-bef9-76ffb4152b64",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_33",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-02T16:34:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "47e4c52c-6d1a-4519-860a-0ab87020d890",
+      "content": "How does AI agents compare to encryption?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_33",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-02T16:36:52.338957",
+      "entities": [],
+      "topics": [
+        "AI agents",
+        "encryption"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "edf1ff1b-85ec-41dc-b903-fc9520243836",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_33",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-02T16:37:52.338957",
+      "entities": [],
+      "topics": [
+        "AI agents",
+        "encryption"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "dbd277f3-3e75-4c35-a55f-935f9ae7d380",
+      "content": "What's the latest on performance?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_33",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-02T16:38:52.338957",
+      "entities": [],
+      "topics": [
+        "performance"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "8be57845-b88d-42af-b739-323c31cd465b",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_33",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-02T16:40:52.338957",
+      "entities": [],
+      "topics": [
+        "performance"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "f4198d27-c161-4e4f-9c26-5f4b2b805ffe",
+      "content": "What's the latest on compensation?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_33",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-02T16:41:52.338957",
+      "entities": [],
+      "topics": [
+        "compensation"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "267ea97c-ac04-41c7-b92c-826f239e478e",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_33",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-02T16:45:52.338957",
+      "entities": [],
+      "topics": [
+        "compensation"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "2795391d-7e50-4acc-80d5-8ed823b508db",
+      "content": "How might we improve Notification Service?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_33",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-02T16:47:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "af5f1ca3-ddc8-4de6-87e0-a79d98852823",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_33",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-02T16:51:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "9dae6cf3-5356-4937-9c89-35d234b5f40d",
+      "content": "What are the risks of microservices?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_12",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T14:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "3f69ab6e-baf2-4b56-aca7-e1ce87ce857e",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_12",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T14:33:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "076f1635-334b-4649-88d7-ac5c88d2dca6",
+      "content": "What's the latest on performance?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_12",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T14:36:52.338957",
+      "entities": [],
+      "topics": [
+        "performance"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "67228496-4168-400f-81de-6bb40b5ad617",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_12",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T14:38:52.338957",
+      "entities": [],
+      "topics": [
+        "performance"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "563715c0-296a-4596-9917-6070f5ab1805",
+      "content": "What's the latest on testing?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_12",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T14:39:52.338957",
+      "entities": [],
+      "topics": [
+        "testing"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "c9f68be0-d550-463e-bf68-a15e4f6830cb",
+      "content": "Here's what I found about testing...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_12",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T14:43:52.338957",
+      "entities": [],
+      "topics": [
+        "testing"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "93d23c2a-c64a-41db-8867-02f0f672bc6c",
+      "content": "Who are the key players in testing?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_12",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T14:46:52.338957",
+      "entities": [],
+      "topics": [
+        "testing"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "ade9aca1-e728-4e54-84c3-f39f8e46c043",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_12",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T14:48:52.338957",
+      "entities": [],
+      "topics": [
+        "testing"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "0cd6e4a5-c0e1-4db4-a80c-efe8ff2c7623",
+      "content": "What are the risks of serverless?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_12",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T14:51:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "70e143f8-7466-4af3-8ac6-bf2e5b56b3fa",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_12",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T14:52:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "f3265c41-0607-473f-a9ef-b79ca358a5b4",
+      "content": "Help me write about CI/CD",
+      "role": "user",
+      "session_id": "knowledge_worker_session_5",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T22:31:52.338957",
+      "entities": [],
+      "topics": [
+        "CI/CD"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "112c054e-3661-45bc-a892-f1a6cbb3c074",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_5",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T22:35:52.338957",
+      "entities": [],
+      "topics": [
+        "CI/CD"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "24458b31-7e1c-4409-91fd-1a7f174dbea7",
+      "content": "Why did latency change last week?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_5",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T22:37:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "3e4e5ce8-a3e7-49af-8fe9-2d2044c37400",
+      "content": "The trend shows... The main driver is...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_5",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T22:42:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "d1c72546-6d2c-49b0-9d9a-8cd30c2a665d",
+      "content": "How might we improve Notification Service?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_5",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T22:44:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "7d1da9a0-7078-4c43-b54a-aaa9684ff170",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_5",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T22:45:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "a6e3aec1-1d30-4e10-b2dd-1d2971f10b6f",
+      "content": "Make this more concise: the implementation details of the system",
+      "role": "user",
+      "session_id": "knowledge_worker_session_5",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T22:47:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "eede3f8d-c322-4c6d-8605-dd019b05c009",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_5",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T22:51:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "863bde71-cdd5-42f3-b7cf-dfe72c7c3d29",
+      "content": "What's driving latency?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_5",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T22:53:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "a88a0bbc-bd54-418b-b9f1-7d7c784917f9",
+      "content": "Comparing across segments, I see...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_5",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-04T22:55:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "d924f186-d012-41db-9867-561f8272d763",
+      "content": "Make this more concise: the implementation details of the system",
+      "role": "user",
+      "session_id": "knowledge_worker_session_16",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-05T13:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "48a14040-8773-4767-82c0-358aff1bd5d6",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_16",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-05T13:34:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "7cf982d7-d957-4aae-86cf-f8b55f0b604d",
+      "content": "Alternative approaches to scaling?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_16",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-05T13:35:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "057710b5-6176-403e-8c1f-49b5596767b1",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_16",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-05T13:38:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "f4d87524-4dc8-40ef-9854-c850fe10a916",
+      "content": "Draft an email to Alex Kumar about embeddings",
+      "role": "user",
+      "session_id": "knowledge_worker_session_16",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-05T13:41:52.338957",
+      "entities": [
+        "Microsoft",
+        "Alex Kumar"
+      ],
+      "topics": [
+        "Azure",
+        "embeddings",
+        "cloud"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "880f5b44-8b84-4091-be9e-2bec4458f403",
+      "content": "Here's a draft for you to review...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_16",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-05T13:44:52.338957",
+      "entities": [
+        "Microsoft",
+        "Alex Kumar"
+      ],
+      "topics": [
+        "Azure",
+        "embeddings",
+        "cloud"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "d7ff8e94-d465-46ab-86bb-06d6ef951f35",
+      "content": "Forecast conversion rate for next quarter",
+      "role": "user",
+      "session_id": "knowledge_worker_session_16",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-05T13:47:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "0a19dd7d-8277-4bc4-8a3f-6db6806d510d",
+      "content": "The trend shows... The main driver is...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_16",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-05T13:52:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "0a1a2ce2-d9da-48b6-abaa-74669c8cde36",
+      "content": "Ideas for MongoDB?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_16",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-05T13:53:52.338957",
+      "entities": [],
+      "topics": [
+        "MongoDB"
+      ],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "8337518b-39b3-4412-95b3-5d89db871c0d",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_16",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-05T13:58:52.338957",
+      "entities": [],
+      "topics": [
+        "MongoDB"
+      ],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "a95f71c4-1c74-44b9-b78e-d9d1c5d7d866",
+      "content": "Compare latency across user types",
+      "role": "user",
+      "session_id": "knowledge_worker_session_8",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-06T00:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "fd5a1234-ea47-434e-bd68-99dc6328bf35",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_8",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-06T00:34:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "54b9c832-02d7-435a-8c82-3314fff1fdcd",
+      "content": "Why did user engagement change last week?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_8",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-06T00:37:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "1495989d-7212-47f6-b731-a7750835dbfa",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_8",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-06T00:41:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "76aa24ec-e293-4303-9046-fb5c2d95ffe6",
+      "content": "Why did revenue change last week?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_8",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-06T00:44:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "07e9cd5a-9d5e-4c65-bfca-63bc77033831",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_8",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-06T00:47:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "61d4451c-9570-4470-befc-2679fe380273",
+      "content": "What are the risks of microservices?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_8",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-06T00:50:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "d1f62868-f587-4d8c-bfd9-d8ad0e9bcdb6",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_8",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-06T00:54:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "4ebf6a6e-72e0-437f-b395-a4d546dbf0cc",
+      "content": "Help me write about transformers",
+      "role": "user",
+      "session_id": "knowledge_worker_session_8",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-06T00:57:52.338957",
+      "entities": [],
+      "topics": [
+        "transformers"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "f35913f1-706b-4c68-a988-a79e74e23c90",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_8",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-06T01:00:52.338957",
+      "entities": [],
+      "topics": [
+        "transformers"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "377be480-3a8e-49e0-90ac-b76aec9d0f2c",
+      "content": "Review this paragraph about retrieval",
+      "role": "user",
+      "session_id": "knowledge_worker_session_10",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T00:31:52.338957",
+      "entities": [],
+      "topics": [
+        "retrieval"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "6d318c31-4c92-40ca-9501-d61852ae6da9",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_10",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T00:36:52.338957",
+      "entities": [],
+      "topics": [
+        "retrieval"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "faf6a145-afc8-4ee8-8d20-7ec2844eb4ef",
+      "content": "Alternative approaches to scaling?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_10",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T00:37:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "5c106bef-f1a3-41ea-9187-de482bc9aab8",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_10",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T00:42:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "ec63467e-5d43-4867-ab02-3ebdb8b0f795",
+      "content": "Analyze the conversion rate trends",
+      "role": "user",
+      "session_id": "knowledge_worker_session_10",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T00:43:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "6206026b-582b-472e-a343-20a788f013ff",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_10",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T00:47:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "cc4f1ac7-56eb-49ec-ba1e-af06358d0f74",
+      "content": "Why did latency change last week?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_10",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T00:49:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "322e264f-7738-42c8-bbc4-925f440c0395",
+      "content": "Comparing across segments, I see...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_10",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T00:54:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "3a9f72b5-746b-4dfa-a9aa-331a2c018cea",
+      "content": "Why did latency change last week?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_10",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T00:57:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "28033861-7865-489a-8ae6-9fbad1ecdc03",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_10",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T01:02:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "9be2bfbf-7815-4df6-8fbd-60bbf525e8f6",
+      "content": "How might we improve Analytics Platform?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_43",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T01:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "57dfea9e-4ad4-471e-b05d-8e892c8ebbf9",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_43",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T01:33:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "3eeb802e-1fa4-4c81-a977-d787ebe47232",
+      "content": "How might we improve Project Alpha?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_43",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T01:35:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "132069a6-57bb-452d-baf2-c8a82ee7a2e1",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_43",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T01:37:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "1339c10b-d589-4442-981b-be8b39f56c7b",
+      "content": "Review this paragraph about pitch deck",
+      "role": "user",
+      "session_id": "knowledge_worker_session_43",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T01:39:52.338957",
+      "entities": [],
+      "topics": [
+        "pitch deck"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "5c19ddde-3be5-439b-87ae-599339ee0180",
+      "content": "Here's a draft for you to review...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_43",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T01:44:52.338957",
+      "entities": [],
+      "topics": [
+        "pitch deck"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "4c1b1d54-2af3-4ed7-982c-9dd62621a540",
+      "content": "Find papers about retrieval",
+      "role": "user",
+      "session_id": "knowledge_worker_session_43",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T01:46:52.338957",
+      "entities": [],
+      "topics": [
+        "retrieval"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "fce7a5bb-aa61-436b-8e7e-e9c5933f4a4b",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_43",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T01:47:52.338957",
+      "entities": [],
+      "topics": [
+        "retrieval"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "6fe0eeca-7cd0-4f38-b622-1091edf73a14",
+      "content": "Alternative approaches to latency?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_43",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T01:50:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "df50caa3-d544-4547-aa64-da5fca76b7df",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_43",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-08T01:54:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "d2e9c751-702d-42d5-818b-4250eea7aba7",
+      "content": "Draft an email to Jerry Tworek about pitch deck",
+      "role": "user",
+      "session_id": "knowledge_worker_session_21",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T18:31:52.338957",
+      "entities": [
+        "Jerry Tworek",
+        "OpenAI"
+      ],
+      "topics": [
+        "AI agents",
+        "reinforcement learning",
+        "pitch deck"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "7bb4c9ce-5580-4c03-b4fa-99d055118ed7",
+      "content": "Here's a draft for you to review...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_21",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T18:32:52.338957",
+      "entities": [
+        "Jerry Tworek",
+        "OpenAI"
+      ],
+      "topics": [
+        "AI agents",
+        "reinforcement learning",
+        "pitch deck"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "6226989f-63cc-4ae3-b36c-fa3914d3e6ad",
+      "content": "Ideas for user research?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_21",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T18:34:52.338957",
+      "entities": [],
+      "topics": [
+        "user research"
+      ],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "db090f42-915a-441d-8601-9b089dfb2d57",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_21",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T18:35:52.338957",
+      "entities": [],
+      "topics": [
+        "user research"
+      ],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "104b211e-e6e3-4fae-abeb-884462acaf7e",
+      "content": "Alternative approaches to cost?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_21",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T18:37:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "1fc4f52e-8df3-4d8d-8969-2ba865523e44",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_21",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T18:40:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "97193a1b-a894-4c89-9758-4fcb8238ad6c",
+      "content": "Summarize the state of A/B testing",
+      "role": "user",
+      "session_id": "knowledge_worker_session_21",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T18:42:52.338957",
+      "entities": [],
+      "topics": [
+        "A/B testing"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "3754a79e-8261-4490-a98f-2d5feb3177a1",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_21",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T18:46:52.338957",
+      "entities": [],
+      "topics": [
+        "A/B testing"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "14f1357c-5296-4685-965e-8e877be219f1",
+      "content": "How might we improve Auth Service?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_21",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T18:47:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "fe5af957-bb22-406c-aa8a-2e69ba21962d",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_21",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T18:48:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "2b47c1f3-5587-462d-b5e0-3438a8043fd8",
+      "content": "Summarize the state of testing",
+      "role": "user",
+      "session_id": "knowledge_worker_session_19",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T19:31:52.338957",
+      "entities": [],
+      "topics": [
+        "testing"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "aafb6883-c981-4edf-84c8-cafb08f751e0",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_19",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T19:33:52.338957",
+      "entities": [],
+      "topics": [
+        "testing"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "ffca3562-a491-434a-8e50-f64efac5711d",
+      "content": "Pros and cons of monolith?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_19",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T19:34:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "8f2a9fc4-4850-490d-9d41-5f9b9cef70ad",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_19",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T19:36:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "41d39790-7f9f-47d3-9de7-42f1283ec76f",
+      "content": "Find papers about SLA",
+      "role": "user",
+      "session_id": "knowledge_worker_session_19",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T19:39:52.338957",
+      "entities": [],
+      "topics": [
+        "SLA"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "b3361e10-38c8-44d1-a37b-65330cb0d170",
+      "content": "Here's what I found about SLA...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_19",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T19:44:52.338957",
+      "entities": [],
+      "topics": [
+        "SLA"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "e4d72ed6-5bae-40ca-85a9-09ff871d627d",
+      "content": "How might we improve API Gateway?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_19",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T19:46:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "f544c920-4855-458b-8fa3-4af87423393e",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_19",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T19:49:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "b42baa39-075f-4fad-9c10-39a9fa855127",
+      "content": "Compare latency across regions",
+      "role": "user",
+      "session_id": "knowledge_worker_session_19",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T19:51:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "d808db6c-cd7a-4362-89ee-650a74aaf78a",
+      "content": "Comparing across segments, I see...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_19",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T19:54:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "27bdcd56-d723-4346-b079-cae3ef3a92c3",
+      "content": "How should I structure the introduction section?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_7",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T21:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "533b7e04-86a8-485e-b98f-2002d7e88990",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_7",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T21:33:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "41fb2934-04bf-490f-b86d-0aec8317e9f2",
+      "content": "Forecast revenue for next quarter",
+      "role": "user",
+      "session_id": "knowledge_worker_session_7",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T21:34:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "74805b4f-2433-46ec-baa9-dc10cdc79e7b",
+      "content": "The trend shows... The main driver is...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_7",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T21:37:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "56b4156d-773c-47fb-94dc-200f2fd8268b",
+      "content": "What's the latest on testing?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_7",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T21:39:52.338957",
+      "entities": [],
+      "topics": [
+        "testing"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "cd79ed55-98fe-4dbb-ab8e-24aa87acf152",
+      "content": "Here's what I found about testing...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_7",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T21:44:52.338957",
+      "entities": [],
+      "topics": [
+        "testing"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "d4cc1bd0-5be3-46a9-aab8-920920e84d68",
+      "content": "How does culture compare to churn?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_7",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T21:45:52.338957",
+      "entities": [],
+      "topics": [
+        "culture",
+        "churn"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "16b87bde-fc1b-489e-834d-c33c8f9737f9",
+      "content": "Here's what I found about culture...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_7",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T21:47:52.338957",
+      "entities": [],
+      "topics": [
+        "culture",
+        "churn"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "af101f9e-02d5-4efd-837e-99b729499a30",
+      "content": "Find papers about testing",
+      "role": "user",
+      "session_id": "knowledge_worker_session_7",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T21:48:52.338957",
+      "entities": [],
+      "topics": [
+        "testing"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "6447a677-0775-42f4-bb58-39872d6b8622",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_7",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T21:51:52.338957",
+      "entities": [],
+      "topics": [
+        "testing"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "b7e29aec-2033-4a7f-8814-4083882a69a5",
+      "content": "Draft an email to Dharsha Udayakumar about user research",
+      "role": "user",
+      "session_id": "knowledge_worker_session_34",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T23:31:52.338957",
+      "entities": [
+        "Dharsha Udayakumar",
+        "T-Hub"
+      ],
+      "topics": [
+        "user research",
+        "incubation",
+        "startups"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "b8cb55a4-9af8-4e2e-82fa-0d7904afb125",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_34",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T23:34:52.338957",
+      "entities": [
+        "Dharsha Udayakumar",
+        "T-Hub"
+      ],
+      "topics": [
+        "user research",
+        "incubation",
+        "startups"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "2c2b8218-80fa-4134-b99c-641b307d3eec",
+      "content": "Forecast revenue for next quarter",
+      "role": "user",
+      "session_id": "knowledge_worker_session_34",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T23:35:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "bcceb73c-c006-4021-b251-5aec871c65f6",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_34",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T23:40:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "0be030ad-89e6-4298-a7d8-d7835eeb59b1",
+      "content": "Alternative approaches to scaling?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_34",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T23:41:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "d4fe0e60-625e-4988-9093-cd50374a146d",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_34",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T23:46:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "3b9205eb-82ce-4082-92ee-192cd37ece3a",
+      "content": "Ideas for encryption?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_34",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T23:48:52.338957",
+      "entities": [],
+      "topics": [
+        "encryption"
+      ],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "5d633015-7a3d-4c6b-b7cc-825310981a84",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_34",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T23:52:52.338957",
+      "entities": [],
+      "topics": [
+        "encryption"
+      ],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "44ed3947-3ff2-4382-89ce-5a53a72e01a8",
+      "content": "Forecast revenue for next quarter",
+      "role": "user",
+      "session_id": "knowledge_worker_session_34",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T23:54:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "91fe5f8a-c95e-4367-8bcd-0a2a3168ff22",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_34",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-10T23:57:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "f4412ef0-0f16-466b-869e-1ac40a9c3910",
+      "content": "Draft an email to Maria Garcia about hiring",
+      "role": "user",
+      "session_id": "knowledge_worker_session_36",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-11T01:31:52.338957",
+      "entities": [
+        "Maria Garcia",
+        "Figma"
+      ],
+      "topics": [
+        "hiring",
+        "UI/UX",
+        "design systems"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "97121ec6-8686-4a56-bb6f-5f9c7b3fe152",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_36",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-11T01:32:52.338957",
+      "entities": [
+        "Maria Garcia",
+        "Figma"
+      ],
+      "topics": [
+        "hiring",
+        "UI/UX",
+        "design systems"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "602bd695-0333-4182-97e7-0860e3779228",
+      "content": "Forecast user engagement for next quarter",
+      "role": "user",
+      "session_id": "knowledge_worker_session_36",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-11T01:33:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "537e3de6-a1e1-4e21-9902-1bec98808aea",
+      "content": "Comparing across segments, I see...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_36",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-11T01:34:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "10343fd0-b069-47c3-a5ad-cea7d65accb1",
+      "content": "Find papers about compliance",
+      "role": "user",
+      "session_id": "knowledge_worker_session_36",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-11T01:37:52.338957",
+      "entities": [],
+      "topics": [
+        "compliance"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "1eab7dcd-0cdd-4794-b9df-b1b33c845595",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_36",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-11T01:42:52.338957",
+      "entities": [],
+      "topics": [
+        "compliance"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "ed9cbc0e-ce55-4ebb-a6bf-03a998e4f387",
+      "content": "Compare conversion rate across regions",
+      "role": "user",
+      "session_id": "knowledge_worker_session_36",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-11T01:45:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "6bb6f254-dceb-4358-976c-b8c0dff4e872",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_36",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-11T01:48:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "8caec127-07c2-41f6-a4d0-bfecd93d215c",
+      "content": "Help me write about metrics",
+      "role": "user",
+      "session_id": "knowledge_worker_session_36",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-11T01:51:52.338957",
+      "entities": [],
+      "topics": [
+        "metrics"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "58365082-38c0-4c3e-9493-e5b957fec27b",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_36",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-11T01:55:52.338957",
+      "entities": [],
+      "topics": [
+        "metrics"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "370ce6dc-99a1-4753-89c9-b562830e6849",
+      "content": "Why did conversion rate change last week?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_28",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T16:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "91396c36-eaa4-47a0-8fb1-46479f935f64",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_28",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T16:34:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "ae424081-f7fc-4052-b551-bc11395965c3",
+      "content": "How might we improve Notification Service?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_28",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T16:37:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "3bc8c075-5e36-4019-82ba-a85327b45f32",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_28",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T16:42:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "476fadf3-bd9a-482a-b07e-efbe65a2c06b",
+      "content": "Alternative approaches to cost?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_28",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T16:44:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "b55021cf-8914-42d5-9f72-8506eb0c4023",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_28",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T16:48:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "0e1828a2-9ac4-438d-aa76-55a2d0679fd6",
+      "content": "Find papers about valuation",
+      "role": "user",
+      "session_id": "knowledge_worker_session_28",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T16:50:52.338957",
+      "entities": [],
+      "topics": [
+        "valuation"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "ee72926d-f97d-47ce-be8a-6296c413e41b",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_28",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T16:54:52.338957",
+      "entities": [],
+      "topics": [
+        "valuation"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "f3b9d8bb-f94e-4618-b383-772052d94589",
+      "content": "How might we improve Mobile App?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_28",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T16:57:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "7f09cbde-b118-4b41-a073-44b755424581",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_28",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T16:58:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "14675503-82f9-4375-ac4f-0b5eff13b1d4",
+      "content": "What's driving latency?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_3",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T22:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "9faf372a-fc05-4bf9-a08f-28b039549bde",
+      "content": "The trend shows... The main driver is...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_3",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T22:36:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "620846fb-fcf3-4450-a316-56d56ab56343",
+      "content": "What's the latest on security?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_3",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T22:38:52.338957",
+      "entities": [],
+      "topics": [
+        "security"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "421026ef-8bf3-4ee9-aa07-84c3f6dfa407",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_3",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T22:39:52.338957",
+      "entities": [],
+      "topics": [
+        "security"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "c1f4c08f-99b4-471f-94a6-1e8fcbd7af8c",
+      "content": "Summarize the state of compliance",
+      "role": "user",
+      "session_id": "knowledge_worker_session_3",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T22:41:52.338957",
+      "entities": [],
+      "topics": [
+        "compliance"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "c930b942-658b-4e3b-9856-8d02143ee599",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_3",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T22:45:52.338957",
+      "entities": [],
+      "topics": [
+        "compliance"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "98640850-0e88-42e8-ac3c-350bcf66a6df",
+      "content": "What are the risks of serverless?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_3",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T22:48:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "2ff02510-97a8-467d-be20-359f8e3b9eeb",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_3",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T22:52:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "17d45815-0410-4fc7-92f5-209f18097e3c",
+      "content": "Review this paragraph about SLA",
+      "role": "user",
+      "session_id": "knowledge_worker_session_3",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T22:53:52.338957",
+      "entities": [],
+      "topics": [
+        "SLA"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "5edd4859-4332-4a13-93d8-c908984e6b90",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_3",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-13T22:56:52.338957",
+      "entities": [],
+      "topics": [
+        "SLA"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "89e122dc-ed5b-4e39-9398-2b33ac0f7781",
+      "content": "Who are the key players in AI agents?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_39",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T01:31:52.338957",
+      "entities": [],
+      "topics": [
+        "AI agents"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "b0441c21-258c-4cfe-aa58-f36aae7cbf37",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_39",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T01:34:52.338957",
+      "entities": [],
+      "topics": [
+        "AI agents"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "0c5777c5-5e89-4e97-8463-0036de89b7e1",
+      "content": "What's the latest on user research?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_39",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T01:37:52.338957",
+      "entities": [],
+      "topics": [
+        "user research"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "4a1b99f5-8b17-4c92-b396-ae811b7fd53e",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_39",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T01:40:52.338957",
+      "entities": [],
+      "topics": [
+        "user research"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "39f34695-f6c4-421c-8ce6-389cbaedd9b1",
+      "content": "How does AI agents compare to culture?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_39",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T01:42:52.338957",
+      "entities": [],
+      "topics": [
+        "AI agents",
+        "culture"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "102ca3f6-230b-45b8-abbd-818817f52786",
+      "content": "Here's what I found about AI agents...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_39",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T01:44:52.338957",
+      "entities": [],
+      "topics": [
+        "AI agents",
+        "culture"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "1e984671-3c27-445d-87c7-764a81a9044e",
+      "content": "Forecast revenue for next quarter",
+      "role": "user",
+      "session_id": "knowledge_worker_session_39",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T01:46:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "f94b8b41-5f59-414b-99b3-3324b800571d",
+      "content": "Comparing across segments, I see...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_39",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T01:49:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "133c116b-3ea9-4f7b-8aea-942abe90f759",
+      "content": "Find papers about MongoDB",
+      "role": "user",
+      "session_id": "knowledge_worker_session_39",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T01:52:52.338957",
+      "entities": [],
+      "topics": [
+        "MongoDB"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "8c517b39-484d-4481-915a-d4bde110cf22",
+      "content": "Here's what I found about MongoDB...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_39",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T01:54:52.338957",
+      "entities": [],
+      "topics": [
+        "MongoDB"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "94641207-f55e-454c-b37a-527e35a55d3c",
+      "content": "What are the risks of microservices?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_30",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T19:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "f12838dd-c25a-41c0-ac01-e0247f3dbfb6",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_30",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T19:33:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "a28ebbe5-9d8b-452b-914b-126b8bab92c1",
+      "content": "Pros and cons of monolith?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_30",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T19:34:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "784caa57-87ad-410a-8bcf-b8467fa2ea89",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_30",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T19:38:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "3bcd7bb1-05fc-4319-9d1d-b8ae37d4c5b9",
+      "content": "What are the risks of monolith?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_30",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T19:39:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "46c9d8a4-415f-408d-8ad9-419968ff1f7f",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_30",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T19:44:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "391e21d6-d939-4fed-9dc2-ccd6fc6eea88",
+      "content": "Alternative approaches to cost?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_30",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T19:47:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "32fc4b50-a2f3-45eb-98b6-fc51d087ef94",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_30",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T19:50:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "5908df51-cda1-459e-a3d3-dd4f4c64ffe1",
+      "content": "Compare conversion rate across devices",
+      "role": "user",
+      "session_id": "knowledge_worker_session_30",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T19:52:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "dd19edad-8ae9-4046-b32a-5addd74dcf0d",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_30",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T19:57:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "b32f9083-9c91-4547-bdac-cdfe430cfd95",
+      "content": "Draft an email to Jerry Tworek about encryption",
+      "role": "user",
+      "session_id": "knowledge_worker_session_29",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T22:31:52.338957",
+      "entities": [
+        "Jerry Tworek",
+        "OpenAI"
+      ],
+      "topics": [
+        "AI agents",
+        "reinforcement learning",
+        "encryption"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "0440dc56-d7a3-4a98-b2aa-2cf5504c2709",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_29",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T22:36:52.338957",
+      "entities": [
+        "Jerry Tworek",
+        "OpenAI"
+      ],
+      "topics": [
+        "AI agents",
+        "reinforcement learning",
+        "encryption"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "118915f0-dcbb-4dd9-87ef-fed9c2ec88e6",
+      "content": "Analyze the latency trends",
+      "role": "user",
+      "session_id": "knowledge_worker_session_29",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T22:38:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "e0c8ea93-edbd-4b55-9224-8b7ed5629126",
+      "content": "Comparing across segments, I see...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_29",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T22:41:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "01bcc7ca-ec55-4531-8854-bce65239e3aa",
+      "content": "What's the latest on encryption?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_29",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T22:43:52.338957",
+      "entities": [],
+      "topics": [
+        "encryption"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "a7882f35-8453-448d-8a21-d98d88847610",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_29",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T22:46:52.338957",
+      "entities": [],
+      "topics": [
+        "encryption"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "fe0f6d86-5e6b-44f2-8388-c91225113c3f",
+      "content": "Review this paragraph about MongoDB",
+      "role": "user",
+      "session_id": "knowledge_worker_session_29",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T22:47:52.338957",
+      "entities": [],
+      "topics": [
+        "MongoDB"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "453a0233-2dac-4532-b774-34cd56de6a1b",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_29",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T22:50:52.338957",
+      "entities": [],
+      "topics": [
+        "MongoDB"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "a61bd6b5-8d69-4cc6-9f36-b08aaa032f52",
+      "content": "How should I structure the results section?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_29",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T22:51:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "d329af23-a0de-406a-b066-7ec1802aacb6",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_29",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-14T22:55:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "02a95325-a82d-43d1-bebd-d05b50132b13",
+      "content": "What are the risks of microservices?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_14",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T13:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "7ea17dc4-48cb-4097-bd28-7c0354c05e30",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_14",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T13:32:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "3fc481c4-66f3-4062-b04e-c7239d87efa8",
+      "content": "Why did conversion rate change last week?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_14",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T13:35:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "02765989-1780-4409-87c8-7093339beeb1",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_14",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T13:36:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "cce33643-ccc4-4421-83ca-f0abc59d6462",
+      "content": "Analyze the user engagement trends",
+      "role": "user",
+      "session_id": "knowledge_worker_session_14",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T13:39:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "09b12fe7-7350-4c3b-92bf-e278a481c393",
+      "content": "The trend shows... The main driver is...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_14",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T13:42:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "b123ef60-afaf-4a15-badd-6e6ab4ff9ff9",
+      "content": "Ideas for onboarding?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_14",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T13:44:52.338957",
+      "entities": [],
+      "topics": [
+        "onboarding"
+      ],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "e73c52fb-be03-4c89-a8eb-5f77a5c10b81",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_14",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T13:46:52.338957",
+      "entities": [],
+      "topics": [
+        "onboarding"
+      ],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "281f6280-9944-4168-8620-906150682b54",
+      "content": "Alternative approaches to cost?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_14",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T13:48:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "c623a571-d4a1-4ad6-8fd2-91bcbb7bcfce",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_14",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T13:52:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "2bfd4b9d-fed4-4411-94e7-4de05a955218",
+      "content": "Forecast revenue for next quarter",
+      "role": "user",
+      "session_id": "knowledge_worker_session_35",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T17:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "e091d7eb-97a9-4993-912b-924c214999c4",
+      "content": "Comparing across segments, I see...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_35",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T17:34:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "6557ad1e-51fd-4207-aa71-fb1ef776c84c",
+      "content": "Draft an email to Maria Garcia about valuation",
+      "role": "user",
+      "session_id": "knowledge_worker_session_35",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T17:35:52.338957",
+      "entities": [
+        "Maria Garcia",
+        "Figma"
+      ],
+      "topics": [
+        "valuation",
+        "UI/UX",
+        "design systems"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "c21866d6-5247-416c-9eec-f0699ed2c9d8",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_35",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T17:40:52.338957",
+      "entities": [
+        "Maria Garcia",
+        "Figma"
+      ],
+      "topics": [
+        "valuation",
+        "UI/UX",
+        "design systems"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "704fc57c-e4cd-451d-8e52-963718c80d46",
+      "content": "What's driving conversion rate?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_35",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T17:43:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "7f7085bf-cb17-4556-bcc4-21d69f5ac425",
+      "content": "The trend shows... The main driver is...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_35",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T17:47:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "2af4de9e-df87-417e-9328-0178620a08e2",
+      "content": "Find papers about interviews",
+      "role": "user",
+      "session_id": "knowledge_worker_session_35",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T17:50:52.338957",
+      "entities": [],
+      "topics": [
+        "interviews"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "5e2743bb-4375-49eb-ab27-be9aefa871da",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_35",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T17:53:52.338957",
+      "entities": [],
+      "topics": [
+        "interviews"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "1a147ac8-26ab-42c3-a414-55dbfb574631",
+      "content": "Find papers about compensation",
+      "role": "user",
+      "session_id": "knowledge_worker_session_35",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T17:56:52.338957",
+      "entities": [],
+      "topics": [
+        "compensation"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "dbc3f44b-df82-4dd1-9863-fc9eb2309c68",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_35",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-18T18:01:52.338957",
+      "entities": [],
+      "topics": [
+        "compensation"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "7ded9126-bd90-4c3b-835c-d25a47e06a51",
+      "content": "Ideas for term sheet?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_26",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-19T15:31:52.338957",
+      "entities": [],
+      "topics": [
+        "term sheet"
+      ],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "96c2f78d-848e-494d-a00d-b2ec92199b59",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_26",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-19T15:33:52.338957",
+      "entities": [],
+      "topics": [
+        "term sheet"
+      ],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "3ddf7817-05e0-4fd2-bc9d-f08a04d7da0c",
+      "content": "Alternative approaches to scaling?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_26",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-19T15:35:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "ab60ec65-106c-40ea-b1e1-b24a97ffa97c",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_26",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-19T15:38:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "70567251-d968-4ce6-8b53-8b2e99d23e81",
+      "content": "Find papers about migrations",
+      "role": "user",
+      "session_id": "knowledge_worker_session_26",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-19T15:39:52.338957",
+      "entities": [],
+      "topics": [
+        "migrations"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "6a582e04-da51-4fbc-8edf-26206c29f043",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_26",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-19T15:44:52.338957",
+      "entities": [],
+      "topics": [
+        "migrations"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "25cb8213-1539-4866-86df-e6ff2f7304df",
+      "content": "Help me write about GDPR",
+      "role": "user",
+      "session_id": "knowledge_worker_session_26",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-19T15:45:52.338957",
+      "entities": [],
+      "topics": [
+        "GDPR"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "9e550b60-1148-4850-8519-7d2611b4ca97",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_26",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-19T15:49:52.338957",
+      "entities": [],
+      "topics": [
+        "GDPR"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "1540877d-4b32-44b8-82f6-1e2780507909",
+      "content": "How might we improve Mobile App?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_26",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-19T15:51:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "8b493387-bf22-400a-a28e-d8aef57a4659",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_26",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-19T15:53:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "b4936fb8-60a4-418d-b279-7286335e3917",
+      "content": "Draft an email to Anna Schmidt about AI agents",
+      "role": "user",
+      "session_id": "knowledge_worker_session_24",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T13:31:52.338957",
+      "entities": [
+        "Anna Schmidt",
+        "OpenAI"
+      ],
+      "topics": [
+        "regulation",
+        "AI governance",
+        "AI agents"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "5ecd9fd7-2820-4a74-9146-3cd150a180a4",
+      "content": "Here's a draft for you to review...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_24",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T13:33:52.338957",
+      "entities": [
+        "Anna Schmidt",
+        "OpenAI"
+      ],
+      "topics": [
+        "regulation",
+        "AI governance",
+        "AI agents"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "9861ab6d-35bb-4994-8a12-c975002cf34d",
+      "content": "Find papers about AI agents",
+      "role": "user",
+      "session_id": "knowledge_worker_session_24",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T13:34:52.338957",
+      "entities": [],
+      "topics": [
+        "AI agents"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "5ae418c8-7d75-4809-b9ae-b80ec6fa6aa4",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_24",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T13:38:52.338957",
+      "entities": [],
+      "topics": [
+        "AI agents"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "0d549fe5-dd38-43a2-8ffc-21b152c0a67a",
+      "content": "Alternative approaches to scaling?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_24",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T13:40:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "e09b39aa-8f30-4e5e-bc09-af3e386a9e7c",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_24",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T13:42:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "4439d80e-cc18-4487-bf47-101e269cbf69",
+      "content": "Review this paragraph about memory systems",
+      "role": "user",
+      "session_id": "knowledge_worker_session_24",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T13:44:52.338957",
+      "entities": [],
+      "topics": [
+        "memory systems"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "8046c6c1-2adb-4b22-81f4-8d4362c39566",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_24",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T13:46:52.338957",
+      "entities": [],
+      "topics": [
+        "memory systems"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "089b793d-c1f5-401c-9527-02b52cc3d759",
+      "content": "Who are the key players in CI/CD?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_24",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T13:49:52.338957",
+      "entities": [],
+      "topics": [
+        "CI/CD"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "1b08aad0-bf41-4e0c-ad70-96c615a0539d",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_24",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T13:50:52.338957",
+      "entities": [],
+      "topics": [
+        "CI/CD"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "c002147d-358a-4317-9e0f-875bde88731c",
+      "content": "Find papers about Redis",
+      "role": "user",
+      "session_id": "knowledge_worker_session_25",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T20:31:52.338957",
+      "entities": [],
+      "topics": [
+        "Redis"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "340d06b1-49a6-4cb3-b5fb-5797c8e3998c",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_25",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T20:35:52.338957",
+      "entities": [],
+      "topics": [
+        "Redis"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "90e3338c-905f-4786-8335-98fc68ccd427",
+      "content": "How does A/B testing compare to churn?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_25",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T20:38:52.338957",
+      "entities": [],
+      "topics": [
+        "churn",
+        "A/B testing"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "67e0419b-35b2-4c2a-8a8d-2bf4c220f9bd",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_25",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T20:41:52.338957",
+      "entities": [],
+      "topics": [
+        "churn",
+        "A/B testing"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "f0852ca4-c3da-4127-aa1c-3ef00fe50b2e",
+      "content": "Find papers about valuation",
+      "role": "user",
+      "session_id": "knowledge_worker_session_25",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T20:44:52.338957",
+      "entities": [],
+      "topics": [
+        "valuation"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "e8a7e5f7-22d9-40a6-a37c-6bc86a6a7e49",
+      "content": "Here's what I found about valuation...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_25",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T20:45:52.338957",
+      "entities": [],
+      "topics": [
+        "valuation"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "73408bbc-e8e1-437b-9c68-f0dc3f03e9d0",
+      "content": "What's the latest on valuation?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_25",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T20:47:52.338957",
+      "entities": [],
+      "topics": [
+        "valuation"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "75707808-f42c-4857-8d50-79ac70aabdfb",
+      "content": "Here's what I found about valuation...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_25",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T20:52:52.338957",
+      "entities": [],
+      "topics": [
+        "valuation"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "0a69aa0c-258c-47ea-85ff-04badb8d811c",
+      "content": "Summarize the state of valuation",
+      "role": "user",
+      "session_id": "knowledge_worker_session_25",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T20:53:52.338957",
+      "entities": [],
+      "topics": [
+        "valuation"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "25d835b7-4b2b-4f5e-95e3-c38fabf3485e",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_25",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-20T20:54:52.338957",
+      "entities": [],
+      "topics": [
+        "valuation"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "af81f8ef-94d3-4755-97a0-9523399f1764",
+      "content": "Summarize the state of valuation",
+      "role": "user",
+      "session_id": "knowledge_worker_session_38",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-21T01:31:52.338957",
+      "entities": [],
+      "topics": [
+        "valuation"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "d906abc2-d5e6-466e-bf66-4cfb4d7f7d9f",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_38",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-21T01:32:52.338957",
+      "entities": [],
+      "topics": [
+        "valuation"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "de22fd05-e33e-42aa-8f20-7ee9d8cb92e0",
+      "content": "Why did latency change last week?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_38",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-21T01:33:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "a5519580-d67c-4477-a19a-013d169e3a48",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_38",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-21T01:38:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "60a88360-5b5d-493e-96b6-b750b0d0b9ff",
+      "content": "What's driving latency?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_38",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-21T01:40:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "2b7a0ed3-488b-4c66-a9ef-a5651e617999",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_38",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-21T01:45:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "80bf99f7-ba54-48b5-877a-175d13e50a1c",
+      "content": "Compare revenue across regions",
+      "role": "user",
+      "session_id": "knowledge_worker_session_38",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-21T01:48:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "f90727ca-c459-4615-9a66-e0d8c08ba9b3",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_38",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-21T01:49:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "4a30328d-5552-4b18-8184-89b169dcd7d8",
+      "content": "Who are the key players in retrieval?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_38",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-21T01:50:52.338957",
+      "entities": [],
+      "topics": [
+        "retrieval"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "25edd65f-555d-4fb3-9a52-d437db2ac807",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_38",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-21T01:54:52.338957",
+      "entities": [],
+      "topics": [
+        "retrieval"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "01cafd51-6b98-4278-b471-b799ed7eb4e6",
+      "content": "How might we improve Project Alpha?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_37",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T13:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "14f0efb9-4313-455d-a327-6bc4e1d488f1",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_37",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T13:35:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "b8e4f76e-0206-4c00-b07c-d8c9652d11a0",
+      "content": "Analyze the revenue trends",
+      "role": "user",
+      "session_id": "knowledge_worker_session_37",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T13:37:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "a53c9426-b00c-4843-b462-15ddab01dbe0",
+      "content": "The trend shows... The main driver is...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_37",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T13:42:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "442e1f77-08a2-48e4-b26e-a407815246e5",
+      "content": "Help me write about interviews",
+      "role": "user",
+      "session_id": "knowledge_worker_session_37",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T13:43:52.338957",
+      "entities": [],
+      "topics": [
+        "interviews"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "138ae335-b200-4e7b-a0ff-7fc2997c4fef",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_37",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T13:44:52.338957",
+      "entities": [],
+      "topics": [
+        "interviews"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "0d4ef6b8-7853-4754-b639-2cf12bf36b91",
+      "content": "What are the risks of microservices?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_37",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T13:46:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "346adf26-9fba-463b-a920-919e1c7806d6",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_37",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T13:50:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "bf9d70cb-2d46-4e7e-834a-1e3fb342b719",
+      "content": "Who are the key players in remote work?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_37",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T13:51:52.338957",
+      "entities": [],
+      "topics": [
+        "remote work"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "9546bcab-dc74-4a8c-a52c-978e5bfff399",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_37",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T13:54:52.338957",
+      "entities": [],
+      "topics": [
+        "remote work"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "1e3afc71-c026-4704-87c2-00fa4997a4f5",
+      "content": "What are the risks of serverless?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_41",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T18:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "0785149f-13b9-4485-a497-f5c13ca405d3",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_41",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T18:36:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "fdb03dd6-4caa-4c20-8858-910ea3766071",
+      "content": "How might we improve Project Alpha?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_41",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T18:39:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "e8d836af-2114-4471-b591-6617ce6f67f1",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_41",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T18:44:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "babf3ba0-3ddb-4145-b04d-99dff7193a25",
+      "content": "Make this more concise: the implementation details of the system",
+      "role": "user",
+      "session_id": "knowledge_worker_session_41",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T18:46:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "e4136025-37cd-4df1-81c3-33eedce72ad2",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_41",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T18:50:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "ed7c80d5-fbf2-418c-afbc-1c1f4a8b78a4",
+      "content": "Draft an email to Jennifer Liu about growth",
+      "role": "user",
+      "session_id": "knowledge_worker_session_41",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T18:52:52.338957",
+      "entities": [
+        "Jennifer Liu",
+        "Vercel"
+      ],
+      "topics": [
+        "Next.js",
+        "frontend",
+        "growth"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "02b57c18-d8f2-4c49-a1b7-1a3cedbd40bc",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_41",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T18:55:52.338957",
+      "entities": [
+        "Jennifer Liu",
+        "Vercel"
+      ],
+      "topics": [
+        "Next.js",
+        "frontend",
+        "growth"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "646d19a7-e8dd-492b-a70e-1aac64690114",
+      "content": "Summarize the state of encryption",
+      "role": "user",
+      "session_id": "knowledge_worker_session_41",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T18:57:52.338957",
+      "entities": [],
+      "topics": [
+        "encryption"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "5c710f8e-7bf2-41f5-8def-622ce551ddaf",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_41",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-22T18:58:52.338957",
+      "entities": [],
+      "topics": [
+        "encryption"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "b3cc5e21-97a1-4649-a470-adfb60a7d555",
+      "content": "How should I structure the results section?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_13",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T18:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "88c31d7c-2e41-43ab-b60e-f5572fe9c53f",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_13",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T18:34:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "417518b6-0226-46d7-b0dc-82b5c7c95ca6",
+      "content": "Who are the key players in hiring?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_13",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T18:36:52.338957",
+      "entities": [],
+      "topics": [
+        "hiring"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "783df82a-a3ef-4501-926c-cbcaef94ba28",
+      "content": "Here's what I found about hiring...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_13",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T18:39:52.338957",
+      "entities": [],
+      "topics": [
+        "hiring"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "b1774bd4-8013-467a-8b9c-660081047dc2",
+      "content": "Pros and cons of monolith?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_13",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T18:42:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "082814e1-d43d-46d2-aad9-485b1c1471a3",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_13",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T18:43:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "dd9aacc4-bd68-4f41-91f6-3a37df98be5a",
+      "content": "Forecast user engagement for next quarter",
+      "role": "user",
+      "session_id": "knowledge_worker_session_13",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T18:46:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "2e0a1fc2-e619-47a2-b3fd-18962d9424fa",
+      "content": "Comparing across segments, I see...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_13",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T18:48:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "1726e020-5c0c-4d5c-82c7-4711984c1b57",
+      "content": "Review this paragraph about encryption",
+      "role": "user",
+      "session_id": "knowledge_worker_session_13",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T18:51:52.338957",
+      "entities": [],
+      "topics": [
+        "encryption"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "0f25b8ab-aee7-49e6-b2ac-36b4522b8a6f",
+      "content": "Here's a draft for you to review...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_13",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T18:53:52.338957",
+      "entities": [],
+      "topics": [
+        "encryption"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "c14101b4-c8b3-4f21-a047-bfc9eb89eec4",
+      "content": "Forecast conversion rate for next quarter",
+      "role": "user",
+      "session_id": "knowledge_worker_session_18",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T20:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "f2ac8200-ac1c-40c3-9d5b-ed460b814143",
+      "content": "Comparing across segments, I see...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_18",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T20:35:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "de6d6884-bd06-487b-bcd7-d86b3d8c0e40",
+      "content": "How should I structure the methodology section?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_18",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T20:37:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "dd002b09-6918-41bb-a03f-6acbec4c5b44",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_18",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T20:40:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "bcb81dfc-27ab-4583-a0dd-b9feae1bfcf8",
+      "content": "Make this more concise: the implementation details of the system",
+      "role": "user",
+      "session_id": "knowledge_worker_session_18",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T20:42:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "65ed4871-ff76-4cb6-bb5a-a12f7a5be127",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_18",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T20:43:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "3bcbde41-918d-460f-940f-8aa2ffd07708",
+      "content": "What's the latest on interviews?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_18",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T20:46:52.338957",
+      "entities": [],
+      "topics": [
+        "interviews"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "801d8baf-6622-4a13-9493-45b33cad12ea",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_18",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T20:48:52.338957",
+      "entities": [],
+      "topics": [
+        "interviews"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "04a8f59e-9748-4b38-8f14-04eee020ee0d",
+      "content": "How should I structure the conclusion section?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_18",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T20:49:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "89eb5e60-cde0-48e0-baca-e96af714fca5",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_18",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T20:51:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "323704af-80e0-4668-bb89-89714958b820",
+      "content": "How might we improve Project Alpha?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_44",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T22:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "6a55b5cd-c9b2-49aa-929f-7e98fd0c1f9d",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_44",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T22:35:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "1cd63512-3d85-4f0f-a427-340868dd5fab",
+      "content": "How should I structure the introduction section?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_44",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T22:37:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "008c5cdf-532b-4956-af95-654483728697",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_44",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T22:38:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "6efce2f5-813d-451e-bd3a-b6e473a6279c",
+      "content": "Who are the key players in deployment?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_44",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T22:39:52.338957",
+      "entities": [],
+      "topics": [
+        "deployment"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "52256fb2-2c7f-4de6-ad77-874118329be8",
+      "content": "Here's what I found about deployment...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_44",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T22:44:52.338957",
+      "entities": [],
+      "topics": [
+        "deployment"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "bfddda98-f224-4949-9ad5-7362e722f560",
+      "content": "Analyze the user engagement trends",
+      "role": "user",
+      "session_id": "knowledge_worker_session_44",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T22:46:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "e4d524d5-01d8-4085-98ce-a16afea37f9d",
+      "content": "The trend shows... The main driver is...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_44",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T22:47:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "9f02d76d-88f6-48d7-9cb0-32c79fc820b7",
+      "content": "Who are the key players in AI agents?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_44",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T22:50:52.338957",
+      "entities": [],
+      "topics": [
+        "AI agents"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "5ea0215d-be19-43ee-8e39-fec90aedd274",
+      "content": "Here's what I found about AI agents...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_44",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-23T22:52:52.338957",
+      "entities": [],
+      "topics": [
+        "AI agents"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "f64fc96d-a512-4e22-a72d-fe1fdf18ee0c",
+      "content": "What's driving user engagement?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_2",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T14:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "716d6e85-1481-4387-b8d2-89ae14745874",
+      "content": "The trend shows... The main driver is...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_2",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T14:33:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "e1e05578-9647-4dfd-8a9f-7a9bb9fc954c",
+      "content": "Review this paragraph about AI agents",
+      "role": "user",
+      "session_id": "knowledge_worker_session_2",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T14:36:52.338957",
+      "entities": [],
+      "topics": [
+        "AI agents"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "b3d13ce2-b560-48ac-af0b-c88d817ac0b7",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_2",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T14:40:52.338957",
+      "entities": [],
+      "topics": [
+        "AI agents"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "e92fa11f-e97b-485f-b3e3-5a4000cd1e80",
+      "content": "How should I structure the introduction section?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_2",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T14:41:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "025baab7-0468-4f61-ad82-ca7379764bce",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_2",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T14:46:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "1acb5782-7e1f-4bec-a61f-3df87e9f50cc",
+      "content": "How might we improve Mobile App?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_2",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T14:48:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "3248b343-cb73-428e-9008-5b2ec21dcbe2",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_2",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T14:50:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "37ad892a-0a58-475c-852f-efff72f120cf",
+      "content": "Alternative approaches to scaling?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_2",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T14:53:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "9e92901f-44e6-45cd-a2a3-deb74717f6e1",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_2",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T14:54:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "03789e34-d633-49d7-b476-35ad2db2a5be",
+      "content": "How does churn compare to transformers?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_40",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T23:31:52.338957",
+      "entities": [],
+      "topics": [
+        "transformers",
+        "churn"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "cf0f8701-35d1-403c-811c-84d0842e2894",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_40",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T23:33:52.338957",
+      "entities": [],
+      "topics": [
+        "transformers",
+        "churn"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "52a8dc27-ba04-4095-9116-4a65e67d98c2",
+      "content": "Ideas for user research?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_40",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T23:36:52.338957",
+      "entities": [],
+      "topics": [
+        "user research"
+      ],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "d44305f5-eb82-4bf3-9abe-679644036bd5",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_40",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T23:40:52.338957",
+      "entities": [],
+      "topics": [
+        "user research"
+      ],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "f8ab9f33-761a-479b-8a48-6975096d2616",
+      "content": "Help me write about performance",
+      "role": "user",
+      "session_id": "knowledge_worker_session_40",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T23:41:52.338957",
+      "entities": [],
+      "topics": [
+        "performance"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "e7cdab9e-b757-4ae4-a1de-1ca6e338271b",
+      "content": "Here's a draft for you to review...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_40",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T23:44:52.338957",
+      "entities": [],
+      "topics": [
+        "performance"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "a926fbec-448b-4758-a4c3-55bb05566850",
+      "content": "Help me write about Redis",
+      "role": "user",
+      "session_id": "knowledge_worker_session_40",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T23:47:52.338957",
+      "entities": [],
+      "topics": [
+        "Redis"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "6bae0f0d-a750-4a05-ab9b-19bcb726318f",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_40",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T23:52:52.338957",
+      "entities": [],
+      "topics": [
+        "Redis"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "2f45099c-f665-43af-ac47-b2f1164624cb",
+      "content": "Find papers about churn",
+      "role": "user",
+      "session_id": "knowledge_worker_session_40",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T23:54:52.338957",
+      "entities": [],
+      "topics": [
+        "churn"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "2b0cb099-aada-4c60-948e-16df61689d5e",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_40",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-24T23:57:52.338957",
+      "entities": [],
+      "topics": [
+        "churn"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "0778e92b-d49b-4897-ac0b-79e783559f78",
+      "content": "Find papers about MongoDB",
+      "role": "user",
+      "session_id": "knowledge_worker_session_32",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-25T14:31:52.338957",
+      "entities": [],
+      "topics": [
+        "MongoDB"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "7e9706f6-408b-45ba-899e-20734ab427e1",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_32",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-25T14:34:52.338957",
+      "entities": [],
+      "topics": [
+        "MongoDB"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "644a79e3-946a-4698-97d6-9618e0dcfa6b",
+      "content": "Draft an email to Maria Garcia about debugging",
+      "role": "user",
+      "session_id": "knowledge_worker_session_32",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-25T14:37:52.338957",
+      "entities": [
+        "Maria Garcia",
+        "Figma"
+      ],
+      "topics": [
+        "UI/UX",
+        "debugging",
+        "design systems"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "6ace0739-2516-435c-817e-f1b23de648b2",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_32",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-25T14:41:52.338957",
+      "entities": [
+        "Maria Garcia",
+        "Figma"
+      ],
+      "topics": [
+        "UI/UX",
+        "debugging",
+        "design systems"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "0e978a91-38f7-4e80-b4d3-a0ae36aa9b82",
+      "content": "Summarize the state of MongoDB",
+      "role": "user",
+      "session_id": "knowledge_worker_session_32",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-25T14:44:52.338957",
+      "entities": [],
+      "topics": [
+        "MongoDB"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "8cf95e56-c4c0-42f6-98d0-3cf38fe3be00",
+      "content": "Here's what I found about MongoDB...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_32",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-25T14:49:52.338957",
+      "entities": [],
+      "topics": [
+        "MongoDB"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "765f5e43-2547-40af-82d0-afea89f82879",
+      "content": "What's driving user engagement?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_32",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-25T14:52:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "086150bc-6144-4468-95d9-6e6d4a189625",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_32",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-25T14:57:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "001d22b4-9836-4eb2-abc3-884f86f1b630",
+      "content": "Help me write about debugging",
+      "role": "user",
+      "session_id": "knowledge_worker_session_32",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-25T14:58:52.338957",
+      "entities": [],
+      "topics": [
+        "debugging"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "62602d69-f279-4e87-be12-53e3eb79baba",
+      "content": "Here's a draft for you to review...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_32",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-25T15:02:52.338957",
+      "entities": [],
+      "topics": [
+        "debugging"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "de1d94cf-41d4-41c7-8ef5-c1e1744e01df",
+      "content": "Summarize the state of investors",
+      "role": "user",
+      "session_id": "knowledge_worker_session_1",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T13:31:52.338957",
+      "entities": [],
+      "topics": [
+        "investors"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "760a2097-861b-4194-bc9c-ace3d9cfc7a8",
+      "content": "Here's what I found about investors...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_1",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T13:36:52.338957",
+      "entities": [],
+      "topics": [
+        "investors"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "b738ac8c-38b2-456c-b88d-c60f2537ca1b",
+      "content": "How does investors compare to A/B testing?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_1",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T13:37:52.338957",
+      "entities": [],
+      "topics": [
+        "A/B testing",
+        "investors"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "39e0d72f-96fb-43ed-aee1-c4a7e1eddc29",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_1",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T13:38:52.338957",
+      "entities": [],
+      "topics": [
+        "A/B testing",
+        "investors"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "671990ff-2d70-4c2d-bb33-9f092e0ec5c0",
+      "content": "How might we improve Project Alpha?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_1",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T13:39:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "3828bfc9-eacd-4e3b-bea7-7fe29020aed0",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_1",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T13:44:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "1db1b14c-36ea-4f02-b386-e6e9de7db0c5",
+      "content": "Find papers about investors",
+      "role": "user",
+      "session_id": "knowledge_worker_session_1",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T13:46:52.338957",
+      "entities": [],
+      "topics": [
+        "investors"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "2cfe7d62-7e19-4137-a8e1-1cd2c6e1b585",
+      "content": "Here's what I found about investors...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_1",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T13:51:52.338957",
+      "entities": [],
+      "topics": [
+        "investors"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "6d0911dd-ce18-484c-8a6c-4103860345eb",
+      "content": "How should I structure the conclusion section?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_1",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T13:53:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "639ebc42-5f4c-4327-8b25-066b9faa19dd",
+      "content": "Here's a draft for you to review...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_1",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T13:55:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "cbdfdca7-7b76-4540-8f44-721b0cc0f244",
+      "content": "What are the risks of microservices?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_4",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T16:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "1ead049c-2036-43ff-8746-6507cde376ee",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_4",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T16:36:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "b4c9e924-9e4c-4de5-bf15-ec65b76840d8",
+      "content": "Compare conversion rate across user types",
+      "role": "user",
+      "session_id": "knowledge_worker_session_4",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T16:38:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "263b43f1-b66a-43f8-b92a-fa8b3f118c71",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_4",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T16:41:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "9bd08178-8574-4b8d-b488-d9d04e9a03dd",
+      "content": "How does hiring compare to metrics?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_4",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T16:43:52.338957",
+      "entities": [],
+      "topics": [
+        "hiring",
+        "metrics"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "41671d00-f12c-4e81-9bad-7c60e95756c3",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_4",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T16:44:52.338957",
+      "entities": [],
+      "topics": [
+        "hiring",
+        "metrics"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "e2d73662-ab0f-4894-9350-e0aa18995d9f",
+      "content": "Why did latency change last week?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_4",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T16:47:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "7bc2f596-3ac3-4ab9-ac87-617579fcb454",
+      "content": "The trend shows... The main driver is...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_4",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T16:48:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "58ce49fa-62f0-47e2-8ef4-9a625e4d1661",
+      "content": "Ideas for compensation?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_4",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T16:49:52.338957",
+      "entities": [],
+      "topics": [
+        "compensation"
+      ],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "4cfc0648-cb18-4e74-a25b-a0d9a555d158",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_4",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T16:52:52.338957",
+      "entities": [],
+      "topics": [
+        "compensation"
+      ],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "82fdcb36-4771-4bd0-bb1f-472cc9a8cb4c",
+      "content": "Draft an email to Lisa Park about deployment",
+      "role": "user",
+      "session_id": "knowledge_worker_session_27",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T21:31:52.338957",
+      "entities": [
+        "Lisa Park",
+        "Amazon"
+      ],
+      "topics": [
+        "infrastructure",
+        "deployment",
+        "AWS"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "0922d672-0241-4e2d-83f5-4644cfaeb48e",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_27",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T21:34:52.338957",
+      "entities": [
+        "Lisa Park",
+        "Amazon"
+      ],
+      "topics": [
+        "infrastructure",
+        "deployment",
+        "AWS"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "df1973f3-3fbb-4176-a4e6-010d12da2088",
+      "content": "Summarize the state of term sheet",
+      "role": "user",
+      "session_id": "knowledge_worker_session_27",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T21:35:52.338957",
+      "entities": [],
+      "topics": [
+        "term sheet"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "08de996c-7fdb-4067-b198-a15c5f271d3f",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_27",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T21:39:52.338957",
+      "entities": [],
+      "topics": [
+        "term sheet"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "75dd04a7-90d5-402c-9963-d242c978fe6d",
+      "content": "Forecast latency for next quarter",
+      "role": "user",
+      "session_id": "knowledge_worker_session_27",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T21:40:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "d2bdb409-0fea-463c-b969-39d4b1537d7e",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_27",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T21:43:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "3bf37812-3213-48a0-8973-cd4cd12da199",
+      "content": "Why did latency change last week?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_27",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T21:46:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "71274d77-83d4-49e3-951f-b954236ba1d4",
+      "content": "The trend shows... The main driver is...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_27",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T21:49:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "ac399eb5-1312-49f7-ad98-f8c32f2f65fc",
+      "content": "What are the risks of monolith?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_27",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T21:52:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "61227b87-aca7-423b-8116-da020a3bbe50",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_27",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-26T21:55:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "4b03ea5b-f8a4-45a4-924c-7b4c2e0c53b0",
+      "content": "Why did latency change last week?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_23",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T01:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "8db23961-9c69-4f5e-90f4-f69cd24b9665",
+      "content": "Comparing across segments, I see...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_23",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T01:33:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "d27ee4ba-d9ba-47d6-9df3-49fd6d1663c4",
+      "content": "Find papers about fundraising",
+      "role": "user",
+      "session_id": "knowledge_worker_session_23",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T01:35:52.338957",
+      "entities": [],
+      "topics": [
+        "fundraising"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "c7b32f47-6646-42bb-b371-768bb5615f11",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_23",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T01:40:52.338957",
+      "entities": [],
+      "topics": [
+        "fundraising"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "de16ab81-6cea-48d7-89a4-2f5ea6bc054c",
+      "content": "Draft an email to Rachel Kim about MongoDB",
+      "role": "user",
+      "session_id": "knowledge_worker_session_23",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T01:43:52.338957",
+      "entities": [
+        "Rachel Kim",
+        "Databricks"
+      ],
+      "topics": [
+        "MongoDB",
+        "analytics",
+        "Spark"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "273e2fe9-5247-48f1-9e5f-c0c1b0045164",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_23",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T01:48:52.338957",
+      "entities": [
+        "Rachel Kim",
+        "Databricks"
+      ],
+      "topics": [
+        "MongoDB",
+        "analytics",
+        "Spark"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "22c2b81e-6f08-4a28-bc8e-e9d5c5fbf879",
+      "content": "Make this more concise: the implementation details of the system",
+      "role": "user",
+      "session_id": "knowledge_worker_session_23",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T01:51:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "db9707bf-c5ec-4202-aad9-371005100d52",
+      "content": "Here's a draft for you to review...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_23",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T01:54:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "cd762511-24bc-4ef7-ada8-278df37353db",
+      "content": "How might we improve Memory System?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_23",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T01:56:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "0482935b-b883-4307-be57-fd7c60d8e299",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_23",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T02:01:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "a9f93e8a-05c7-4e98-bbd9-3a80da751f40",
+      "content": "Who are the key players in pitch deck?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_6",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:31:52.338957",
+      "entities": [],
+      "topics": [
+        "pitch deck"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "d8792bb5-961e-45e4-b957-861acc9e0c17",
+      "content": "Draft an email to Maria Garcia about product roadmap",
+      "role": "user",
+      "session_id": "knowledge_worker_session_11",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:31:52.338957",
+      "entities": [
+        "Maria Garcia",
+        "Figma"
+      ],
+      "topics": [
+        "product roadmap",
+        "UI/UX",
+        "design systems"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "e1ade2d9-9d49-460b-a9da-e9cd0be0ac02",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_6",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:33:52.338957",
+      "entities": [],
+      "topics": [
+        "pitch deck"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "3e1b64ba-c79c-4ff9-abee-a47db8076f5f",
+      "content": "Ideas for SLA?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_6",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:34:52.338957",
+      "entities": [],
+      "topics": [
+        "SLA"
+      ],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "e548a6a6-d6b0-4c9c-83c1-3421d02b05c1",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_11",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:34:52.338957",
+      "entities": [
+        "Maria Garcia",
+        "Figma"
+      ],
+      "topics": [
+        "product roadmap",
+        "UI/UX",
+        "design systems"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "f511287d-a760-421b-b646-b9cd0aa63ad8",
+      "content": "What's the latest on growth?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_11",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:35:52.338957",
+      "entities": [],
+      "topics": [
+        "growth"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "2790bc06-e58a-4587-9034-190d5bb9ee56",
+      "content": "Here's what I found about growth...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_11",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:36:52.338957",
+      "entities": [],
+      "topics": [
+        "growth"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "5885f93d-f51f-46f4-a36d-b2b92a8cd5b1",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_6",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:37:52.338957",
+      "entities": [],
+      "topics": [
+        "SLA"
+      ],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "865462c4-d275-4137-9122-6bad5da48f05",
+      "content": "Pros and cons of microservices?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_6",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:38:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "2da62a9b-dbce-4d8c-a255-bc5b83a8c9f7",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_6",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:39:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "4992538a-181f-4144-8eb8-cecd52e0eb8c",
+      "content": "What's the latest on churn?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_11",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:39:52.338957",
+      "entities": [],
+      "topics": [
+        "churn"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "31c3a311-123c-4657-a7f1-a4c247c5b1ef",
+      "content": "What's the latest on migrations?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_6",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:40:52.338957",
+      "entities": [],
+      "topics": [
+        "migrations"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "ae0a0796-a393-45ca-b124-05dc84d8f257",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_11",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:41:52.338957",
+      "entities": [],
+      "topics": [
+        "churn"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "24e2ce8e-a935-483e-b169-7894000330ae",
+      "content": "Here's what I found about migrations...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_6",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:44:52.338957",
+      "entities": [],
+      "topics": [
+        "migrations"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "aa6f5c84-4f72-4449-bc5d-0b42b21cdcc3",
+      "content": "Pros and cons of monolith?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_11",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:44:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "f5e0b521-a757-4901-a7e3-3b6c675dd8cf",
+      "content": "Draft an email to Sarah Chen about growth",
+      "role": "user",
+      "session_id": "knowledge_worker_session_6",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:46:52.338957",
+      "entities": [
+        "Sarah Chen",
+        "Anthropic"
+      ],
+      "topics": [
+        "alignment",
+        "growth",
+        "safety"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "d9a26b65-f4c0-4d8b-aa5e-08d9b70b9981",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_6",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:49:52.338957",
+      "entities": [
+        "Sarah Chen",
+        "Anthropic"
+      ],
+      "topics": [
+        "alignment",
+        "growth",
+        "safety"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "30f9689c-dcf8-474f-8248-ae259e1325ce",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_11",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:49:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "1666e5ce-7ebc-4e70-b11c-f508eaa347f7",
+      "content": "Who are the key players in MongoDB?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_11",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:51:52.338957",
+      "entities": [],
+      "topics": [
+        "MongoDB"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "76fe7cfe-bb37-4f80-bdb3-4e7b06005a34",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_11",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T15:52:52.338957",
+      "entities": [],
+      "topics": [
+        "MongoDB"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "9deab5ab-7f28-4f72-bafb-1253725494ce",
+      "content": "Review this paragraph about transformers",
+      "role": "user",
+      "session_id": "knowledge_worker_session_15",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T16:31:52.338957",
+      "entities": [],
+      "topics": [
+        "transformers"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "680cd776-742f-4d96-ac3a-ff9ba1ac6ccd",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_15",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T16:36:52.338957",
+      "entities": [],
+      "topics": [
+        "transformers"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "8e84813b-b74b-47b6-8cc7-1bbb6c2f0988",
+      "content": "Summarize the state of database",
+      "role": "user",
+      "session_id": "knowledge_worker_session_15",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T16:37:52.338957",
+      "entities": [],
+      "topics": [
+        "database"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "30be44b1-d604-49ba-a671-f749356adb61",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_15",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T16:41:52.338957",
+      "entities": [],
+      "topics": [
+        "database"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "f424ac8f-c49b-40a4-ace5-1bb5037a56a0",
+      "content": "How might we improve API Gateway?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_15",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T16:42:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "0665e1e3-1ba2-46c2-aba4-499935e249a6",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_15",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T16:44:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "14e10ffe-1024-41e9-8ae5-af91a124d102",
+      "content": "Draft an email to Emily Zhang about security",
+      "role": "user",
+      "session_id": "knowledge_worker_session_15",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T16:45:52.338957",
+      "entities": [
+        "Meta",
+        "Emily Zhang"
+      ],
+      "topics": [
+        "transformers",
+        "security",
+        "NLP"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "7b2c7978-145a-459a-a578-46b6b6d05e1a",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_15",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T16:46:52.338957",
+      "entities": [
+        "Meta",
+        "Emily Zhang"
+      ],
+      "topics": [
+        "transformers",
+        "security",
+        "NLP"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "2cb2663a-3f4f-49de-b96a-c063b84bf0cf",
+      "content": "Ideas for term sheet?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_15",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T16:49:52.338957",
+      "entities": [],
+      "topics": [
+        "term sheet"
+      ],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "c40ff8c5-5a39-4a98-a49c-c0f947f96451",
+      "content": "Pros: ... Cons: ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_15",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-28T16:54:52.338957",
+      "entities": [],
+      "topics": [
+        "term sheet"
+      ],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "c59baa2e-c12e-449c-9ea0-2b711b02245d",
+      "content": "Who are the key players in compensation?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_9",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T00:31:52.338957",
+      "entities": [],
+      "topics": [
+        "compensation"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "6f39e0b2-87c8-4544-8f2a-e5895d9cf710",
+      "content": "Here's what I found about compensation...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_9",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T00:35:52.338957",
+      "entities": [],
+      "topics": [
+        "compensation"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "0784560e-f024-4d3a-a2e4-ab6c476b5170",
+      "content": "Who are the key players in culture?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_9",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T00:37:52.338957",
+      "entities": [],
+      "topics": [
+        "culture"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "864ac61d-dde0-49c5-ae23-50be6e9a1d8d",
+      "content": "Key papers on this include...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_9",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T00:40:52.338957",
+      "entities": [],
+      "topics": [
+        "culture"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "5476397b-d0bd-4d78-aa72-a09efe6b7b5d",
+      "content": "Forecast user engagement for next quarter",
+      "role": "user",
+      "session_id": "knowledge_worker_session_9",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T00:42:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "02c01b6c-18e7-46b6-b727-8435dc5f8c20",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_9",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T00:45:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "c3403d56-96ab-45da-8165-9f09446e56a3",
+      "content": "How does compensation compare to compensation?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_9",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T00:46:52.338957",
+      "entities": [],
+      "topics": [
+        "compensation"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "19e6ae20-bf52-49fb-861f-4041880451a4",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_9",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T00:47:52.338957",
+      "entities": [],
+      "topics": [
+        "compensation"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "dabf9f93-991e-4c45-ba61-3e910e2181c9",
+      "content": "Analyze the revenue trends",
+      "role": "user",
+      "session_id": "knowledge_worker_session_9",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T00:48:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "3f3e770c-2ff4-46f3-bfc4-d9322d0b7d1c",
+      "content": "The trend shows... The main driver is...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_9",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T00:52:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "567b2f0e-acce-4584-8d7e-d24ad45df0e3",
+      "content": "How might we improve Search Engine?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_42",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T01:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "5b4155ab-945f-4f8e-ac2d-8207ce8ca9fe",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_42",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T01:32:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "5f43f8a5-f7d8-448a-81d2-bde82d46164f",
+      "content": "Why did latency change last week?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_42",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T01:34:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "d9204f7c-4913-483c-9144-de3f80dca42c",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_42",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T01:35:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "87ad2ee2-3948-48fc-ac5b-db64e37355af",
+      "content": "Review this paragraph about investors",
+      "role": "user",
+      "session_id": "knowledge_worker_session_42",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T01:37:52.338957",
+      "entities": [],
+      "topics": [
+        "investors"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "be6af1cb-e563-405a-8760-b908c419ecd0",
+      "content": "Here's a draft for you to review...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_42",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T01:42:52.338957",
+      "entities": [],
+      "topics": [
+        "investors"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "18461955-019b-42e8-bf6e-dd23dd56f37b",
+      "content": "Ideas for support tickets?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_42",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T01:43:52.338957",
+      "entities": [],
+      "topics": [
+        "support tickets"
+      ],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "63ee4f1c-12d3-4e36-8cc9-00c6ac5552b3",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_42",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T01:46:52.338957",
+      "entities": [],
+      "topics": [
+        "support tickets"
+      ],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "12eba818-194d-4fee-a8c4-b011617f5dde",
+      "content": "Find papers about Redis",
+      "role": "user",
+      "session_id": "knowledge_worker_session_42",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T01:47:52.338957",
+      "entities": [],
+      "topics": [
+        "Redis"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "9ca8a7ba-7928-4550-88a9-7886e1976277",
+      "content": "Here's what I found about Redis...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_42",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T01:49:52.338957",
+      "entities": [],
+      "topics": [
+        "Redis"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "37f240d5-ef3b-4df6-ab8a-123984dc6134",
+      "content": "Make this more concise: the implementation details of the system",
+      "role": "user",
+      "session_id": "knowledge_worker_session_0",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T15:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "630251f0-e76b-47d2-aa8e-2f95f43163d2",
+      "content": "Here's a draft for you to review...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_0",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T15:36:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "7f269ecd-1bde-496b-b3a6-38f973dae424",
+      "content": "Make this more concise: the implementation details of the system",
+      "role": "user",
+      "session_id": "knowledge_worker_session_0",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T15:39:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "8259b49d-7551-40f3-b750-8eca299308c5",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_0",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T15:44:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "ec125428-62a5-4da9-87d2-83f3f7f5c1e7",
+      "content": "Summarize the state of onboarding",
+      "role": "user",
+      "session_id": "knowledge_worker_session_0",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T15:46:52.338957",
+      "entities": [],
+      "topics": [
+        "onboarding"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "2513129e-3665-4d04-8558-ce1e99c9f489",
+      "content": "Here's what I found about onboarding...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_0",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T15:51:52.338957",
+      "entities": [],
+      "topics": [
+        "onboarding"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "c47b2b83-0eec-4fd4-a130-15181f2f9b48",
+      "content": "How should I structure the methodology section?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_0",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T15:52:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "b37a84be-af9b-4bfb-9c2e-244d24f58c97",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_0",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T15:57:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "7d053ee3-d39e-4752-80bf-519f8f911db3",
+      "content": "What are the risks of serverless?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_0",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T16:00:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "96693b13-7df5-4041-a6e2-d1ae1fbdd4d8",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_0",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T16:05:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "fe39ba2e-3dfe-480b-990e-c8b168898741",
+      "content": "How might we improve Search Engine?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_31",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T17:31:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "acb519d0-dad1-40b3-b162-b407f740ab26",
+      "content": "Here are some ideas: 1) ... 2) ... 3) ...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_31",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T17:36:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "7f6c6948-1b09-4ab0-be99-35cd73e8e45f",
+      "content": "Analyze the conversion rate trends",
+      "role": "user",
+      "session_id": "knowledge_worker_session_31",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T17:39:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "9aaeb020-2d56-4c7d-85e6-2002f6fa3399",
+      "content": "The trend shows... The main driver is...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_31",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T17:40:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "69cc43cc-0e84-4152-91b0-b7467d0a1327",
+      "content": "Draft an email to Jennifer Liu about hiring",
+      "role": "user",
+      "session_id": "knowledge_worker_session_31",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T17:42:52.338957",
+      "entities": [
+        "Jennifer Liu",
+        "Vercel"
+      ],
+      "topics": [
+        "Next.js",
+        "hiring",
+        "frontend"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "ad2be5e8-7c11-4c9d-90f8-764d5ef570d5",
+      "content": "I've restructured it as follows...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_31",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T17:43:52.338957",
+      "entities": [
+        "Jennifer Liu",
+        "Vercel"
+      ],
+      "topics": [
+        "Next.js",
+        "hiring",
+        "frontend"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "2366176e-2989-4f66-9366-142dfd87e4a9",
+      "content": "Analyze the revenue trends",
+      "role": "user",
+      "session_id": "knowledge_worker_session_31",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T17:46:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "eca4ddc4-62fd-454e-a357-992c222a3136",
+      "content": "Comparing across segments, I see...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_31",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T17:47:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "d605b75c-8fc1-433d-a79a-4ad21cfcac70",
+      "content": "How might we improve Project Alpha?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_31",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T17:48:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm",
+      "metadata": {}
+    },
+    {
+      "id": "f6db9abc-9a9f-499e-9ed7-a1cf08562767",
+      "content": "The main risks are... The opportunities are...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_31",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-29T17:52:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "brainstorm_response",
+      "metadata": {}
+    },
+    {
+      "id": "cbeb693d-1b81-49c2-bac2-a69a23548682",
+      "content": "Summarize the state of migrations",
+      "role": "user",
+      "session_id": "knowledge_worker_session_20",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T16:31:52.338957",
+      "entities": [],
+      "topics": [
+        "migrations"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "c900bc91-96d6-4448-8804-a94934edfcf6",
+      "content": "Here's what I found about migrations...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_20",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T16:33:52.338957",
+      "entities": [],
+      "topics": [
+        "migrations"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "8360a297-75ef-49b3-858c-c4107ba6a7b0",
+      "content": "Who are the key players in migrations?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_20",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T16:36:52.338957",
+      "entities": [],
+      "topics": [
+        "migrations"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "9a3a7cc0-e31c-44ea-abec-1946d7527b91",
+      "content": "Here's what I found about migrations...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_20",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T16:39:52.338957",
+      "entities": [],
+      "topics": [
+        "migrations"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "92d181eb-8fe5-4e1e-931c-0fac9531e3a4",
+      "content": "Compare user engagement across regions",
+      "role": "user",
+      "session_id": "knowledge_worker_session_20",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T16:42:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "5c94280a-2196-4f8e-9a8e-8b4504967cd0",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_20",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T16:46:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "4a07c0ba-f23a-428e-9ddc-42d405350ab1",
+      "content": "Forecast user engagement for next quarter",
+      "role": "user",
+      "session_id": "knowledge_worker_session_20",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T16:49:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "5160bc17-4d57-4740-bb2a-3b5d5136fe6a",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_20",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T16:54:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "66eb9a1f-4bec-4495-8070-01765be71e4a",
+      "content": "Why did revenue change last week?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_20",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T16:56:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "d361ce34-4c92-4261-b44a-6a86b7e1a2de",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_20",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T16:58:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    },
+    {
+      "id": "285f8657-688f-4339-b761-8bcbaca83832",
+      "content": "Help me write about testing",
+      "role": "user",
+      "session_id": "knowledge_worker_session_17",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T18:31:52.338957",
+      "entities": [],
+      "topics": [
+        "testing"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "e8b5b7b4-a65c-42da-b00f-e688d79f75bb",
+      "content": "Here's a draft for you to review...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_17",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T18:32:52.338957",
+      "entities": [],
+      "topics": [
+        "testing"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "d17eaf10-00fa-4f06-9fb0-0a4bac969bfe",
+      "content": "How does deployment compare to MongoDB?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_17",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T18:34:52.338957",
+      "entities": [],
+      "topics": [
+        "MongoDB",
+        "deployment"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "2f27e306-5edb-46ae-b74b-a2d5f9c2eee8",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_17",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T18:37:52.338957",
+      "entities": [],
+      "topics": [
+        "MongoDB",
+        "deployment"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "e1dc610c-1c0a-479d-a2fa-966e289f03b5",
+      "content": "Who are the key players in retrieval?",
+      "role": "user",
+      "session_id": "knowledge_worker_session_17",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T18:40:52.338957",
+      "entities": [],
+      "topics": [
+        "retrieval"
+      ],
+      "template_type": "research",
+      "metadata": {}
+    },
+    {
+      "id": "0e1dbf9d-dbaa-4f55-8f5b-1fac130aa22b",
+      "content": "The latest research suggests...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_17",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T18:44:52.338957",
+      "entities": [],
+      "topics": [
+        "retrieval"
+      ],
+      "template_type": "research_response",
+      "metadata": {}
+    },
+    {
+      "id": "138002ab-e2ff-4df6-bde1-6e75ed7983c7",
+      "content": "Draft an email to Dharsha Udayakumar about retrieval",
+      "role": "user",
+      "session_id": "knowledge_worker_session_17",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T18:46:52.338957",
+      "entities": [
+        "Dharsha Udayakumar",
+        "T-Hub"
+      ],
+      "topics": [
+        "retrieval",
+        "incubation",
+        "startups"
+      ],
+      "template_type": "writing",
+      "metadata": {}
+    },
+    {
+      "id": "cb7a5558-adb1-4d19-834f-2bf3aecf4beb",
+      "content": "Here's a more concise version...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_17",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T18:50:52.338957",
+      "entities": [
+        "Dharsha Udayakumar",
+        "T-Hub"
+      ],
+      "topics": [
+        "retrieval",
+        "incubation",
+        "startups"
+      ],
+      "template_type": "writing_response",
+      "metadata": {}
+    },
+    {
+      "id": "a0200906-2264-45c0-8119-f165eae35183",
+      "content": "Forecast user engagement for next quarter",
+      "role": "user",
+      "session_id": "knowledge_worker_session_17",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T18:52:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis",
+      "metadata": {}
+    },
+    {
+      "id": "2097320a-bdbc-4aaa-bd70-1063995be64e",
+      "content": "Based on the data, I forecast...",
+      "role": "assistant",
+      "session_id": "knowledge_worker_session_17",
+      "user_id": "benchmark_user",
+      "timestamp": "2026-01-30T18:53:52.338957",
+      "entities": [],
+      "topics": [],
+      "template_type": "analysis_response",
+      "metadata": {}
+    }
+  ],
+  "entity_list": [
+    "T-Hub",
+    "Jennifer Liu",
+    "Jerry Tworek",
+    "Emily Zhang",
+    "Meta",
+    "Microsoft",
+    "Rachel Kim",
+    "Sarah Chen",
+    "Alex Kumar",
+    "Databricks",
+    "Anna Schmidt",
+    "Lisa Park",
+    "OpenAI",
+    "Dharsha Udayakumar",
+    "Figma",
+    "Maria Garcia",
+    "Amazon",
+    "Vercel",
+    "Anthropic"
+  ],
+  "topic_list": [
+    "product roadmap",
+    "reinforcement learning",
+    "alignment",
+    "frontend",
+    "GDPR",
+    "retrieval",
+    "analytics",
+    "growth",
+    "churn",
+    "CI/CD",
+    "Azure",
+    "remote work",
+    "database",
+    "Next.js",
+    "embeddings",
+    "culture",
+    "design systems",
+    "MongoDB",
+    "fundraising",
+    "metrics",
+    "memory systems",
+    "NLP",
+    "pitch deck",
+    "A/B testing",
+    "AWS",
+    "SLA",
+    "term sheet",
+    "incubation",
+    "interviews",
+    "migrations",
+    "support tickets",
+    "debugging",
+    "investors",
+    "valuation",
+    "compensation",
+    "deployment",
+    "performance",
+    "hiring",
+    "AI governance",
+    "testing",
+    "user research",
+    "onboarding",
+    "regulation",
+    "UI/UX",
+    "cloud",
+    "infrastructure",
+    "security",
+    "transformers",
+    "compliance",
+    "safety",
+    "startups",
+    "encryption",
+    "Redis",
+    "AI agents",
+    "Spark"
+  ]
+}

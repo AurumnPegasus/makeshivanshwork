@@ -1,0 +1,760 @@
+[
+  {
+    "query": "What was the first thing we discussed about performance?",
+    "type": "long_range_recall",
+    "min_distance": 100,
+    "expected_keywords": [
+      "performance"
+    ],
+    "difficulty": "hard",
+    "id": "longrange_000",
+    "relevant_message_ids": [
+      "dbd277f3-3e75-4c35-a55f-935f9ae7d380",
+      "076f1635-334b-4649-88d7-ac5c88d2dca6",
+      "f8ab9f33-761a-479b-8a48-6975096d2616",
+      "85c466b6-5c8a-4398-9ae1-e8c757df221d",
+      "ae6d3a8f-9adc-4adb-9ab3-ce033e832f49"
+    ]
+  },
+  {
+    "query": "When did we first mention Jerry Tworek?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Jerry Tworek"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_001",
+    "relevant_message_ids": [
+      "d2e9c751-702d-42d5-818b-4250eea7aba7",
+      "b32f9083-9c91-4547-bdac-cdfe430cfd95",
+      "ca766d6e-c0ba-4cfd-9817-a4ff215842f3",
+      "96f5112c-fd8a-434d-a3fa-37f878a23f41",
+      "c85239a9-745f-47bb-b3aa-2484cd3cc3f6",
+      "ec9d46be-e90e-4324-8370-78840786c27e",
+      "d84b1564-4fd2-413c-880e-9d00108910cb",
+      "7cd7e22c-b9bf-4bc3-ae76-1a5cb92dbbba",
+      "6d137900-b108-40f6-90ef-dba0b35a49b7",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "cd35fc43-033d-496b-a257-746453f952f7",
+      "08bed6bb-5ef0-43f8-acbd-d52a52c804da",
+      "7a2053c9-c7cc-4cc3-b83a-8e4d9293303d",
+      "5d24a0d1-4cb0-4ed6-bad0-6e9714cdad13",
+      "bd3ca3b7-a352-4ae9-95da-3f134b825f49",
+      "494135d8-0a2c-4831-a8e6-4b3e03db374e",
+      "35954809-2da1-4fe8-889b-30f4bcd19b58",
+      "cfd94f23-524c-4d0e-b758-795e3feabb4b",
+      "8cbd3c2f-7a9d-4836-91cd-4bc3dbe0ff6d",
+      "85948f30-d1e9-4a3e-ab41-2737c3531a12"
+    ]
+  },
+  {
+    "query": "What was the first thing we discussed about product roadmap?",
+    "type": "long_range_recall",
+    "min_distance": 100,
+    "expected_keywords": [
+      "product roadmap"
+    ],
+    "difficulty": "hard",
+    "id": "longrange_002",
+    "relevant_message_ids": [
+      "d8792bb5-961e-45e4-b957-861acc9e0c17",
+      "8ebb2efc-26dc-49eb-89a9-e53aa5710d8a",
+      "b5b6ba71-53c3-4fb0-893a-76b1aac1e206",
+      "38e8c41b-9cf5-440e-aac7-2517cb631488",
+      "f4d5a0ef-1fc2-4735-8210-d3d970457b3d"
+    ]
+  },
+  {
+    "query": "When did we first mention Jerry Tworek?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Jerry Tworek"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_003",
+    "relevant_message_ids": [
+      "d2e9c751-702d-42d5-818b-4250eea7aba7",
+      "b32f9083-9c91-4547-bdac-cdfe430cfd95",
+      "ca766d6e-c0ba-4cfd-9817-a4ff215842f3",
+      "96f5112c-fd8a-434d-a3fa-37f878a23f41",
+      "c85239a9-745f-47bb-b3aa-2484cd3cc3f6",
+      "ec9d46be-e90e-4324-8370-78840786c27e",
+      "d84b1564-4fd2-413c-880e-9d00108910cb",
+      "7cd7e22c-b9bf-4bc3-ae76-1a5cb92dbbba",
+      "6d137900-b108-40f6-90ef-dba0b35a49b7",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "cd35fc43-033d-496b-a257-746453f952f7",
+      "08bed6bb-5ef0-43f8-acbd-d52a52c804da",
+      "7a2053c9-c7cc-4cc3-b83a-8e4d9293303d",
+      "5d24a0d1-4cb0-4ed6-bad0-6e9714cdad13",
+      "bd3ca3b7-a352-4ae9-95da-3f134b825f49",
+      "494135d8-0a2c-4831-a8e6-4b3e03db374e",
+      "35954809-2da1-4fe8-889b-30f4bcd19b58",
+      "cfd94f23-524c-4d0e-b758-795e3feabb4b",
+      "8cbd3c2f-7a9d-4836-91cd-4bc3dbe0ff6d",
+      "85948f30-d1e9-4a3e-ab41-2737c3531a12"
+    ]
+  },
+  {
+    "query": "When did we first mention Alex Kumar?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Alex Kumar"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_004",
+    "relevant_message_ids": [
+      "f4d87524-4dc8-40ef-9854-c850fe10a916",
+      "cc34bd71-aaf2-42ea-bc94-434555373cf5",
+      "4db90247-4625-446d-aded-b5d8aabf379f",
+      "a66e63ad-b3d4-4c66-a7c2-b99972c8bff2",
+      "e3994b02-998f-4642-a9c2-7695cb5259da",
+      "294cc893-ee11-4f0b-970c-ba2a7af6594e",
+      "6aad1ad9-6c3c-4396-9449-6c3a62654ee5",
+      "d4cffa10-5570-4f8f-91bc-ae8ad63a672c",
+      "222b331f-3d6c-443f-91c2-d0547287e418",
+      "905d0330-58e5-4216-bb2a-c9dde86eb68a",
+      "3faff873-c0fc-404a-8fc6-3102e95c5f84",
+      "af854f4f-f8a8-44bb-a1bd-c0a24e19d116",
+      "8cafb0af-e155-45d2-aae2-a48da201d92c",
+      "e169165e-6d7f-4141-a2c6-63dd29ac348f",
+      "c6be2337-ce26-4e44-be35-d5ca8a58c476",
+      "54a26684-2d3f-4c93-8ce2-01b235e08094",
+      "dab40412-a7ae-4b3b-acb7-144e02fc199b",
+      "17686c97-5fa6-4b28-ac9d-5478a3562245"
+    ]
+  },
+  {
+    "query": "When did we first mention Jerry Tworek?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Jerry Tworek"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_005",
+    "relevant_message_ids": [
+      "d2e9c751-702d-42d5-818b-4250eea7aba7",
+      "b32f9083-9c91-4547-bdac-cdfe430cfd95",
+      "ca766d6e-c0ba-4cfd-9817-a4ff215842f3",
+      "96f5112c-fd8a-434d-a3fa-37f878a23f41",
+      "c85239a9-745f-47bb-b3aa-2484cd3cc3f6",
+      "ec9d46be-e90e-4324-8370-78840786c27e",
+      "d84b1564-4fd2-413c-880e-9d00108910cb",
+      "7cd7e22c-b9bf-4bc3-ae76-1a5cb92dbbba",
+      "6d137900-b108-40f6-90ef-dba0b35a49b7",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "cd35fc43-033d-496b-a257-746453f952f7",
+      "08bed6bb-5ef0-43f8-acbd-d52a52c804da",
+      "7a2053c9-c7cc-4cc3-b83a-8e4d9293303d",
+      "5d24a0d1-4cb0-4ed6-bad0-6e9714cdad13",
+      "bd3ca3b7-a352-4ae9-95da-3f134b825f49",
+      "494135d8-0a2c-4831-a8e6-4b3e03db374e",
+      "35954809-2da1-4fe8-889b-30f4bcd19b58",
+      "cfd94f23-524c-4d0e-b758-795e3feabb4b",
+      "8cbd3c2f-7a9d-4836-91cd-4bc3dbe0ff6d",
+      "85948f30-d1e9-4a3e-ab41-2737c3531a12"
+    ]
+  },
+  {
+    "query": "When did we first mention Alex Kumar?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Alex Kumar"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_006",
+    "relevant_message_ids": [
+      "f4d87524-4dc8-40ef-9854-c850fe10a916",
+      "cc34bd71-aaf2-42ea-bc94-434555373cf5",
+      "4db90247-4625-446d-aded-b5d8aabf379f",
+      "a66e63ad-b3d4-4c66-a7c2-b99972c8bff2",
+      "e3994b02-998f-4642-a9c2-7695cb5259da",
+      "294cc893-ee11-4f0b-970c-ba2a7af6594e",
+      "6aad1ad9-6c3c-4396-9449-6c3a62654ee5",
+      "d4cffa10-5570-4f8f-91bc-ae8ad63a672c",
+      "222b331f-3d6c-443f-91c2-d0547287e418",
+      "905d0330-58e5-4216-bb2a-c9dde86eb68a",
+      "3faff873-c0fc-404a-8fc6-3102e95c5f84",
+      "af854f4f-f8a8-44bb-a1bd-c0a24e19d116",
+      "8cafb0af-e155-45d2-aae2-a48da201d92c",
+      "e169165e-6d7f-4141-a2c6-63dd29ac348f",
+      "c6be2337-ce26-4e44-be35-d5ca8a58c476",
+      "54a26684-2d3f-4c93-8ce2-01b235e08094",
+      "dab40412-a7ae-4b3b-acb7-144e02fc199b",
+      "17686c97-5fa6-4b28-ac9d-5478a3562245"
+    ]
+  },
+  {
+    "query": "When did we first mention Emily Zhang?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Emily Zhang"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_007",
+    "relevant_message_ids": [
+      "14e10ffe-1024-41e9-8ae5-af91a124d102",
+      "daf720b7-da88-457c-8652-25c16f2ac889",
+      "dd361915-64df-456e-bc29-df4786f42c99",
+      "05f260ae-f837-4a74-8d17-91981074877d",
+      "f6ea608d-74cf-459d-af56-175edc657bd9",
+      "95520bc9-b741-4c03-b791-803c6fa578d1",
+      "115b5da3-5039-4e65-8b5f-a5bf4f28a5ce",
+      "621b32d1-920d-4ac0-9512-004e16cb3b1e",
+      "ddfe4d61-d23f-4ddc-8097-1b371bde8aae",
+      "2aa9f1b1-b92f-489a-83d5-8c50657e0009",
+      "0be9d568-24ee-4fb6-b968-e5bbb074b1eb",
+      "e1152bc1-dede-4007-92d9-7ad68a5c27b7",
+      "7f733ea6-7011-4225-b282-cdda23e22a87",
+      "a242e93d-1d49-412c-b76f-7a9fca1df442",
+      "731f5c63-b20a-4e4f-9606-70ac10ee3b13",
+      "990cbf1e-5ef8-486b-8f3f-925f075cf34e"
+    ]
+  },
+  {
+    "query": "What was the first thing we discussed about testing?",
+    "type": "long_range_recall",
+    "min_distance": 100,
+    "expected_keywords": [
+      "testing"
+    ],
+    "difficulty": "hard",
+    "id": "longrange_008",
+    "relevant_message_ids": [
+      "fb645fcd-93f7-4da4-8dfd-1dda339fc660",
+      "d44c7d55-0f8e-4a9e-9147-17b722078af1",
+      "563715c0-296a-4596-9917-6070f5ab1805",
+      "c9f68be0-d550-463e-bf68-a15e4f6830cb",
+      "93d23c2a-c64a-41db-8867-02f0f672bc6c",
+      "97193a1b-a894-4c89-9758-4fcb8238ad6c",
+      "2b47c1f3-5587-462d-b5e0-3438a8043fd8",
+      "56b4156d-773c-47fb-94dc-200f2fd8268b",
+      "cd79ed55-98fe-4dbb-ab8e-24aa87acf152",
+      "af101f9e-02d5-4efd-837e-99b729499a30",
+      "90e3338c-905f-4786-8335-98fc68ccd427",
+      "b738ac8c-38b2-456c-b88d-c60f2537ca1b",
+      "285f8657-688f-4339-b761-8bcbaca83832",
+      "35446e12-148c-48b4-b29b-c1524f25ed9c",
+      "f264d0e8-a9c9-4d22-9883-050d3b427ade",
+      "294cc893-ee11-4f0b-970c-ba2a7af6594e",
+      "66e6c5da-bd49-4429-913d-f9b41b20e82d",
+      "fc87827d-65a1-43e0-8b70-b8942d8bb4e6"
+    ]
+  },
+  {
+    "query": "What was the first thing we discussed about AI agents?",
+    "type": "long_range_recall",
+    "min_distance": 100,
+    "expected_keywords": [
+      "AI agents"
+    ],
+    "difficulty": "hard",
+    "id": "longrange_009",
+    "relevant_message_ids": [
+      "47e4c52c-6d1a-4519-860a-0ab87020d890",
+      "89e122dc-ed5b-4e39-9398-2b33ac0f7781",
+      "39f34695-f6c4-421c-8ce6-389cbaedd9b1",
+      "102ca3f6-230b-45b8-abbd-818817f52786",
+      "b4936fb8-60a4-418d-b279-7286335e3917",
+      "9861ab6d-35bb-4994-8a12-c975002cf34d",
+      "9f02d76d-88f6-48d7-9cb0-32c79fc820b7",
+      "5ea0215d-be19-43ee-8e39-fec90aedd274",
+      "e1e05578-9647-4dfd-8a9f-7a9bb9fc954c",
+      "caa760ab-07a6-4f07-9547-ea705ec2fee0",
+      "b085cae8-77d5-477a-b7f7-ca05cca99cee",
+      "bbfc7957-2df8-4690-b722-22649b70f39d",
+      "5f29f71c-98e9-4878-9485-b4c13705f626",
+      "8df1a6f2-a746-4ccc-a129-cc90da33dc2f",
+      "767f9a76-e328-422b-94d1-a6d42b7dc675",
+      "21d7b48f-778b-4886-8340-7fac0d8d193f",
+      "5f80fbcf-4fe6-4c5d-b85b-05bd455ae41c",
+      "9b7c5392-a1a0-46f4-9020-9ac153c3fe34",
+      "0663e9e6-08ee-4711-9484-f498614429d3",
+      "9b1d269a-00e5-46cf-8356-e1db14628a59"
+    ]
+  },
+  {
+    "query": "When did we first mention Jerry Tworek?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Jerry Tworek"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_010",
+    "relevant_message_ids": [
+      "d2e9c751-702d-42d5-818b-4250eea7aba7",
+      "b32f9083-9c91-4547-bdac-cdfe430cfd95",
+      "ca766d6e-c0ba-4cfd-9817-a4ff215842f3",
+      "96f5112c-fd8a-434d-a3fa-37f878a23f41",
+      "c85239a9-745f-47bb-b3aa-2484cd3cc3f6",
+      "ec9d46be-e90e-4324-8370-78840786c27e",
+      "d84b1564-4fd2-413c-880e-9d00108910cb",
+      "7cd7e22c-b9bf-4bc3-ae76-1a5cb92dbbba",
+      "6d137900-b108-40f6-90ef-dba0b35a49b7",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "cd35fc43-033d-496b-a257-746453f952f7",
+      "08bed6bb-5ef0-43f8-acbd-d52a52c804da",
+      "7a2053c9-c7cc-4cc3-b83a-8e4d9293303d",
+      "5d24a0d1-4cb0-4ed6-bad0-6e9714cdad13",
+      "bd3ca3b7-a352-4ae9-95da-3f134b825f49",
+      "494135d8-0a2c-4831-a8e6-4b3e03db374e",
+      "35954809-2da1-4fe8-889b-30f4bcd19b58",
+      "cfd94f23-524c-4d0e-b758-795e3feabb4b",
+      "8cbd3c2f-7a9d-4836-91cd-4bc3dbe0ff6d",
+      "85948f30-d1e9-4a3e-ab41-2737c3531a12"
+    ]
+  },
+  {
+    "query": "What was the first thing we discussed about memory systems?",
+    "type": "long_range_recall",
+    "min_distance": 100,
+    "expected_keywords": [
+      "memory systems"
+    ],
+    "difficulty": "hard",
+    "id": "longrange_011",
+    "relevant_message_ids": [
+      "4439d80e-cc18-4487-bf47-101e269cbf69",
+      "4db90247-4625-446d-aded-b5d8aabf379f",
+      "c5bf5d81-482d-40b7-89a9-4872a350fc3b",
+      "26767296-af5f-4dfd-8ff4-c09c50344947"
+    ]
+  },
+  {
+    "query": "What was the first thing we discussed about performance?",
+    "type": "long_range_recall",
+    "min_distance": 100,
+    "expected_keywords": [
+      "performance"
+    ],
+    "difficulty": "hard",
+    "id": "longrange_012",
+    "relevant_message_ids": [
+      "dbd277f3-3e75-4c35-a55f-935f9ae7d380",
+      "076f1635-334b-4649-88d7-ac5c88d2dca6",
+      "f8ab9f33-761a-479b-8a48-6975096d2616",
+      "85c466b6-5c8a-4398-9ae1-e8c757df221d",
+      "ae6d3a8f-9adc-4adb-9ab3-ce033e832f49"
+    ]
+  },
+  {
+    "query": "When did we first mention Emily Zhang?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Emily Zhang"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_013",
+    "relevant_message_ids": [
+      "14e10ffe-1024-41e9-8ae5-af91a124d102",
+      "daf720b7-da88-457c-8652-25c16f2ac889",
+      "dd361915-64df-456e-bc29-df4786f42c99",
+      "05f260ae-f837-4a74-8d17-91981074877d",
+      "f6ea608d-74cf-459d-af56-175edc657bd9",
+      "95520bc9-b741-4c03-b791-803c6fa578d1",
+      "115b5da3-5039-4e65-8b5f-a5bf4f28a5ce",
+      "621b32d1-920d-4ac0-9512-004e16cb3b1e",
+      "ddfe4d61-d23f-4ddc-8097-1b371bde8aae",
+      "2aa9f1b1-b92f-489a-83d5-8c50657e0009",
+      "0be9d568-24ee-4fb6-b968-e5bbb074b1eb",
+      "e1152bc1-dede-4007-92d9-7ad68a5c27b7",
+      "7f733ea6-7011-4225-b282-cdda23e22a87",
+      "a242e93d-1d49-412c-b76f-7a9fca1df442",
+      "731f5c63-b20a-4e4f-9606-70ac10ee3b13",
+      "990cbf1e-5ef8-486b-8f3f-925f075cf34e"
+    ]
+  },
+  {
+    "query": "When did we first mention Sarah Chen?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Sarah Chen"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_014",
+    "relevant_message_ids": [
+      "f5e0b521-a757-4901-a7e3-3b6c675dd8cf",
+      "d90681a6-b323-4a67-bee5-db9333443f17",
+      "38e8c41b-9cf5-440e-aac7-2517cb631488",
+      "122d23e1-c30e-44ea-9d19-7cf6ea2d2cf5",
+      "4bc76962-cc0f-4f74-a31a-deb621ed6b4d",
+      "6e2ead9b-6c77-4be0-9b98-bb9306ebb3cc",
+      "c8be765a-9060-49ba-87d1-b173dfefb41e",
+      "fd51ec55-e353-4bb5-ac44-d86c34382289",
+      "2f9f29c6-7b21-46c6-857d-339277fa2d18",
+      "7b893074-9d5f-40f2-bd4f-c46fef6c4a0c",
+      "66e6c5da-bd49-4429-913d-f9b41b20e82d",
+      "1af39c02-ccee-4675-aadb-17be918f4a34",
+      "95ea2847-ea0f-4809-b7fb-1096ed2e1d33"
+    ]
+  },
+  {
+    "query": "What was the first thing we discussed about testing?",
+    "type": "long_range_recall",
+    "min_distance": 100,
+    "expected_keywords": [
+      "testing"
+    ],
+    "difficulty": "hard",
+    "id": "longrange_015",
+    "relevant_message_ids": [
+      "fb645fcd-93f7-4da4-8dfd-1dda339fc660",
+      "d44c7d55-0f8e-4a9e-9147-17b722078af1",
+      "563715c0-296a-4596-9917-6070f5ab1805",
+      "c9f68be0-d550-463e-bf68-a15e4f6830cb",
+      "93d23c2a-c64a-41db-8867-02f0f672bc6c",
+      "97193a1b-a894-4c89-9758-4fcb8238ad6c",
+      "2b47c1f3-5587-462d-b5e0-3438a8043fd8",
+      "56b4156d-773c-47fb-94dc-200f2fd8268b",
+      "cd79ed55-98fe-4dbb-ab8e-24aa87acf152",
+      "af101f9e-02d5-4efd-837e-99b729499a30",
+      "90e3338c-905f-4786-8335-98fc68ccd427",
+      "b738ac8c-38b2-456c-b88d-c60f2537ca1b",
+      "285f8657-688f-4339-b761-8bcbaca83832",
+      "35446e12-148c-48b4-b29b-c1524f25ed9c",
+      "f264d0e8-a9c9-4d22-9883-050d3b427ade",
+      "294cc893-ee11-4f0b-970c-ba2a7af6594e",
+      "66e6c5da-bd49-4429-913d-f9b41b20e82d",
+      "fc87827d-65a1-43e0-8b70-b8942d8bb4e6"
+    ]
+  },
+  {
+    "query": "What was the first thing we discussed about performance?",
+    "type": "long_range_recall",
+    "min_distance": 100,
+    "expected_keywords": [
+      "performance"
+    ],
+    "difficulty": "hard",
+    "id": "longrange_016",
+    "relevant_message_ids": [
+      "dbd277f3-3e75-4c35-a55f-935f9ae7d380",
+      "076f1635-334b-4649-88d7-ac5c88d2dca6",
+      "f8ab9f33-761a-479b-8a48-6975096d2616",
+      "85c466b6-5c8a-4398-9ae1-e8c757df221d",
+      "ae6d3a8f-9adc-4adb-9ab3-ce033e832f49"
+    ]
+  },
+  {
+    "query": "When did we first mention Mike Johnson?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Mike Johnson"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_017",
+    "relevant_message_ids": [
+      "48d22e4e-b4ed-431c-9827-2328e36f9936",
+      "33682d9c-7c43-48af-a81d-ee9423561259",
+      "c12135a7-1751-4d69-a175-c5e06accbae4",
+      "84c7c46b-6f3a-48d1-8be0-edb0ed4b9ea3",
+      "2d80cef3-9969-4454-b1b6-8892549dc595",
+      "b5b6ba71-53c3-4fb0-893a-76b1aac1e206",
+      "40976b9d-58e1-4403-b945-9a8e5b788c35",
+      "1281a5c8-2bf5-4021-ab77-1d3854aec4af",
+      "2cbfcd74-78b6-4b90-8834-61cfc537b3eb",
+      "636b7fd9-0c37-4f72-b085-37ff6ce3859c"
+    ]
+  },
+  {
+    "query": "What was the first thing we discussed about performance?",
+    "type": "long_range_recall",
+    "min_distance": 100,
+    "expected_keywords": [
+      "performance"
+    ],
+    "difficulty": "hard",
+    "id": "longrange_018",
+    "relevant_message_ids": [
+      "dbd277f3-3e75-4c35-a55f-935f9ae7d380",
+      "076f1635-334b-4649-88d7-ac5c88d2dca6",
+      "f8ab9f33-761a-479b-8a48-6975096d2616",
+      "85c466b6-5c8a-4398-9ae1-e8c757df221d",
+      "ae6d3a8f-9adc-4adb-9ab3-ce033e832f49"
+    ]
+  },
+  {
+    "query": "When did we first mention Sarah Chen?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Sarah Chen"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_019",
+    "relevant_message_ids": [
+      "f5e0b521-a757-4901-a7e3-3b6c675dd8cf",
+      "d90681a6-b323-4a67-bee5-db9333443f17",
+      "38e8c41b-9cf5-440e-aac7-2517cb631488",
+      "122d23e1-c30e-44ea-9d19-7cf6ea2d2cf5",
+      "4bc76962-cc0f-4f74-a31a-deb621ed6b4d",
+      "6e2ead9b-6c77-4be0-9b98-bb9306ebb3cc",
+      "c8be765a-9060-49ba-87d1-b173dfefb41e",
+      "fd51ec55-e353-4bb5-ac44-d86c34382289",
+      "2f9f29c6-7b21-46c6-857d-339277fa2d18",
+      "7b893074-9d5f-40f2-bd4f-c46fef6c4a0c",
+      "66e6c5da-bd49-4429-913d-f9b41b20e82d",
+      "1af39c02-ccee-4675-aadb-17be918f4a34",
+      "95ea2847-ea0f-4809-b7fb-1096ed2e1d33"
+    ]
+  },
+  {
+    "query": "When did we first mention Mike Johnson?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Mike Johnson"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_020",
+    "relevant_message_ids": [
+      "48d22e4e-b4ed-431c-9827-2328e36f9936",
+      "33682d9c-7c43-48af-a81d-ee9423561259",
+      "c12135a7-1751-4d69-a175-c5e06accbae4",
+      "84c7c46b-6f3a-48d1-8be0-edb0ed4b9ea3",
+      "2d80cef3-9969-4454-b1b6-8892549dc595",
+      "b5b6ba71-53c3-4fb0-893a-76b1aac1e206",
+      "40976b9d-58e1-4403-b945-9a8e5b788c35",
+      "1281a5c8-2bf5-4021-ab77-1d3854aec4af",
+      "2cbfcd74-78b6-4b90-8834-61cfc537b3eb",
+      "636b7fd9-0c37-4f72-b085-37ff6ce3859c"
+    ]
+  },
+  {
+    "query": "When did we first mention Emily Zhang?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Emily Zhang"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_021",
+    "relevant_message_ids": [
+      "14e10ffe-1024-41e9-8ae5-af91a124d102",
+      "daf720b7-da88-457c-8652-25c16f2ac889",
+      "dd361915-64df-456e-bc29-df4786f42c99",
+      "05f260ae-f837-4a74-8d17-91981074877d",
+      "f6ea608d-74cf-459d-af56-175edc657bd9",
+      "95520bc9-b741-4c03-b791-803c6fa578d1",
+      "115b5da3-5039-4e65-8b5f-a5bf4f28a5ce",
+      "621b32d1-920d-4ac0-9512-004e16cb3b1e",
+      "ddfe4d61-d23f-4ddc-8097-1b371bde8aae",
+      "2aa9f1b1-b92f-489a-83d5-8c50657e0009",
+      "0be9d568-24ee-4fb6-b968-e5bbb074b1eb",
+      "e1152bc1-dede-4007-92d9-7ad68a5c27b7",
+      "7f733ea6-7011-4225-b282-cdda23e22a87",
+      "a242e93d-1d49-412c-b76f-7a9fca1df442",
+      "731f5c63-b20a-4e4f-9606-70ac10ee3b13",
+      "990cbf1e-5ef8-486b-8f3f-925f075cf34e"
+    ]
+  },
+  {
+    "query": "What was the first thing we discussed about database?",
+    "type": "long_range_recall",
+    "min_distance": 100,
+    "expected_keywords": [
+      "database"
+    ],
+    "difficulty": "hard",
+    "id": "longrange_022",
+    "relevant_message_ids": [
+      "8e84813b-b74b-47b6-8cc7-1bbb6c2f0988",
+      "ff6a2f7e-4379-4954-8376-a7c1144deb77",
+      "e62042d6-07a7-4aa1-aadd-e2afa21789cc",
+      "ec9d46be-e90e-4324-8370-78840786c27e",
+      "54d265d7-510c-4b0c-b209-a30c3c38bcdc",
+      "c03fe052-6898-46bc-9bb6-09246496fd2b",
+      "e17f40cc-de4e-4a00-9f84-2db9cf30837e",
+      "b7845981-c5e6-4a70-9229-1fedde76b533"
+    ]
+  },
+  {
+    "query": "What was the first thing we discussed about AI agents?",
+    "type": "long_range_recall",
+    "min_distance": 100,
+    "expected_keywords": [
+      "AI agents"
+    ],
+    "difficulty": "hard",
+    "id": "longrange_023",
+    "relevant_message_ids": [
+      "47e4c52c-6d1a-4519-860a-0ab87020d890",
+      "89e122dc-ed5b-4e39-9398-2b33ac0f7781",
+      "39f34695-f6c4-421c-8ce6-389cbaedd9b1",
+      "102ca3f6-230b-45b8-abbd-818817f52786",
+      "b4936fb8-60a4-418d-b279-7286335e3917",
+      "9861ab6d-35bb-4994-8a12-c975002cf34d",
+      "9f02d76d-88f6-48d7-9cb0-32c79fc820b7",
+      "5ea0215d-be19-43ee-8e39-fec90aedd274",
+      "e1e05578-9647-4dfd-8a9f-7a9bb9fc954c",
+      "caa760ab-07a6-4f07-9547-ea705ec2fee0",
+      "b085cae8-77d5-477a-b7f7-ca05cca99cee",
+      "bbfc7957-2df8-4690-b722-22649b70f39d",
+      "5f29f71c-98e9-4878-9485-b4c13705f626",
+      "8df1a6f2-a746-4ccc-a129-cc90da33dc2f",
+      "767f9a76-e328-422b-94d1-a6d42b7dc675",
+      "21d7b48f-778b-4886-8340-7fac0d8d193f",
+      "5f80fbcf-4fe6-4c5d-b85b-05bd455ae41c",
+      "9b7c5392-a1a0-46f4-9020-9ac153c3fe34",
+      "0663e9e6-08ee-4711-9484-f498614429d3",
+      "9b1d269a-00e5-46cf-8356-e1db14628a59"
+    ]
+  },
+  {
+    "query": "When did we first mention Emily Zhang?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Emily Zhang"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_024",
+    "relevant_message_ids": [
+      "14e10ffe-1024-41e9-8ae5-af91a124d102",
+      "daf720b7-da88-457c-8652-25c16f2ac889",
+      "dd361915-64df-456e-bc29-df4786f42c99",
+      "05f260ae-f837-4a74-8d17-91981074877d",
+      "f6ea608d-74cf-459d-af56-175edc657bd9",
+      "95520bc9-b741-4c03-b791-803c6fa578d1",
+      "115b5da3-5039-4e65-8b5f-a5bf4f28a5ce",
+      "621b32d1-920d-4ac0-9512-004e16cb3b1e",
+      "ddfe4d61-d23f-4ddc-8097-1b371bde8aae",
+      "2aa9f1b1-b92f-489a-83d5-8c50657e0009",
+      "0be9d568-24ee-4fb6-b968-e5bbb074b1eb",
+      "e1152bc1-dede-4007-92d9-7ad68a5c27b7",
+      "7f733ea6-7011-4225-b282-cdda23e22a87",
+      "a242e93d-1d49-412c-b76f-7a9fca1df442",
+      "731f5c63-b20a-4e4f-9606-70ac10ee3b13",
+      "990cbf1e-5ef8-486b-8f3f-925f075cf34e"
+    ]
+  },
+  {
+    "query": "When did we first mention Sarah Chen?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Sarah Chen"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_025",
+    "relevant_message_ids": [
+      "f5e0b521-a757-4901-a7e3-3b6c675dd8cf",
+      "d90681a6-b323-4a67-bee5-db9333443f17",
+      "38e8c41b-9cf5-440e-aac7-2517cb631488",
+      "122d23e1-c30e-44ea-9d19-7cf6ea2d2cf5",
+      "4bc76962-cc0f-4f74-a31a-deb621ed6b4d",
+      "6e2ead9b-6c77-4be0-9b98-bb9306ebb3cc",
+      "c8be765a-9060-49ba-87d1-b173dfefb41e",
+      "fd51ec55-e353-4bb5-ac44-d86c34382289",
+      "2f9f29c6-7b21-46c6-857d-339277fa2d18",
+      "7b893074-9d5f-40f2-bd4f-c46fef6c4a0c",
+      "66e6c5da-bd49-4429-913d-f9b41b20e82d",
+      "1af39c02-ccee-4675-aadb-17be918f4a34",
+      "95ea2847-ea0f-4809-b7fb-1096ed2e1d33"
+    ]
+  },
+  {
+    "query": "What was the first thing we discussed about security?",
+    "type": "long_range_recall",
+    "min_distance": 100,
+    "expected_keywords": [
+      "security"
+    ],
+    "difficulty": "hard",
+    "id": "longrange_026",
+    "relevant_message_ids": [
+      "4f689fee-7a30-454c-9a30-5f9b39bdd771",
+      "620846fb-fcf3-4450-a316-56d56ab56343",
+      "14e10ffe-1024-41e9-8ae5-af91a124d102",
+      "31debab5-22b2-408b-899a-64ca2195a795",
+      "fc4bdecc-66fc-45c0-b3af-4d66e016fc33",
+      "f47820dc-9679-4151-90e1-b422745e1fb2",
+      "5f610f0e-6350-4ad3-8e98-d6570446048d",
+      "a3756353-4a95-4b04-b008-c146681e2e09",
+      "9f7085c7-a3e0-45df-8059-ef412c852eba"
+    ]
+  },
+  {
+    "query": "What was the first thing we discussed about memory systems?",
+    "type": "long_range_recall",
+    "min_distance": 100,
+    "expected_keywords": [
+      "memory systems"
+    ],
+    "difficulty": "hard",
+    "id": "longrange_027",
+    "relevant_message_ids": [
+      "4439d80e-cc18-4487-bf47-101e269cbf69",
+      "4db90247-4625-446d-aded-b5d8aabf379f",
+      "c5bf5d81-482d-40b7-89a9-4872a350fc3b",
+      "26767296-af5f-4dfd-8ff4-c09c50344947"
+    ]
+  },
+  {
+    "query": "When did we first mention Jerry Tworek?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Jerry Tworek"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_028",
+    "relevant_message_ids": [
+      "d2e9c751-702d-42d5-818b-4250eea7aba7",
+      "b32f9083-9c91-4547-bdac-cdfe430cfd95",
+      "ca766d6e-c0ba-4cfd-9817-a4ff215842f3",
+      "96f5112c-fd8a-434d-a3fa-37f878a23f41",
+      "c85239a9-745f-47bb-b3aa-2484cd3cc3f6",
+      "ec9d46be-e90e-4324-8370-78840786c27e",
+      "d84b1564-4fd2-413c-880e-9d00108910cb",
+      "7cd7e22c-b9bf-4bc3-ae76-1a5cb92dbbba",
+      "6d137900-b108-40f6-90ef-dba0b35a49b7",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "cd35fc43-033d-496b-a257-746453f952f7",
+      "08bed6bb-5ef0-43f8-acbd-d52a52c804da",
+      "7a2053c9-c7cc-4cc3-b83a-8e4d9293303d",
+      "5d24a0d1-4cb0-4ed6-bad0-6e9714cdad13",
+      "bd3ca3b7-a352-4ae9-95da-3f134b825f49",
+      "494135d8-0a2c-4831-a8e6-4b3e03db374e",
+      "35954809-2da1-4fe8-889b-30f4bcd19b58",
+      "cfd94f23-524c-4d0e-b758-795e3feabb4b",
+      "8cbd3c2f-7a9d-4836-91cd-4bc3dbe0ff6d",
+      "85948f30-d1e9-4a3e-ab41-2737c3531a12"
+    ]
+  },
+  {
+    "query": "When did we first mention Sarah Chen?",
+    "type": "long_range_recall",
+    "min_distance": 50,
+    "expected_keywords": [
+      "Sarah Chen"
+    ],
+    "difficulty": "medium",
+    "id": "longrange_029",
+    "relevant_message_ids": [
+      "f5e0b521-a757-4901-a7e3-3b6c675dd8cf",
+      "d90681a6-b323-4a67-bee5-db9333443f17",
+      "38e8c41b-9cf5-440e-aac7-2517cb631488",
+      "122d23e1-c30e-44ea-9d19-7cf6ea2d2cf5",
+      "4bc76962-cc0f-4f74-a31a-deb621ed6b4d",
+      "6e2ead9b-6c77-4be0-9b98-bb9306ebb3cc",
+      "c8be765a-9060-49ba-87d1-b173dfefb41e",
+      "fd51ec55-e353-4bb5-ac44-d86c34382289",
+      "2f9f29c6-7b21-46c6-857d-339277fa2d18",
+      "7b893074-9d5f-40f2-bd4f-c46fef6c4a0c",
+      "66e6c5da-bd49-4429-913d-f9b41b20e82d",
+      "1af39c02-ccee-4675-aadb-17be918f4a34",
+      "95ea2847-ea0f-4809-b7fb-1096ed2e1d33"
+    ]
+  }
+]

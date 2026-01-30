@@ -1,0 +1,64 @@
+[
+  {
+    "system_name": "Raw Context Baseline",
+    "system_version": "1.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 0.0050067901611328125,
+    "latency_p95_ms": 0.006198883056640625,
+    "latency_p99_ms": 0.015020370483398438,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 100,
+    "evaluation_time_seconds": 0.0010571479797363281,
+    "timestamp": "2026-01-30T11:29:45.199307"
+  },
+  {
+    "system_name": "flat_vector",
+    "system_version": "1.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 395.23887634277344,
+    "latency_p95_ms": 504.73785400390625,
+    "latency_p99_ms": 607.0091724395752,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 0,
+    "evaluation_time_seconds": 20.386082887649536,
+    "timestamp": "2026-01-30T11:30:05.585427"
+  }
+]

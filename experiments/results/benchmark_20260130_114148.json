@@ -1,0 +1,188 @@
+[
+  {
+    "system_name": "Raw Context Baseline",
+    "system_version": "1.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 0.00476837158203125,
+    "latency_p95_ms": 0.006198883056640625,
+    "latency_p99_ms": 0.011920928955078125,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 100,
+    "evaluation_time_seconds": 0.001013040542602539,
+    "timestamp": "2026-01-30T11:32:02.078828"
+  },
+  {
+    "system_name": "Multi-Vector Memory",
+    "system_version": "1.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 418.83206367492676,
+    "latency_p95_ms": 825.0360488891602,
+    "latency_p99_ms": 950.8578777313232,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 100,
+    "evaluation_time_seconds": 111.6468391418457,
+    "timestamp": "2026-01-30T11:34:33.268123"
+  },
+  {
+    "system_name": "Vector + Graph Memory",
+    "system_version": "1.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 430.27377128601074,
+    "latency_p95_ms": 842.4499034881592,
+    "latency_p99_ms": 873.2118606567383,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 100,
+    "evaluation_time_seconds": 109.0528838634491,
+    "timestamp": "2026-01-30T11:36:22.321106"
+  },
+  {
+    "system_name": "Hypergraph Memory",
+    "system_version": "1.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 822.2167491912842,
+    "latency_p95_ms": 1219.8610305786133,
+    "latency_p99_ms": 1241.3208484649658,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 100,
+    "evaluation_time_seconds": 126.56124973297119,
+    "timestamp": "2026-01-30T11:38:28.882516"
+  },
+  {
+    "system_name": "Hierarchical Memory",
+    "system_version": "1.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 393.69797706604004,
+    "latency_p95_ms": 460.62612533569336,
+    "latency_p99_ms": 480.679988861084,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 100,
+    "evaluation_time_seconds": 104.66463279724121,
+    "timestamp": "2026-01-30T11:40:13.547253"
+  },
+  {
+    "system_name": "Ultimate Hybrid Memory (ASM v2)",
+    "system_version": "2.0.0",
+    "retrieval": {
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@20": 1.0,
+      "precision@1": 0.0,
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "precision@10": 0.0,
+      "mrr": 0.0,
+      "ndcg@10": 0.0,
+      "num_queries": 50
+    },
+    "answer_quality": {
+      "note": "LLM judge not configured"
+    },
+    "false_action_rate": 0.0,
+    "missed_action_rate": 0.0,
+    "latency_p50_ms": 0.014066696166992188,
+    "latency_p95_ms": 803.5142421722412,
+    "latency_p99_ms": 829.4789791107178,
+    "estimated_cost_usd": 0.0075,
+    "num_test_cases": 50,
+    "num_messages_loaded": 100,
+    "evaluation_time_seconds": 94.88063311576843,
+    "timestamp": "2026-01-30T11:41:48.427982"
+  }
+]

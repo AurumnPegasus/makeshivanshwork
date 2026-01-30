@@ -1,0 +1,830 @@
+[
+  {
+    "query": "What meetings did I have this week?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "meeting",
+      "scheduled"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_000",
+    "relevant_message_ids": [
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "b4beea84-a896-48a4-b501-47336c2e0bfc",
+      "65b6b80a-fb5e-4b4c-80a0-12a17f6ecb6c",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "f4d5a0ef-1fc2-4735-8210-d3d970457b3d",
+      "40976b9d-58e1-4403-b945-9a8e5b788c35",
+      "da374555-424f-496f-93e8-bf06c60fbd88",
+      "af0206b9-a1c1-4aa2-b612-5393e893e708",
+      "4623defd-8cfc-451f-8448-963726cc24bf",
+      "f25646da-4bfd-43a2-b3be-2dccf40825b3",
+      "8f5f7492-27d4-43f0-9498-554bcae971e5",
+      "b67b38bf-09d8-473c-8016-cb16d0a1fcb7",
+      "e68afda3-2ca7-475e-bd7a-cd91fb41d5e4",
+      "c3039e24-fcff-4db0-9815-81006fbdef45",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "3e3a4fe7-78c7-4807-8775-28fcb7b4f559",
+      "03ed8ef8-094f-4ae1-ac4f-dd6ea3c8356c",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "18a0388c-d2dd-4508-97a4-45152afecbce",
+      "d18b8288-8565-4ea6-a2b3-53cd1b4f7f4d"
+    ]
+  },
+  {
+    "query": "What meetings did I have this week?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "meeting",
+      "scheduled"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_001",
+    "relevant_message_ids": [
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "b4beea84-a896-48a4-b501-47336c2e0bfc",
+      "65b6b80a-fb5e-4b4c-80a0-12a17f6ecb6c",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "f4d5a0ef-1fc2-4735-8210-d3d970457b3d",
+      "40976b9d-58e1-4403-b945-9a8e5b788c35",
+      "da374555-424f-496f-93e8-bf06c60fbd88",
+      "af0206b9-a1c1-4aa2-b612-5393e893e708",
+      "4623defd-8cfc-451f-8448-963726cc24bf",
+      "f25646da-4bfd-43a2-b3be-2dccf40825b3",
+      "8f5f7492-27d4-43f0-9498-554bcae971e5",
+      "b67b38bf-09d8-473c-8016-cb16d0a1fcb7",
+      "e68afda3-2ca7-475e-bd7a-cd91fb41d5e4",
+      "c3039e24-fcff-4db0-9815-81006fbdef45",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "3e3a4fe7-78c7-4807-8775-28fcb7b4f559",
+      "03ed8ef8-094f-4ae1-ac4f-dd6ea3c8356c",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "18a0388c-d2dd-4508-97a4-45152afecbce",
+      "d18b8288-8565-4ea6-a2b3-53cd1b4f7f4d"
+    ]
+  },
+  {
+    "query": "When did we last discuss AI agents?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "AI agents"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_002",
+    "relevant_message_ids": [
+      "9b7c5392-a1a0-46f4-9020-9ac153c3fe34",
+      "39f34695-f6c4-421c-8ce6-389cbaedd9b1",
+      "5f80fbcf-4fe6-4c5d-b85b-05bd455ae41c",
+      "b085cae8-77d5-477a-b7f7-ca05cca99cee",
+      "9b1d269a-00e5-46cf-8356-e1db14628a59",
+      "8df1a6f2-a746-4ccc-a129-cc90da33dc2f",
+      "9861ab6d-35bb-4994-8a12-c975002cf34d",
+      "102ca3f6-230b-45b8-abbd-818817f52786",
+      "b4936fb8-60a4-418d-b279-7286335e3917",
+      "9f02d76d-88f6-48d7-9cb0-32c79fc820b7",
+      "e1e05578-9647-4dfd-8a9f-7a9bb9fc954c",
+      "0663e9e6-08ee-4711-9484-f498614429d3",
+      "47e4c52c-6d1a-4519-860a-0ab87020d890",
+      "5f29f71c-98e9-4878-9485-b4c13705f626",
+      "21d7b48f-778b-4886-8340-7fac0d8d193f",
+      "bbfc7957-2df8-4690-b722-22649b70f39d",
+      "767f9a76-e328-422b-94d1-a6d42b7dc675",
+      "caa760ab-07a6-4f07-9547-ea705ec2fee0",
+      "89e122dc-ed5b-4e39-9398-2b33ac0f7781",
+      "5ea0215d-be19-43ee-8e39-fec90aedd274"
+    ]
+  },
+  {
+    "query": "What did we discuss today?",
+    "type": "temporal_recall",
+    "temporal_filter": "today",
+    "difficulty": "easy",
+    "id": "temporal_003",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What did we talk about last week?",
+    "type": "temporal_recall",
+    "temporal_filter": "last_week",
+    "difficulty": "medium",
+    "id": "temporal_004",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What did we discuss today?",
+    "type": "temporal_recall",
+    "temporal_filter": "today",
+    "difficulty": "easy",
+    "id": "temporal_005",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What meetings did I have this week?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "meeting",
+      "scheduled"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_006",
+    "relevant_message_ids": [
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "b4beea84-a896-48a4-b501-47336c2e0bfc",
+      "65b6b80a-fb5e-4b4c-80a0-12a17f6ecb6c",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "f4d5a0ef-1fc2-4735-8210-d3d970457b3d",
+      "40976b9d-58e1-4403-b945-9a8e5b788c35",
+      "da374555-424f-496f-93e8-bf06c60fbd88",
+      "af0206b9-a1c1-4aa2-b612-5393e893e708",
+      "4623defd-8cfc-451f-8448-963726cc24bf",
+      "f25646da-4bfd-43a2-b3be-2dccf40825b3",
+      "8f5f7492-27d4-43f0-9498-554bcae971e5",
+      "b67b38bf-09d8-473c-8016-cb16d0a1fcb7",
+      "e68afda3-2ca7-475e-bd7a-cd91fb41d5e4",
+      "c3039e24-fcff-4db0-9815-81006fbdef45",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "3e3a4fe7-78c7-4807-8775-28fcb7b4f559",
+      "03ed8ef8-094f-4ae1-ac4f-dd6ea3c8356c",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "18a0388c-d2dd-4508-97a4-45152afecbce",
+      "d18b8288-8565-4ea6-a2b3-53cd1b4f7f4d"
+    ]
+  },
+  {
+    "query": "What did we discuss today?",
+    "type": "temporal_recall",
+    "temporal_filter": "today",
+    "difficulty": "easy",
+    "id": "temporal_007",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What did we discuss today?",
+    "type": "temporal_recall",
+    "temporal_filter": "today",
+    "difficulty": "easy",
+    "id": "temporal_008",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What happened yesterday?",
+    "type": "temporal_recall",
+    "temporal_filter": "yesterday",
+    "difficulty": "easy",
+    "id": "temporal_009",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What meetings did I have this week?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "meeting",
+      "scheduled"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_010",
+    "relevant_message_ids": [
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "b4beea84-a896-48a4-b501-47336c2e0bfc",
+      "65b6b80a-fb5e-4b4c-80a0-12a17f6ecb6c",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "f4d5a0ef-1fc2-4735-8210-d3d970457b3d",
+      "40976b9d-58e1-4403-b945-9a8e5b788c35",
+      "da374555-424f-496f-93e8-bf06c60fbd88",
+      "af0206b9-a1c1-4aa2-b612-5393e893e708",
+      "4623defd-8cfc-451f-8448-963726cc24bf",
+      "f25646da-4bfd-43a2-b3be-2dccf40825b3",
+      "8f5f7492-27d4-43f0-9498-554bcae971e5",
+      "b67b38bf-09d8-473c-8016-cb16d0a1fcb7",
+      "e68afda3-2ca7-475e-bd7a-cd91fb41d5e4",
+      "c3039e24-fcff-4db0-9815-81006fbdef45",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "3e3a4fe7-78c7-4807-8775-28fcb7b4f559",
+      "03ed8ef8-094f-4ae1-ac4f-dd6ea3c8356c",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "18a0388c-d2dd-4508-97a4-45152afecbce",
+      "d18b8288-8565-4ea6-a2b3-53cd1b4f7f4d"
+    ]
+  },
+  {
+    "query": "What did we talk about last week?",
+    "type": "temporal_recall",
+    "temporal_filter": "last_week",
+    "difficulty": "medium",
+    "id": "temporal_011",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What happened yesterday?",
+    "type": "temporal_recall",
+    "temporal_filter": "yesterday",
+    "difficulty": "easy",
+    "id": "temporal_012",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What did we talk about last week?",
+    "type": "temporal_recall",
+    "temporal_filter": "last_week",
+    "difficulty": "medium",
+    "id": "temporal_013",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What did we talk about last week?",
+    "type": "temporal_recall",
+    "temporal_filter": "last_week",
+    "difficulty": "medium",
+    "id": "temporal_014",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What meetings did I have this week?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "meeting",
+      "scheduled"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_015",
+    "relevant_message_ids": [
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "b4beea84-a896-48a4-b501-47336c2e0bfc",
+      "65b6b80a-fb5e-4b4c-80a0-12a17f6ecb6c",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "f4d5a0ef-1fc2-4735-8210-d3d970457b3d",
+      "40976b9d-58e1-4403-b945-9a8e5b788c35",
+      "da374555-424f-496f-93e8-bf06c60fbd88",
+      "af0206b9-a1c1-4aa2-b612-5393e893e708",
+      "4623defd-8cfc-451f-8448-963726cc24bf",
+      "f25646da-4bfd-43a2-b3be-2dccf40825b3",
+      "8f5f7492-27d4-43f0-9498-554bcae971e5",
+      "b67b38bf-09d8-473c-8016-cb16d0a1fcb7",
+      "e68afda3-2ca7-475e-bd7a-cd91fb41d5e4",
+      "c3039e24-fcff-4db0-9815-81006fbdef45",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "3e3a4fe7-78c7-4807-8775-28fcb7b4f559",
+      "03ed8ef8-094f-4ae1-ac4f-dd6ea3c8356c",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "18a0388c-d2dd-4508-97a4-45152afecbce",
+      "d18b8288-8565-4ea6-a2b3-53cd1b4f7f4d"
+    ]
+  },
+  {
+    "query": "What did we discuss today?",
+    "type": "temporal_recall",
+    "temporal_filter": "today",
+    "difficulty": "easy",
+    "id": "temporal_016",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What happened yesterday?",
+    "type": "temporal_recall",
+    "temporal_filter": "yesterday",
+    "difficulty": "easy",
+    "id": "temporal_017",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What did we talk about last week?",
+    "type": "temporal_recall",
+    "temporal_filter": "last_week",
+    "difficulty": "medium",
+    "id": "temporal_018",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What meetings did I have this week?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "meeting",
+      "scheduled"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_019",
+    "relevant_message_ids": [
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "b4beea84-a896-48a4-b501-47336c2e0bfc",
+      "65b6b80a-fb5e-4b4c-80a0-12a17f6ecb6c",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "f4d5a0ef-1fc2-4735-8210-d3d970457b3d",
+      "40976b9d-58e1-4403-b945-9a8e5b788c35",
+      "da374555-424f-496f-93e8-bf06c60fbd88",
+      "af0206b9-a1c1-4aa2-b612-5393e893e708",
+      "4623defd-8cfc-451f-8448-963726cc24bf",
+      "f25646da-4bfd-43a2-b3be-2dccf40825b3",
+      "8f5f7492-27d4-43f0-9498-554bcae971e5",
+      "b67b38bf-09d8-473c-8016-cb16d0a1fcb7",
+      "e68afda3-2ca7-475e-bd7a-cd91fb41d5e4",
+      "c3039e24-fcff-4db0-9815-81006fbdef45",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "3e3a4fe7-78c7-4807-8775-28fcb7b4f559",
+      "03ed8ef8-094f-4ae1-ac4f-dd6ea3c8356c",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "18a0388c-d2dd-4508-97a4-45152afecbce",
+      "d18b8288-8565-4ea6-a2b3-53cd1b4f7f4d"
+    ]
+  },
+  {
+    "query": "What meetings did I have this week?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "meeting",
+      "scheduled"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_020",
+    "relevant_message_ids": [
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "b4beea84-a896-48a4-b501-47336c2e0bfc",
+      "65b6b80a-fb5e-4b4c-80a0-12a17f6ecb6c",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "f4d5a0ef-1fc2-4735-8210-d3d970457b3d",
+      "40976b9d-58e1-4403-b945-9a8e5b788c35",
+      "da374555-424f-496f-93e8-bf06c60fbd88",
+      "af0206b9-a1c1-4aa2-b612-5393e893e708",
+      "4623defd-8cfc-451f-8448-963726cc24bf",
+      "f25646da-4bfd-43a2-b3be-2dccf40825b3",
+      "8f5f7492-27d4-43f0-9498-554bcae971e5",
+      "b67b38bf-09d8-473c-8016-cb16d0a1fcb7",
+      "e68afda3-2ca7-475e-bd7a-cd91fb41d5e4",
+      "c3039e24-fcff-4db0-9815-81006fbdef45",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "3e3a4fe7-78c7-4807-8775-28fcb7b4f559",
+      "03ed8ef8-094f-4ae1-ac4f-dd6ea3c8356c",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "18a0388c-d2dd-4508-97a4-45152afecbce",
+      "d18b8288-8565-4ea6-a2b3-53cd1b4f7f4d"
+    ]
+  },
+  {
+    "query": "What did we discuss today?",
+    "type": "temporal_recall",
+    "temporal_filter": "today",
+    "difficulty": "easy",
+    "id": "temporal_021",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What did we discuss today?",
+    "type": "temporal_recall",
+    "temporal_filter": "today",
+    "difficulty": "easy",
+    "id": "temporal_022",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What did we discuss today?",
+    "type": "temporal_recall",
+    "temporal_filter": "today",
+    "difficulty": "easy",
+    "id": "temporal_023",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What did we talk about last week?",
+    "type": "temporal_recall",
+    "temporal_filter": "last_week",
+    "difficulty": "medium",
+    "id": "temporal_024",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What meetings did I have this week?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "meeting",
+      "scheduled"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_025",
+    "relevant_message_ids": [
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "b4beea84-a896-48a4-b501-47336c2e0bfc",
+      "65b6b80a-fb5e-4b4c-80a0-12a17f6ecb6c",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "f4d5a0ef-1fc2-4735-8210-d3d970457b3d",
+      "40976b9d-58e1-4403-b945-9a8e5b788c35",
+      "da374555-424f-496f-93e8-bf06c60fbd88",
+      "af0206b9-a1c1-4aa2-b612-5393e893e708",
+      "4623defd-8cfc-451f-8448-963726cc24bf",
+      "f25646da-4bfd-43a2-b3be-2dccf40825b3",
+      "8f5f7492-27d4-43f0-9498-554bcae971e5",
+      "b67b38bf-09d8-473c-8016-cb16d0a1fcb7",
+      "e68afda3-2ca7-475e-bd7a-cd91fb41d5e4",
+      "c3039e24-fcff-4db0-9815-81006fbdef45",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "3e3a4fe7-78c7-4807-8775-28fcb7b4f559",
+      "03ed8ef8-094f-4ae1-ac4f-dd6ea3c8356c",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "18a0388c-d2dd-4508-97a4-45152afecbce",
+      "d18b8288-8565-4ea6-a2b3-53cd1b4f7f4d"
+    ]
+  },
+  {
+    "query": "What did we talk about last week?",
+    "type": "temporal_recall",
+    "temporal_filter": "last_week",
+    "difficulty": "medium",
+    "id": "temporal_026",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What happened yesterday?",
+    "type": "temporal_recall",
+    "temporal_filter": "yesterday",
+    "difficulty": "easy",
+    "id": "temporal_027",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What meetings did I have this week?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "meeting",
+      "scheduled"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_028",
+    "relevant_message_ids": [
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "b4beea84-a896-48a4-b501-47336c2e0bfc",
+      "65b6b80a-fb5e-4b4c-80a0-12a17f6ecb6c",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "f4d5a0ef-1fc2-4735-8210-d3d970457b3d",
+      "40976b9d-58e1-4403-b945-9a8e5b788c35",
+      "da374555-424f-496f-93e8-bf06c60fbd88",
+      "af0206b9-a1c1-4aa2-b612-5393e893e708",
+      "4623defd-8cfc-451f-8448-963726cc24bf",
+      "f25646da-4bfd-43a2-b3be-2dccf40825b3",
+      "8f5f7492-27d4-43f0-9498-554bcae971e5",
+      "b67b38bf-09d8-473c-8016-cb16d0a1fcb7",
+      "e68afda3-2ca7-475e-bd7a-cd91fb41d5e4",
+      "c3039e24-fcff-4db0-9815-81006fbdef45",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "3e3a4fe7-78c7-4807-8775-28fcb7b4f559",
+      "03ed8ef8-094f-4ae1-ac4f-dd6ea3c8356c",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "18a0388c-d2dd-4508-97a4-45152afecbce",
+      "d18b8288-8565-4ea6-a2b3-53cd1b4f7f4d"
+    ]
+  },
+  {
+    "query": "What happened yesterday?",
+    "type": "temporal_recall",
+    "temporal_filter": "yesterday",
+    "difficulty": "easy",
+    "id": "temporal_029",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "When did we last discuss testing?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "testing"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_030",
+    "relevant_message_ids": [
+      "563715c0-296a-4596-9917-6070f5ab1805",
+      "d44c7d55-0f8e-4a9e-9147-17b722078af1",
+      "35446e12-148c-48b4-b29b-c1524f25ed9c",
+      "f264d0e8-a9c9-4d22-9883-050d3b427ade",
+      "fc87827d-65a1-43e0-8b70-b8942d8bb4e6",
+      "af101f9e-02d5-4efd-837e-99b729499a30",
+      "fb645fcd-93f7-4da4-8dfd-1dda339fc660",
+      "90e3338c-905f-4786-8335-98fc68ccd427",
+      "97193a1b-a894-4c89-9758-4fcb8238ad6c",
+      "b738ac8c-38b2-456c-b88d-c60f2537ca1b",
+      "285f8657-688f-4339-b761-8bcbaca83832",
+      "66e6c5da-bd49-4429-913d-f9b41b20e82d",
+      "dab40412-a7ae-4b3b-acb7-144e02fc199b",
+      "2b47c1f3-5587-462d-b5e0-3438a8043fd8",
+      "c9f68be0-d550-463e-bf68-a15e4f6830cb",
+      "cd79ed55-98fe-4dbb-ab8e-24aa87acf152",
+      "294cc893-ee11-4f0b-970c-ba2a7af6594e",
+      "93d23c2a-c64a-41db-8867-02f0f672bc6c",
+      "56b4156d-773c-47fb-94dc-200f2fd8268b"
+    ]
+  },
+  {
+    "query": "What did we discuss today?",
+    "type": "temporal_recall",
+    "temporal_filter": "today",
+    "difficulty": "easy",
+    "id": "temporal_031",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "When did we last discuss security?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "security"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_032",
+    "relevant_message_ids": [
+      "14e10ffe-1024-41e9-8ae5-af91a124d102",
+      "f47820dc-9679-4151-90e1-b422745e1fb2",
+      "620846fb-fcf3-4450-a316-56d56ab56343",
+      "4f689fee-7a30-454c-9a30-5f9b39bdd771",
+      "fc4bdecc-66fc-45c0-b3af-4d66e016fc33",
+      "31debab5-22b2-408b-899a-64ca2195a795",
+      "5f610f0e-6350-4ad3-8e98-d6570446048d",
+      "9f7085c7-a3e0-45df-8059-ef412c852eba",
+      "a3756353-4a95-4b04-b008-c146681e2e09"
+    ]
+  },
+  {
+    "query": "When did we last discuss database?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "database"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_033",
+    "relevant_message_ids": [
+      "ec9d46be-e90e-4324-8370-78840786c27e",
+      "b7845981-c5e6-4a70-9229-1fedde76b533",
+      "54d265d7-510c-4b0c-b209-a30c3c38bcdc",
+      "e62042d6-07a7-4aa1-aadd-e2afa21789cc",
+      "c03fe052-6898-46bc-9bb6-09246496fd2b",
+      "e17f40cc-de4e-4a00-9f84-2db9cf30837e",
+      "ff6a2f7e-4379-4954-8376-a7c1144deb77",
+      "8e84813b-b74b-47b6-8cc7-1bbb6c2f0988"
+    ]
+  },
+  {
+    "query": "When did we last discuss AI agents?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "AI agents"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_034",
+    "relevant_message_ids": [
+      "9b7c5392-a1a0-46f4-9020-9ac153c3fe34",
+      "39f34695-f6c4-421c-8ce6-389cbaedd9b1",
+      "5f80fbcf-4fe6-4c5d-b85b-05bd455ae41c",
+      "b085cae8-77d5-477a-b7f7-ca05cca99cee",
+      "9b1d269a-00e5-46cf-8356-e1db14628a59",
+      "8df1a6f2-a746-4ccc-a129-cc90da33dc2f",
+      "9861ab6d-35bb-4994-8a12-c975002cf34d",
+      "102ca3f6-230b-45b8-abbd-818817f52786",
+      "b4936fb8-60a4-418d-b279-7286335e3917",
+      "9f02d76d-88f6-48d7-9cb0-32c79fc820b7",
+      "e1e05578-9647-4dfd-8a9f-7a9bb9fc954c",
+      "0663e9e6-08ee-4711-9484-f498614429d3",
+      "47e4c52c-6d1a-4519-860a-0ab87020d890",
+      "5f29f71c-98e9-4878-9485-b4c13705f626",
+      "21d7b48f-778b-4886-8340-7fac0d8d193f",
+      "bbfc7957-2df8-4690-b722-22649b70f39d",
+      "767f9a76-e328-422b-94d1-a6d42b7dc675",
+      "caa760ab-07a6-4f07-9547-ea705ec2fee0",
+      "89e122dc-ed5b-4e39-9398-2b33ac0f7781",
+      "5ea0215d-be19-43ee-8e39-fec90aedd274"
+    ]
+  },
+  {
+    "query": "What did we discuss today?",
+    "type": "temporal_recall",
+    "temporal_filter": "today",
+    "difficulty": "easy",
+    "id": "temporal_035",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "When did we last discuss security?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "security"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_036",
+    "relevant_message_ids": [
+      "14e10ffe-1024-41e9-8ae5-af91a124d102",
+      "f47820dc-9679-4151-90e1-b422745e1fb2",
+      "620846fb-fcf3-4450-a316-56d56ab56343",
+      "4f689fee-7a30-454c-9a30-5f9b39bdd771",
+      "fc4bdecc-66fc-45c0-b3af-4d66e016fc33",
+      "31debab5-22b2-408b-899a-64ca2195a795",
+      "5f610f0e-6350-4ad3-8e98-d6570446048d",
+      "9f7085c7-a3e0-45df-8059-ef412c852eba",
+      "a3756353-4a95-4b04-b008-c146681e2e09"
+    ]
+  },
+  {
+    "query": "What did we discuss today?",
+    "type": "temporal_recall",
+    "temporal_filter": "today",
+    "difficulty": "easy",
+    "id": "temporal_037",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What happened yesterday?",
+    "type": "temporal_recall",
+    "temporal_filter": "yesterday",
+    "difficulty": "easy",
+    "id": "temporal_038",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What meetings did I have this week?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "meeting",
+      "scheduled"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_039",
+    "relevant_message_ids": [
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "b4beea84-a896-48a4-b501-47336c2e0bfc",
+      "65b6b80a-fb5e-4b4c-80a0-12a17f6ecb6c",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "f4d5a0ef-1fc2-4735-8210-d3d970457b3d",
+      "40976b9d-58e1-4403-b945-9a8e5b788c35",
+      "da374555-424f-496f-93e8-bf06c60fbd88",
+      "af0206b9-a1c1-4aa2-b612-5393e893e708",
+      "4623defd-8cfc-451f-8448-963726cc24bf",
+      "f25646da-4bfd-43a2-b3be-2dccf40825b3",
+      "8f5f7492-27d4-43f0-9498-554bcae971e5",
+      "b67b38bf-09d8-473c-8016-cb16d0a1fcb7",
+      "e68afda3-2ca7-475e-bd7a-cd91fb41d5e4",
+      "c3039e24-fcff-4db0-9815-81006fbdef45",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "3e3a4fe7-78c7-4807-8775-28fcb7b4f559",
+      "03ed8ef8-094f-4ae1-ac4f-dd6ea3c8356c",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "18a0388c-d2dd-4508-97a4-45152afecbce",
+      "d18b8288-8565-4ea6-a2b3-53cd1b4f7f4d"
+    ]
+  },
+  {
+    "query": "What happened yesterday?",
+    "type": "temporal_recall",
+    "temporal_filter": "yesterday",
+    "difficulty": "easy",
+    "id": "temporal_040",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What happened yesterday?",
+    "type": "temporal_recall",
+    "temporal_filter": "yesterday",
+    "difficulty": "easy",
+    "id": "temporal_041",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "When did we last discuss testing?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "testing"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_042",
+    "relevant_message_ids": [
+      "563715c0-296a-4596-9917-6070f5ab1805",
+      "d44c7d55-0f8e-4a9e-9147-17b722078af1",
+      "35446e12-148c-48b4-b29b-c1524f25ed9c",
+      "f264d0e8-a9c9-4d22-9883-050d3b427ade",
+      "fc87827d-65a1-43e0-8b70-b8942d8bb4e6",
+      "af101f9e-02d5-4efd-837e-99b729499a30",
+      "fb645fcd-93f7-4da4-8dfd-1dda339fc660",
+      "90e3338c-905f-4786-8335-98fc68ccd427",
+      "97193a1b-a894-4c89-9758-4fcb8238ad6c",
+      "b738ac8c-38b2-456c-b88d-c60f2537ca1b",
+      "285f8657-688f-4339-b761-8bcbaca83832",
+      "66e6c5da-bd49-4429-913d-f9b41b20e82d",
+      "dab40412-a7ae-4b3b-acb7-144e02fc199b",
+      "2b47c1f3-5587-462d-b5e0-3438a8043fd8",
+      "c9f68be0-d550-463e-bf68-a15e4f6830cb",
+      "cd79ed55-98fe-4dbb-ab8e-24aa87acf152",
+      "294cc893-ee11-4f0b-970c-ba2a7af6594e",
+      "93d23c2a-c64a-41db-8867-02f0f672bc6c",
+      "56b4156d-773c-47fb-94dc-200f2fd8268b"
+    ]
+  },
+  {
+    "query": "What did we discuss today?",
+    "type": "temporal_recall",
+    "temporal_filter": "today",
+    "difficulty": "easy",
+    "id": "temporal_043",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What meetings did I have this week?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "meeting",
+      "scheduled"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_044",
+    "relevant_message_ids": [
+      "4ddbab91-f5c2-4403-af2f-2f84ca0c42a1",
+      "b4beea84-a896-48a4-b501-47336c2e0bfc",
+      "65b6b80a-fb5e-4b4c-80a0-12a17f6ecb6c",
+      "f6e19afe-3439-457a-8bcc-46dd8ec0be28",
+      "f4d5a0ef-1fc2-4735-8210-d3d970457b3d",
+      "40976b9d-58e1-4403-b945-9a8e5b788c35",
+      "da374555-424f-496f-93e8-bf06c60fbd88",
+      "af0206b9-a1c1-4aa2-b612-5393e893e708",
+      "4623defd-8cfc-451f-8448-963726cc24bf",
+      "f25646da-4bfd-43a2-b3be-2dccf40825b3",
+      "8f5f7492-27d4-43f0-9498-554bcae971e5",
+      "b67b38bf-09d8-473c-8016-cb16d0a1fcb7",
+      "e68afda3-2ca7-475e-bd7a-cd91fb41d5e4",
+      "c3039e24-fcff-4db0-9815-81006fbdef45",
+      "4ff69c24-7e87-494b-bf30-c3b8efc6ab09",
+      "3e3a4fe7-78c7-4807-8775-28fcb7b4f559",
+      "03ed8ef8-094f-4ae1-ac4f-dd6ea3c8356c",
+      "f4e27c25-c916-4141-bc05-ab4e0d399c8e",
+      "18a0388c-d2dd-4508-97a4-45152afecbce",
+      "d18b8288-8565-4ea6-a2b3-53cd1b4f7f4d"
+    ]
+  },
+  {
+    "query": "What did we discuss today?",
+    "type": "temporal_recall",
+    "temporal_filter": "today",
+    "difficulty": "easy",
+    "id": "temporal_045",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What did we discuss today?",
+    "type": "temporal_recall",
+    "temporal_filter": "today",
+    "difficulty": "easy",
+    "id": "temporal_046",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What happened yesterday?",
+    "type": "temporal_recall",
+    "temporal_filter": "yesterday",
+    "difficulty": "easy",
+    "id": "temporal_047",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  },
+  {
+    "query": "When did we last discuss product roadmap?",
+    "type": "temporal_recall",
+    "expected_keywords": [
+      "product roadmap"
+    ],
+    "difficulty": "medium",
+    "id": "temporal_048",
+    "relevant_message_ids": [
+      "8ebb2efc-26dc-49eb-89a9-e53aa5710d8a",
+      "38e8c41b-9cf5-440e-aac7-2517cb631488",
+      "d8792bb5-961e-45e4-b957-861acc9e0c17",
+      "f4d5a0ef-1fc2-4735-8210-d3d970457b3d",
+      "b5b6ba71-53c3-4fb0-893a-76b1aac1e206"
+    ]
+  },
+  {
+    "query": "What happened yesterday?",
+    "type": "temporal_recall",
+    "temporal_filter": "yesterday",
+    "difficulty": "easy",
+    "id": "temporal_049",
+    "expected_keywords": null,
+    "relevant_message_ids": []
+  }
+]

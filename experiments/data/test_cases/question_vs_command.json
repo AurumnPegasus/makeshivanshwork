@@ -1,0 +1,746 @@
+[
+  {
+    "query": "Why did you delete the task?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "delete",
+      "remove"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_000",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Why did you add that meeting?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "add",
+      "create",
+      "schedule"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_001",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "How did you update the configuration?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "update",
+      "modify",
+      "change"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_002",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "When did you send that email?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "send",
+      "email"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "temporal"
+    },
+    "difficulty": "easy",
+    "id": "qvc_003",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What if you deleted all my tasks?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "delete",
+      "remove"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "hypothetical"
+    },
+    "difficulty": "medium",
+    "id": "qvc_004",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What would happen if you added another reminder?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "add",
+      "create"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "hypothetical"
+    },
+    "difficulty": "medium",
+    "id": "qvc_005",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "How would you update the schedule if I asked?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "update",
+      "modify"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "hypothetical"
+    },
+    "difficulty": "medium",
+    "id": "qvc_006",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Delete the task",
+    "type": "actual_command",
+    "should_trigger": [
+      "delete"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "imperative"
+    },
+    "difficulty": "easy",
+    "id": "qvc_007",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Please add a reminder for tomorrow",
+    "type": "actual_command",
+    "should_trigger": [
+      "add"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "polite_request"
+    },
+    "difficulty": "easy",
+    "id": "qvc_008",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Can you send an email to Jerry?",
+    "type": "actual_command",
+    "should_trigger": [
+      "send"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "polite_request"
+    },
+    "difficulty": "easy",
+    "id": "qvc_009",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "I need you to update the meeting time",
+    "type": "actual_command",
+    "should_trigger": [
+      "update"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "indirect"
+    },
+    "difficulty": "medium",
+    "id": "qvc_010",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Why did you delete the task?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "delete",
+      "remove"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_011",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Why did you add that meeting?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "add",
+      "create",
+      "schedule"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_012",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "How did you update the configuration?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "update",
+      "modify",
+      "change"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_013",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "When did you send that email?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "send",
+      "email"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "temporal"
+    },
+    "difficulty": "easy",
+    "id": "qvc_014",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What if you deleted all my tasks?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "delete",
+      "remove"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "hypothetical"
+    },
+    "difficulty": "medium",
+    "id": "qvc_015",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What would happen if you added another reminder?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "add",
+      "create"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "hypothetical"
+    },
+    "difficulty": "medium",
+    "id": "qvc_016",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "How would you update the schedule if I asked?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "update",
+      "modify"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "hypothetical"
+    },
+    "difficulty": "medium",
+    "id": "qvc_017",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Delete the task",
+    "type": "actual_command",
+    "should_trigger": [
+      "delete"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "imperative"
+    },
+    "difficulty": "easy",
+    "id": "qvc_018",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Please add a reminder for tomorrow",
+    "type": "actual_command",
+    "should_trigger": [
+      "add"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "polite_request"
+    },
+    "difficulty": "easy",
+    "id": "qvc_019",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Can you send an email to Jerry?",
+    "type": "actual_command",
+    "should_trigger": [
+      "send"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "polite_request"
+    },
+    "difficulty": "easy",
+    "id": "qvc_020",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "I need you to update the meeting time",
+    "type": "actual_command",
+    "should_trigger": [
+      "update"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "indirect"
+    },
+    "difficulty": "medium",
+    "id": "qvc_021",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Why did you delete the task?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "delete",
+      "remove"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_022",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Why did you add that meeting?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "add",
+      "create",
+      "schedule"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_023",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "How did you update the configuration?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "update",
+      "modify",
+      "change"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_024",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "When did you send that email?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "send",
+      "email"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "temporal"
+    },
+    "difficulty": "easy",
+    "id": "qvc_025",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What if you deleted all my tasks?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "delete",
+      "remove"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "hypothetical"
+    },
+    "difficulty": "medium",
+    "id": "qvc_026",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What would happen if you added another reminder?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "add",
+      "create"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "hypothetical"
+    },
+    "difficulty": "medium",
+    "id": "qvc_027",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "How would you update the schedule if I asked?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "update",
+      "modify"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "hypothetical"
+    },
+    "difficulty": "medium",
+    "id": "qvc_028",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Delete the task",
+    "type": "actual_command",
+    "should_trigger": [
+      "delete"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "imperative"
+    },
+    "difficulty": "easy",
+    "id": "qvc_029",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Please add a reminder for tomorrow",
+    "type": "actual_command",
+    "should_trigger": [
+      "add"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "polite_request"
+    },
+    "difficulty": "easy",
+    "id": "qvc_030",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Can you send an email to Jerry?",
+    "type": "actual_command",
+    "should_trigger": [
+      "send"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "polite_request"
+    },
+    "difficulty": "easy",
+    "id": "qvc_031",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "I need you to update the meeting time",
+    "type": "actual_command",
+    "should_trigger": [
+      "update"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "indirect"
+    },
+    "difficulty": "medium",
+    "id": "qvc_032",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Why did you delete the task?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "delete",
+      "remove"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_033",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Why did you add that meeting?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "add",
+      "create",
+      "schedule"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_034",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "How did you update the configuration?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "update",
+      "modify",
+      "change"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_035",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "When did you send that email?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "send",
+      "email"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "temporal"
+    },
+    "difficulty": "easy",
+    "id": "qvc_036",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What if you deleted all my tasks?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "delete",
+      "remove"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "hypothetical"
+    },
+    "difficulty": "medium",
+    "id": "qvc_037",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What would happen if you added another reminder?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "add",
+      "create"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "hypothetical"
+    },
+    "difficulty": "medium",
+    "id": "qvc_038",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "How would you update the schedule if I asked?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "update",
+      "modify"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "hypothetical"
+    },
+    "difficulty": "medium",
+    "id": "qvc_039",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Delete the task",
+    "type": "actual_command",
+    "should_trigger": [
+      "delete"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "imperative"
+    },
+    "difficulty": "easy",
+    "id": "qvc_040",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Please add a reminder for tomorrow",
+    "type": "actual_command",
+    "should_trigger": [
+      "add"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "polite_request"
+    },
+    "difficulty": "easy",
+    "id": "qvc_041",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Can you send an email to Jerry?",
+    "type": "actual_command",
+    "should_trigger": [
+      "send"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "polite_request"
+    },
+    "difficulty": "easy",
+    "id": "qvc_042",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "I need you to update the meeting time",
+    "type": "actual_command",
+    "should_trigger": [
+      "update"
+    ],
+    "classification": {
+      "intent": "COMMAND",
+      "subtype": "indirect"
+    },
+    "difficulty": "medium",
+    "id": "qvc_043",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Why did you delete the task?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "delete",
+      "remove"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_044",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "Why did you add that meeting?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "add",
+      "create",
+      "schedule"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_045",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "How did you update the configuration?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "update",
+      "modify",
+      "change"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "explanation"
+    },
+    "difficulty": "easy",
+    "id": "qvc_046",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "When did you send that email?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "send",
+      "email"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "temporal"
+    },
+    "difficulty": "easy",
+    "id": "qvc_047",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What if you deleted all my tasks?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "delete",
+      "remove"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "hypothetical"
+    },
+    "difficulty": "medium",
+    "id": "qvc_048",
+    "relevant_message_ids": []
+  },
+  {
+    "query": "What would happen if you added another reminder?",
+    "type": "question_not_command",
+    "should_not_trigger": [
+      "add",
+      "create"
+    ],
+    "classification": {
+      "intent": "QUESTION",
+      "subtype": "hypothetical"
+    },
+    "difficulty": "medium",
+    "id": "qvc_049",
+    "relevant_message_ids": []
+  }
+]
