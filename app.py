@@ -90,9 +90,12 @@ def build_system_prompt(tasks_context):
 - ask_clarification: Ask when something is unclear
 
 ## Rules
-- Only act on the current user message
-- Previous messages are context only - don't re-execute
+- Only act on the CURRENT user message
+- Previous messages are context only - NEVER re-execute past actions
+- When you perform an action, it's DONE - don't question or second-guess it later
+- Don't ask "did you want me to update X?" about tasks you just created - you already did it
 - Be direct and concise (CLI interface)
+- Stay confident about your completed actions
 """
 
 def load_persona():
