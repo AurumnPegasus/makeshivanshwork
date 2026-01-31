@@ -1095,8 +1095,10 @@
             tasksPanel.classList.remove('mobile-visible');
         });
 
-        // Auto-refresh tasks every 5 seconds for real-time updates
-        setInterval(loadTasks, 5000);
+        // Auto-refresh tasks every 10s, only when tab is visible
+        setInterval(() => {
+            if (!document.hidden) loadTasks();
+        }, 10000);
 
     </script>
 </body>
