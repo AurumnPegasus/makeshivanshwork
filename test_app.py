@@ -199,5 +199,92 @@ class TestAuthRequired:
         assert resp.status_code == 302
 
 
+class TestChatRobustness:
+    """Test chat endpoint handles edge cases gracefully."""
+
+    def test_empty_response_with_action_shows_summary(self, auth_client):
+        """When Gemini returns no text but performs action, show summary."""
+        from unittest.mock import patch, MagicMock
+
+        def create_mock_response(text='', function_calls=None):
+            mock_response = MagicMock()
+            mock_candidate = MagicMock()
+            mock_content = MagicMock()
+            parts = []
+            if text:
+                mock_text_part = MagicMock()
+                mock_text_part.text = text
+                mock_text_part.function_call = None
+                parts.append(mock_text_part)
+            if function_calls:
+                for fc in function_calls:
+                    mock_fc_part = MagicMock()
+                    mock_fc_part.text = None
+                    mock_fc_part.function_call = MagicMock()
+                    mock_fc_part.function_call.name = fc['name']
+                    mock_fc_part.function_call.args = fc.get('args', {})
+                    parts.append(mock_fc_part)
+            mock_content.parts = parts
+            mock_candidate.content = mock_content
+            mock_response.candidates = [mock_candidate]
+            return mock_response
+
+        with patch('app.gemini_client') as mock_gemini:
+            mock_chat = MagicMock()
+            # Function call with NO text
+            first_response = create_mock_response(
+                text='',
+                function_calls=[{'name': 'add_read', 'args': {'title': 'Test Book'}}]
+            )
+            second_response = create_mock_response(text='')
+            mock_chat.send_message.side_effect = [first_response, second_response]
+            mock_gemini.chats.create.return_value = mock_chat
+
+            resp = auth_client.post('/api/chat', json={'message': 'Add test book'})
+            data = resp.get_json()
+
+            assert resp.status_code == 200
+            assert data.get('response'), 'Response should not be empty'
+            assert 'Test Book' in data.get('response', '')
+
+    def test_api_error_returns_500(self, auth_client):
+        """API errors should return 500 with error message."""
+        from unittest.mock import patch
+
+        with patch('app.gemini_client') as mock_gemini:
+            mock_gemini.chats.create.side_effect = Exception('API error')
+
+            resp = auth_client.post('/api/chat', json={'message': 'Hello'})
+            data = resp.get_json()
+
+            assert resp.status_code == 500
+            assert 'error' in data
+            assert 'API error' in data['error']
+
+    def test_normal_response_unchanged(self, auth_client):
+        """Normal text responses should work as before."""
+        from unittest.mock import patch, MagicMock
+
+        with patch('app.gemini_client') as mock_gemini:
+            mock_chat = MagicMock()
+            mock_response = MagicMock()
+            mock_candidate = MagicMock()
+            mock_content = MagicMock()
+            mock_text_part = MagicMock()
+            mock_text_part.text = 'Hello! How can I help?'
+            mock_text_part.function_call = None
+            mock_content.parts = [mock_text_part]
+            mock_candidate.content = mock_content
+            mock_response.candidates = [mock_candidate]
+            mock_chat.send_message.return_value = mock_response
+            mock_gemini.chats.create.return_value = mock_chat
+
+            resp = auth_client.post('/api/chat', json={'message': 'Hello'})
+            data = resp.get_json()
+
+            assert resp.status_code == 200
+            assert data.get('response') == 'Hello! How can I help?'
+
+
 if __name__ == '__main__':
     pytest.main([__file__, '-v'])

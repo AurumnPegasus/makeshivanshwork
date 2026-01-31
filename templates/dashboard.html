@@ -1021,6 +1021,11 @@
                         if (hasTaskAction) loadTasks();
                         if (hasReadAction) loadReads();
                     }
+
+                    // If neither response nor actions, show fallback
+                    if (!data.response && (!data.actions || data.actions.length === 0)) {
+                        addLine('system', 'No response received. Try again.');
+                    }
                 }
             } catch (err) {
                 typingEl.remove();

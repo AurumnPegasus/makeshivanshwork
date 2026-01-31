@@ -1304,8 +1304,30 @@ def chat():
         conn.commit()
         conn.close()
 
+        # If we performed actions but got no text response, generate a summary
+        final_response = ai_response.strip()
+        if not final_response and actions_performed:
+            # Build a brief summary of what was done
+            summaries = []
+            for action in actions_performed:
+                atype = action.get('type')
+                if atype == 'added':
+                    summaries.append(f"Added task: {action['task']['title']}")
+                elif atype == 'done':
+                    summaries.append(f"Completed: {action['task']['title']}")
+                elif atype == 'read_added':
+                    summaries.append(f"Added to reading list: {action['read']['title']}")
+                elif atype == 'read_done':
+                    summaries.append(f"Marked as read: {action['read']['title']}")
+                elif atype == 'deleted':
+                    summaries.append(f"Deleted task: {action['task']['title']}")
+                elif atype == 'read_deleted':
+                    summaries.append(f"Removed: {action['read']['title']}")
+            if summaries:
+                final_response = "Done. " + ", ".join(summaries) + "."
+
         return jsonify({
-            "response": ai_response,
+            "response": final_response,
             "actions": actions_performed
         })
 
