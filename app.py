@@ -94,11 +94,11 @@ def build_system_prompt(tasks_context, reads_context=""):
 - mark_task_done: Complete a task
 
 ### Reading List
-- add_read: Add paper/book to reading list (can include url, author)
+- add_read: Add paper/book to reading list (title required, url/author optional)
 - update_read: Update a reading list item
 - delete_read: Remove from reading list
 - mark_read_done: Mark as read
-- web_search: Search the web for a paper/book URL (call first, then add_read with result)
+- web_search: Get a Google Scholar search link for a paper (optional, for finding URLs)
 
 ### Other
 - ask_clarification: Ask when something is unclear
@@ -107,7 +107,7 @@ def build_system_prompt(tasks_context, reads_context=""):
 - Only act on the current user message
 - Previous messages are context only - don't re-execute
 - Be direct and concise
-- When adding papers, use search_arxiv first to get the URL
+- When adding papers/books, just use add_read directly with the title
 """
 
 def load_persona():
@@ -524,47 +524,16 @@ def get_calendar_events() -> list[dict[str, Any]]:
 
 
 def web_search(query: str) -> dict[str, Any]:
-    """Search the web for a paper/article and return URL, title, description"""
-    try:
-        # Use DuckDuckGo instant answer API
-        search_url = f"https://api.duckduckgo.com/?q={urllib.parse.quote(query)}&format=json&no_html=1"
-        req = urllib.request.Request(search_url, headers={'User-Agent': 'MakeArjoWork/1.0'})
+    """Search for a paper/article. Returns Google Scholar search URL."""
+    # For academic content, Google Scholar is the most reliable
+    # The AI should inform the user to click the link to find the exact paper
+    encoded_query = urllib.parse.quote(query)
 
-        with urllib.request.urlopen(req, timeout=10) as response:
-            data = json.loads(response.read().decode('utf-8'))
-
-        # Try to get the best result
-        if data.get('AbstractURL'):
-            return {
-                'url': data['AbstractURL'],
-                'title': data.get('Heading', query),
-                'description': data.get('AbstractText', '')[:200]
-            }
-
-        # Check related topics
-        if data.get('RelatedTopics'):
-            for topic in data['RelatedTopics'][:3]:
-                if isinstance(topic, dict) and topic.get('FirstURL'):
-                    return {
-                        'url': topic['FirstURL'],
-                        'title': topic.get('Text', query)[:100],
-                        'description': ''
-                    }
-
-        # Fallback: construct a search URL
-        return {
-            'url': f"https://scholar.google.com/scholar?q={urllib.parse.quote(query)}",
-            'title': query,
-            'description': 'Search on Google Scholar'
-        }
-
-    except Exception as e:
-        # Fallback to Google Scholar search
-        return {
-            'url': f"https://scholar.google.com/scholar?q={urllib.parse.quote(query)}",
-            'title': query,
-            'description': f'Search link (web search failed: {str(e)[:50]})'
-        }
+    return {
+        'url': f"https://scholar.google.com/scholar?q={encoded_query}",
+        'title': query,
+        'description': 'Click to search on Google Scholar and find the paper'
+    }
 
 
 class RowLike(Protocol):
