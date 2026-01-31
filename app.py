@@ -70,7 +70,7 @@ _persona_load_time = None
 gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 
 
-def build_system_prompt(tasks_context, reads_context=""):
+def build_system_prompt(tasks_context, reads_context="", user_email=""):
     """Build full system prompt with persona, current tasks, and reads"""
     persona = load_persona()
     persona_context = build_persona_context(persona)
@@ -78,11 +78,20 @@ def build_system_prompt(tasks_context, reads_context=""):
 
     reads_section = f"\n## Current Reads\n{reads_context}\n" if reads_context else ""
 
+    # Context section with current user and time
+    now = datetime.now()
+    email_display = user_email if user_email else "unknown"
+    context_section = f"""
+## Context
+- Current user: {email_display}
+- Current time: {now.strftime('%Y-%m-%d %H:%M')} ({now.strftime('%A')})
+"""
+
     return f"""You ARE {name}. First person always.
 
 ## Who I Am
 {persona_context}
-
+{context_section}
 ## Current Tasks
 {tasks_context}
 {reads_section}
@@ -98,7 +107,7 @@ def build_system_prompt(tasks_context, reads_context=""):
 - update_read: Update a reading list item
 - delete_read: Remove from reading list
 - mark_read_done: Mark as read
-- web_search: Get a Google Scholar search link for a paper (optional, for finding URLs)
+- add_link: Get a Google search link for a paper (optional, for finding URLs)
 
 ### Other
 - ask_clarification: Ask when something is unclear
@@ -277,7 +286,7 @@ def get_task_tools():
             )
         ),
         types.FunctionDeclaration(
-            name="web_search",
+            name="add_link",
             description="Search the web for a paper, article, or book. Returns URL and title. Use before add_read to find URLs.",
             parameters=types.Schema(
                 type=types.Type.OBJECT,
@@ -398,7 +407,7 @@ def execute_function_call(func_call: dict[str, Any], conn: Any, user_email: str)
                 search_query = title
                 if args.get('author'):
                     search_query += ' ' + args.get('author', '')
-                url = f"https://scholar.google.com/scholar?q={urllib.parse.quote(search_query)}"
+                url = f"https://google.com/search?q={urllib.parse.quote(search_query)}"
 
             if USE_CLOUD_SQL:
                 cursor = execute_query(conn,
@@ -473,12 +482,12 @@ def execute_function_call(func_call: dict[str, Any], conn: Any, user_email: str)
                 return {'type': 'error', 'message': 'Failed to retrieve completed read'}
             return {'type': 'read_done', 'read': task_to_dict(done_read)}
 
-        elif name == 'web_search':
+        elif name == 'add_link':
             query = args.get('query', '').strip()
             if not query:
                 return {'type': 'error', 'message': 'Search query is required'}
 
-            result = web_search(query)
+            result = add_link(query)
             return {'type': 'search_result', 'result': result}
 
         return {'type': 'error', 'message': f'Unknown function: {name}'}
@@ -531,16 +540,14 @@ def get_calendar_events() -> list[dict[str, Any]]:
         return []
 
 
-def web_search(query: str) -> dict[str, Any]:
-    """Search for a paper/article. Returns Google Scholar search URL."""
-    # For academic content, Google Scholar is the most reliable
-    # The AI should inform the user to click the link to find the exact paper
+def add_link(query: str) -> dict[str, Any]:
+    """Search for a paper/article. Returns Google search URL."""
     encoded_query = urllib.parse.quote(query)
 
     return {
-        'url': f"https://scholar.google.com/scholar?q={encoded_query}",
+        'url': f"https://google.com/search?q={encoded_query}",
         'title': query,
-        'description': 'Click to search on Google Scholar and find the paper'
+        'description': 'Click to search on Google and find the paper'
     }
 
 
@@ -1146,7 +1153,7 @@ def chat():
     cursor = execute_query(conn, 'SELECT * FROM tasks ORDER BY created_at DESC LIMIT 20')
     tasks = fetchall(cursor)
     tasks_context = "\n".join([
-        f"- [#{t['id']}] [{t['status']}] {t['title']}"
+        f"- [#{t['id']}] [{t['status']}] {t['title']} (by {t['assigned_by']})"
         for t in tasks
     ]) if tasks else "No tasks yet."
 
@@ -1156,7 +1163,7 @@ def chat():
         cursor = execute_query(conn, 'SELECT * FROM reads ORDER BY created_at DESC LIMIT 20')
         reads = fetchall(cursor)
         reads_context = "\n".join([
-            f"- [#{r['id']}] [{r['status']}] {r['title']}" + (f" ({r['url']})" if r['url'] else "")
+            f"- [#{r['id']}] [{r['status']}] {r['title']} (by {r['added_by']})" + (f" ({r['url']})" if r['url'] else "")
             for r in reads
         ]) if reads else ""
     except Exception:
@@ -1179,7 +1186,7 @@ def chat():
 
     try:
         # Build full system prompt with persona + current tasks + reads
-        system_prompt = build_system_prompt(tasks_context, reads_context)
+        system_prompt = build_system_prompt(tasks_context, reads_context, user_email)
 
         # Create chat with history and tools
         gemini_chat = gemini_client.chats.create(

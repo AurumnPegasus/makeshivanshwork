@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Make Arjo Work</title>
     <link rel="icon" type="image/png" href="/static/favicon.png">
     <style>
@@ -45,6 +45,7 @@
             background: var(--bg);
             color: var(--text);
             height: 100vh;
+            height: 100dvh;  /* Dynamic viewport - adjusts for keyboard */
             display: flex;
             flex-direction: column;
             -webkit-font-smoothing: antialiased;
@@ -59,7 +60,11 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 16px;
+            padding-top: env(safe-area-inset-top);
             flex-shrink: 0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
         }
 
         .nav-brand {
@@ -298,6 +303,7 @@
             display: flex;
             align-items: center;
             padding: 12px 16px;
+            padding-bottom: max(12px, env(safe-area-inset-bottom));
             background: var(--bg-secondary);
             border-top: 1px solid var(--border);
             position: relative;
@@ -560,6 +566,11 @@
             .terminal {
                 border-right: none;
                 width: 100%;
+            }
+            .terminal-input {
+                position: sticky;
+                bottom: 0;
+                z-index: 10;
             }
             .tasks {
                 position: fixed;
@@ -1054,7 +1065,7 @@
 
             const item = action.task || action.read;
             el.innerHTML = `
-                <div class="action-label">${labels[action.type] || action.type}</div>
+                <div class="action-label">${labels[action.type] || escapeHtml(action.type)}</div>
                 <div class="action-title">${escapeHtml(item.title)}</div>
             `;
             output.appendChild(el);
@@ -1307,7 +1318,7 @@
                 const url = read.url || '';
 
                 return `
-                <div class="read-item ${status} ${url ? 'has-link' : ''}" data-id="${read.id}" ${url ? `onclick="window.open('${escapeHtml(url)}', '_blank')"` : ''}>
+                <div class="read-item ${status} ${url ? 'has-link' : ''}" data-id="${read.id}" ${url ? `data-url="${escapeHtml(url)}"` : ''}>
                     <div class="read-title">${escapeHtml(title)}</div>
                     <div class="read-meta">
                         ${author ? `${escapeHtml(author)} · ` : ''}#${read.id} · ${formatDate(read.created_at)}
@@ -1316,6 +1327,12 @@
                 </div>`;
             }).join('');
         }
+
+        // Event delegation for read item clicks
+        document.getElementById('reads-list').addEventListener('click', (e) => {
+            const item = e.target.closest('.read-item[data-url]');
+            if (item) window.open(item.dataset.url, '_blank');
+        });
 
         function getDomain(url) {
             try {
@@ -1362,6 +1379,13 @@
             document.documentElement.setAttribute('data-theme', next);
             localStorage.setItem('theme', next);
         });
+
+        // Handle mobile keyboard - scroll to bottom when viewport resizes
+        if (window.visualViewport) {
+            window.visualViewport.addEventListener('resize', () => {
+                scrollToBottom();
+            });
+        }
 
     </script>
 </body>
