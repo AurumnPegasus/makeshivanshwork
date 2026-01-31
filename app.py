@@ -1106,37 +1106,6 @@ def delete_read(read_id):
     return '', 204
 
 
-# One-time migration endpoint (no auth - remove after use)
-@app.route('/api/setup-reads-table', methods=['GET'])
-def setup_reads_table():
-    """One-time setup for reads table"""
-    conn = get_db()
-    try:
-        if USE_CLOUD_SQL:
-            cursor = conn.cursor()
-            cursor.execute('''
-                CREATE TABLE IF NOT EXISTS reads (
-                    id SERIAL PRIMARY KEY,
-                    title TEXT NOT NULL,
-                    url TEXT,
-                    author TEXT,
-                    notes TEXT,
-                    status TEXT DEFAULT 'unread',
-                    added_by TEXT NOT NULL,
-                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-                )
-            ''')
-            conn.commit()
-            return jsonify({'status': 'reads table ready'})
-        return jsonify({'status': 'sqlite - already handled'})
-    except Exception as e:
-        conn.rollback()
-        return jsonify({'error': str(e)}), 500
-    finally:
-        conn.close()
-
-
 # Internal maintenance endpoint - requires secret token
 @app.route('/api/internal/clear-all-chats/<token>', methods=['POST'])
 def internal_clear_all_chats(token):
