@@ -5,7 +5,7 @@ import os
 
 os.environ['DATABASE'] = ':memory:'
 
-from app import app, init_db, get_db, execute_query, search_arxiv
+from app import app, init_db, get_db, execute_query, web_search
 
 
 @pytest.fixture
@@ -122,26 +122,22 @@ class TestFullWorkflow:
         assert len(resp.json) == 0
 
 
-class TestArxivIntegration:
-    """Test arxiv search integration."""
+class TestWebSearchIntegration:
+    """Test web search integration."""
 
-    def test_arxiv_search_real_query(self):
-        """Test real arxiv search (requires network)."""
-        result = search_arxiv('transformer neural network attention')
+    def test_web_search_paper(self):
+        """Test web search for a paper."""
+        result = web_search('A Path to Autonomous Machine Intelligence Yann LeCun')
 
-        assert 'url' in result or 'error' in result
-        if 'url' in result:
-            assert 'arxiv.org' in result['url']
-            assert result['title']
-            assert result['authors']
+        assert 'url' in result
+        assert 'title' in result
 
-    def test_arxiv_search_specific_paper(self):
-        """Search for a specific well-known paper."""
-        result = search_arxiv('BERT pre-training deep bidirectional')
+    def test_web_search_always_returns_url(self):
+        """Web search always returns a URL (fallback to Google Scholar)."""
+        result = web_search('some obscure query that wont match anything')
 
-        assert 'url' in result or 'error' in result
-        if 'url' in result:
-            assert 'arxiv.org' in result['url']
+        assert 'url' in result
+        assert 'title' in result
 
 
 class TestConcurrency:

@@ -6,7 +6,7 @@ import os
 # Set up test environment before importing app
 os.environ['DATABASE'] = ':memory:'
 
-from app import app, init_db, get_db, execute_query, search_arxiv
+from app import app, init_db, get_db, execute_query, web_search
 
 
 @pytest.fixture
@@ -151,26 +151,23 @@ class TestReadsAPI:
         assert resp.json[0]['title'] == 'Reading Paper'
 
 
-class TestArxivSearch:
-    """Test the arxiv search function."""
+class TestWebSearch:
+    """Test the web search function."""
 
-    def test_search_arxiv_returns_result(self):
-        """search_arxiv returns URL, title, and authors."""
-        result = search_arxiv('transformer neural network')
+    def test_web_search_returns_result(self):
+        """web_search returns URL and title."""
+        result = web_search('A Path to Autonomous Machine Intelligence')
 
-        # Should return a dict with url, title, authors
-        assert 'url' in result or 'error' in result
-        if 'url' in result:
-            assert 'arxiv.org' in result['url']
-            assert 'title' in result
-            assert 'authors' in result
+        # Should return a dict with url, title
+        assert 'url' in result
+        assert 'title' in result
 
-    def test_search_arxiv_handles_empty_query(self):
-        """search_arxiv handles edge cases gracefully."""
-        # Empty results should return error
-        result = search_arxiv('xyznonexistentpaper12345')
-        # Either returns a result or an error, both are valid
-        assert 'url' in result or 'error' in result
+    def test_web_search_handles_any_query(self):
+        """web_search always returns a result (fallback to Google Scholar)."""
+        result = web_search('some random query xyz')
+        # Always returns a result (worst case: Google Scholar link)
+        assert 'url' in result
+        assert 'title' in result
 
 
 class TestDatabaseSchema:

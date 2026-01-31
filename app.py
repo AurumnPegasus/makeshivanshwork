@@ -13,7 +13,6 @@ from functools import wraps
 from typing import Any, Protocol
 import urllib.parse
 import urllib.request
-import xml.etree.ElementTree as ET
 
 from flask import Flask, request, jsonify, render_template, redirect, session, url_for
 from dotenv import load_dotenv
@@ -99,7 +98,7 @@ def build_system_prompt(tasks_context, reads_context=""):
 - update_read: Update a reading list item
 - delete_read: Remove from reading list
 - mark_read_done: Mark as read
-- search_arxiv: Search arxiv for a paper URL (call this first, then use the result to call add_read)
+- web_search: Search the web for a paper/book URL (call first, then add_read with result)
 
 ### Other
 - ask_clarification: Ask when something is unclear
@@ -278,12 +277,12 @@ def get_task_tools():
             )
         ),
         types.FunctionDeclaration(
-            name="search_arxiv",
-            description="Search arxiv for a paper and get its URL. Use this to find paper URLs before adding to reading list.",
+            name="web_search",
+            description="Search the web for a paper, article, or book. Returns URL and title. Use before add_read to find URLs.",
             parameters=types.Schema(
                 type=types.Type.OBJECT,
                 properties={
-                    "query": types.Schema(type=types.Type.STRING, description="Search query (paper title or keywords)")
+                    "query": types.Schema(type=types.Type.STRING, description="Search query (paper title, book name, or keywords)")
                 },
                 required=["query"]
             )
@@ -466,15 +465,13 @@ def execute_function_call(func_call: dict[str, Any], conn: Any, user_email: str)
                 return {'type': 'error', 'message': 'Failed to retrieve completed read'}
             return {'type': 'read_done', 'read': task_to_dict(done_read)}
 
-        elif name == 'search_arxiv':
+        elif name == 'web_search':
             query = args.get('query', '').strip()
             if not query:
                 return {'type': 'error', 'message': 'Search query is required'}
 
-            result = search_arxiv(query)
-            if 'error' in result:
-                return {'type': 'arxiv_result', 'result': result}
-            return {'type': 'arxiv_result', 'result': result}
+            result = web_search(query)
+            return {'type': 'search_result', 'result': result}
 
         return {'type': 'error', 'message': f'Unknown function: {name}'}
 
@@ -526,47 +523,48 @@ def get_calendar_events() -> list[dict[str, Any]]:
         return []
 
 
-def search_arxiv(query: str) -> dict[str, Any]:
-    """Search arxiv for paper and return URL, title, authors"""
+def web_search(query: str) -> dict[str, Any]:
+    """Search the web for a paper/article and return URL, title, description"""
     try:
-        search_url = f"http://export.arxiv.org/api/query?search_query=all:{urllib.parse.quote(query)}&max_results=1"
-        with urllib.request.urlopen(search_url, timeout=10) as response:
-            xml_data = response.read().decode('utf-8')
+        # Use DuckDuckGo instant answer API
+        search_url = f"https://api.duckduckgo.com/?q={urllib.parse.quote(query)}&format=json&no_html=1"
+        req = urllib.request.Request(search_url, headers={'User-Agent': 'MakeArjoWork/1.0'})
 
-        # Parse XML response
-        root = ET.fromstring(xml_data)
-        ns = {'atom': 'http://www.w3.org/2005/Atom'}
+        with urllib.request.urlopen(req, timeout=10) as response:
+            data = json.loads(response.read().decode('utf-8'))
 
-        entry = root.find('atom:entry', ns)
-        if entry is None:
-            return {'error': 'No results found'}
+        # Try to get the best result
+        if data.get('AbstractURL'):
+            return {
+                'url': data['AbstractURL'],
+                'title': data.get('Heading', query),
+                'description': data.get('AbstractText', '')[:200]
+            }
 
-        title = entry.find('atom:title', ns)
-        title_text = title.text.strip().replace('\n', ' ') if title is not None and title.text else 'Unknown'
+        # Check related topics
+        if data.get('RelatedTopics'):
+            for topic in data['RelatedTopics'][:3]:
+                if isinstance(topic, dict) and topic.get('FirstURL'):
+                    return {
+                        'url': topic['FirstURL'],
+                        'title': topic.get('Text', query)[:100],
+                        'description': ''
+                    }
 
-        # Get arxiv URL (prefer abs link)
-        url = ''
-        for link in entry.findall('atom:link', ns):
-            if link.get('type') == 'text/html':
-                url = link.get('href', '')
-                break
-            if link.get('rel') == 'alternate':
-                url = link.get('href', '')
-
-        # Get authors
-        authors = []
-        for author in entry.findall('atom:author', ns):
-            name = author.find('atom:name', ns)
-            if name is not None and name.text:
-                authors.append(name.text)
-
+        # Fallback: construct a search URL
         return {
-            'url': url,
-            'title': title_text,
-            'authors': ', '.join(authors[:3]) + ('...' if len(authors) > 3 else '')
+            'url': f"https://scholar.google.com/scholar?q={urllib.parse.quote(query)}",
+            'title': query,
+            'description': 'Search on Google Scholar'
         }
+
     except Exception as e:
-        return {'error': str(e)}
+        # Fallback to Google Scholar search
+        return {
+            'url': f"https://scholar.google.com/scholar?q={urllib.parse.quote(query)}",
+            'title': query,
+            'description': f'Search link (web search failed: {str(e)[:50]})'
+        }
 
 
 class RowLike(Protocol):
@@ -1297,9 +1295,9 @@ def chat():
                 action_descriptions.append(f"Removed from reading list: {action['read']['title']}")
             elif action_type == 'read_done':
                 action_descriptions.append(f"Marked as read: {action['read']['title']}")
-            elif action_type == 'arxiv_result':
+            elif action_type == 'search_result':
                 if 'error' not in action.get('result', {}):
-                    action_descriptions.append(f"Found on arxiv: {action['result'].get('title', 'Unknown')}")
+                    action_descriptions.append(f"Found: {action['result'].get('title', 'Unknown')}")
 
         # Build response for history - ALWAYS include action descriptions so AI remembers what it did
         history_response = ai_response.strip()

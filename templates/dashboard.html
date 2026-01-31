@@ -556,24 +556,23 @@
 
         @media (max-width: 768px) {
             .mobile-toggle { display: block; }
-            .layout { flex-direction: column; position: relative; }
+            .layout { position: relative; }
             .terminal {
                 border-right: none;
-                flex: 1;
-                display: flex;
+                width: 100%;
             }
             .tasks {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
+                position: fixed;
+                top: 44px;
+                right: -280px;
+                width: 280px;
                 bottom: 0;
-                z-index: 10;
-                display: none;
-                max-height: none;
+                z-index: 100;
+                transition: right 0.2s ease;
+                box-shadow: -2px 0 10px rgba(0,0,0,0.3);
             }
             .tasks.mobile-visible {
-                display: flex;
+                right: 0;
             }
             .tasks-close {
                 display: block;
