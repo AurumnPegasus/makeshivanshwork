@@ -9,6 +9,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
+            /* Dark theme (default) */
             --bg: #1a1a1a;
             --bg-secondary: #242424;
             --bg-tertiary: #2d2d2d;
@@ -21,6 +22,21 @@
             --pending: #f59e0b;
             --progress: #3b82f6;
             --done: #10b981;
+        }
+
+        [data-theme="light"] {
+            --bg: #fafafa;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f0f0f0;
+            --text: #1a1a1a;
+            --text-user: #4a4a4a;
+            --text-system: #888888;
+            --accent: #059669;
+            --border: #e0e0e0;
+            --user-marker: #4f46e5;
+            --pending: #d97706;
+            --progress: #2563eb;
+            --done: #059669;
         }
 
 
@@ -438,7 +454,7 @@
             transition: all 0.1s;
         }
 
-        .task:hover { border-color: var(--text-system); }
+        .task:hover { background: var(--bg-tertiary); }
 
         .task-row {
             display: flex;
@@ -584,12 +600,135 @@
             width: 20px;
             height: 20px;
         }
+
+        /* Panel tabs */
+        .panel-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .panel-tab {
+            flex: 1;
+            padding: 12px 16px;
+            font-size: 12px;
+            font-family: inherit;
+            font-weight: 500;
+            background: transparent;
+            color: var(--text-system);
+            border: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .panel-tab:hover { color: var(--text-user); }
+
+        .panel-tab.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* Reads list */
+        .reads-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 8px;
+        }
+
+        .read-item {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 10px 12px;
+            margin-bottom: 6px;
+            cursor: pointer;
+            transition: all 0.1s;
+        }
+
+        .read-item:hover { background: var(--bg-tertiary); }
+
+        .read-item.reading { border-left: 3px solid var(--progress); }
+        .read-item.read { border-left: 3px solid var(--done); }
+
+        .read-title {
+            font-size: 12px;
+            color: var(--text);
+            margin-bottom: 4px;
+            word-break: break-word;
+        }
+
+        .read-item.read .read-title {
+            color: var(--text-system);
+        }
+
+        .read-meta {
+            font-size: 10px;
+            color: var(--text-system);
+        }
+
+        .read-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 10px;
+        }
+
+        .read-link:hover { text-decoration: underline; }
+
+        .read-status {
+            display: inline-block;
+            padding: 1px 5px;
+            font-size: 9px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-left: 6px;
+        }
+
+        .read-status.unread { background: rgba(245, 158, 11, 0.2); color: var(--pending); }
+        .read-status.reading { background: rgba(59, 130, 246, 0.2); color: var(--progress); }
+        .read-status.read { background: rgba(16, 185, 129, 0.2); color: var(--done); }
+
+        .empty-reads {
+            text-align: center;
+            padding: 32px 16px;
+            color: var(--text-system);
+            font-size: 12px;
+        }
+
+        /* Theme toggle */
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text-system);
+            cursor: pointer;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover { color: var(--text); }
+
+        .theme-toggle svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Hide sun/moon based on theme */
+        .theme-toggle .sun { display: none; }
+        .theme-toggle .moon { display: block; }
+        [data-theme="light"] .theme-toggle .sun { display: block; }
+        [data-theme="light"] .theme-toggle .moon { display: none; }
     </style>
 </head>
 <body>
     <nav class="nav">
         <div class="nav-brand">{{ user.email }}</div>
         <div class="nav-right">
+            <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
+                <svg class="sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
             <button class="mobile-toggle" id="tasks-toggle" title="Tasks">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
@@ -631,8 +770,11 @@
             <button class="tasks-close" id="tasks-close">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"></path></svg>
             </button>
-            <div class="tasks-header">
-                <div class="tasks-title">Arjo's Tasks</div>
+            <div class="panel-tabs">
+                <button class="panel-tab active" data-panel="tasks">Tasks</button>
+                <button class="panel-tab" data-panel="reads">Reads</button>
+            </div>
+            <div class="tasks-header" id="tasks-header">
                 <div class="tasks-stats">
                     <div class="stat">
                         <div class="stat-value pending" id="pending-count">0</div>
@@ -657,13 +799,20 @@
             </div>
 
             <div class="tasks-list" id="tasks-list"></div>
+            <div class="reads-list" id="reads-list" style="display: none;"></div>
         </div>
     </div>
 
 
     <script>
+        // Theme handling - set immediately to prevent flash
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
         let tasks = [];
+        let reads = [];
         let currentFilter = 'all';
+        let currentPanel = 'tasks';
         let isLoading = false;
 
         const input = document.getElementById('input');
@@ -674,6 +823,7 @@
 
         loadHistory();
         loadTasks();
+        loadReads();
 
         // Ensure input is focused on page load
         input.focus();
@@ -846,10 +996,15 @@
 
                     // Show action cards
                     if (data.actions && data.actions.length > 0) {
+                        let hasTaskAction = false;
+                        let hasReadAction = false;
                         data.actions.forEach(action => {
                             addActionCard(action);
+                            if (['added', 'updated', 'deleted', 'done'].includes(action.type)) hasTaskAction = true;
+                            if (['read_added', 'read_updated', 'read_deleted', 'read_done'].includes(action.type)) hasReadAction = true;
                         });
-                        loadTasks();
+                        if (hasTaskAction) loadTasks();
+                        if (hasReadAction) loadReads();
                     }
                 }
             } catch (err) {
@@ -876,8 +1031,8 @@
         }
 
         function addActionCard(action) {
-            // Skip actions without task data (like clarification)
-            if (!action.task) return;
+            // Skip actions without task or read data (like clarification, arxiv_result)
+            if (!action.task && !action.read) return;
 
             const el = document.createElement('div');
             el.className = `action-card ${action.type}`;
@@ -886,12 +1041,17 @@
                 added: 'Task Added',
                 updated: 'Task Updated',
                 done: 'Task Completed',
-                deleted: 'Task Deleted'
+                deleted: 'Task Deleted',
+                read_added: 'Added to Reading List',
+                read_updated: 'Reading List Updated',
+                read_done: 'Marked as Read',
+                read_deleted: 'Removed from Reading List'
             };
 
+            const item = action.task || action.read;
             el.innerHTML = `
                 <div class="action-label">${labels[action.type] || action.type}</div>
-                <div class="action-title">${escapeHtml(action.task.title)}</div>
+                <div class="action-title">${escapeHtml(item.title)}</div>
             `;
             output.appendChild(el);
             scrollToBottom();
@@ -1052,12 +1212,23 @@
         }
 
         async function toggleTask(id, done) {
-            await fetch(`/api/tasks/${id}`, {
+            // Optimistic UI update
+            const taskEl = document.querySelector(`.task[data-id="${id}"]`);
+            const checkEl = taskEl?.querySelector('.task-check');
+            if (done) {
+                taskEl?.classList.add('done');
+                checkEl?.classList.add('checked');
+            } else {
+                taskEl?.classList.remove('done');
+                checkEl?.classList.remove('checked');
+            }
+
+            // Sync with server (don't await)
+            fetch(`/api/tasks/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ status: done ? 'done' : 'pending' })
-            });
-            loadTasks();
+            }).then(() => loadTasks()); // Refresh in background
         }
 
         function toggleDescription(id) {
@@ -1073,6 +1244,83 @@
                 renderTasks();
             });
         });
+
+        // Panel tabs switching
+        function switchPanel(panel) {
+            currentPanel = panel;
+            document.querySelectorAll('.panel-tab').forEach(t => t.classList.remove('active'));
+            document.querySelector(`.panel-tab[data-panel="${panel}"]`).classList.add('active');
+
+            const tasksList = document.getElementById('tasks-list');
+            const tasksHeader = document.getElementById('tasks-header');
+            const tasksFilters = document.querySelector('.tasks-filters');
+            const readsList = document.getElementById('reads-list');
+
+            if (panel === 'tasks') {
+                tasksList.style.display = 'block';
+                tasksHeader.style.display = 'block';
+                tasksFilters.style.display = 'flex';
+                readsList.style.display = 'none';
+            } else {
+                tasksList.style.display = 'none';
+                tasksHeader.style.display = 'none';
+                tasksFilters.style.display = 'none';
+                readsList.style.display = 'block';
+            }
+        }
+
+        document.querySelectorAll('.panel-tab').forEach(tab => {
+            tab.addEventListener('click', () => switchPanel(tab.dataset.panel));
+        });
+
+        // Reads
+        async function loadReads() {
+            try {
+                const res = await fetch('/api/reads');
+                const data = await res.json();
+                reads = Array.isArray(data) ? data : [];
+                renderReads();
+            } catch (err) {
+                console.error('Failed to load reads:', err);
+                reads = [];
+                renderReads();
+            }
+        }
+
+        function renderReads() {
+            const list = document.getElementById('reads-list');
+
+            if (reads.length === 0) {
+                list.innerHTML = '<div class="empty-reads">No papers or books yet.<br>Ask me to add something to your reading list.</div>';
+                return;
+            }
+
+            list.innerHTML = reads.map(read => {
+                if (!read) return '';
+                const status = read.status || 'unread';
+                const title = read.title || 'Untitled';
+                const author = read.author || '';
+                const url = read.url || '';
+
+                return `
+                <div class="read-item ${status}" data-id="${read.id}">
+                    <div class="read-title">${escapeHtml(title)}</div>
+                    <div class="read-meta">
+                        ${author ? `${escapeHtml(author)} · ` : ''}#${read.id} · ${formatDate(read.created_at)}
+                        <span class="read-status ${status}">${status}</span>
+                    </div>
+                    ${url ? `<a href="${escapeHtml(url)}" class="read-link" target="_blank" onclick="event.stopPropagation()">${getDomain(url)}</a>` : ''}
+                </div>`;
+            }).join('');
+        }
+
+        function getDomain(url) {
+            try {
+                return new URL(url).hostname.replace('www.', '');
+            } catch {
+                return url;
+            }
+        }
 
         // Hide hints when clicking outside
         document.addEventListener('click', e => {
@@ -1095,10 +1343,22 @@
             tasksPanel.classList.remove('mobile-visible');
         });
 
-        // Auto-refresh tasks every 10s, only when tab is visible
+        // Auto-refresh tasks and reads every 10s, only when tab is visible
         setInterval(() => {
-            if (!document.hidden) loadTasks();
+            if (!document.hidden) {
+                loadTasks();
+                loadReads();
+            }
         }, 10000);
+
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
 
     </script>
 </body>

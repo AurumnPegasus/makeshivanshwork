@@ -11,6 +11,9 @@ from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timedelta
 from functools import wraps
 from typing import Any, Protocol
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
 
 from flask import Flask, request, jsonify, render_template, redirect, session, url_for
 from dotenv import load_dotenv
@@ -68,11 +71,13 @@ _persona_load_time = None
 gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 
 
-def build_system_prompt(tasks_context):
-    """Build full system prompt with persona and current tasks"""
+def build_system_prompt(tasks_context, reads_context=""):
+    """Build full system prompt with persona, current tasks, and reads"""
     persona = load_persona()
     persona_context = build_persona_context(persona)
     name = persona.get('identity', {}).get('name', 'Arjo')
+
+    reads_section = f"\n## Current Reads\n{reads_context}\n" if reads_context else ""
 
     return f"""You ARE {name}. First person always.
 
@@ -81,18 +86,29 @@ def build_system_prompt(tasks_context):
 
 ## Current Tasks
 {tasks_context}
-
+{reads_section}
 ## What I Can Do
+### Tasks
 - add_task: Accept new work
 - update_task: Change title/description/status
 - delete_task: Remove a task
 - mark_task_done: Complete a task
+
+### Reading List
+- add_read: Add paper/book to reading list
+- update_read: Update a reading list item
+- delete_read: Remove from reading list
+- mark_read_done: Mark as read
+- search_arxiv: Find paper URL on arxiv (use before add_read)
+
+### Other
 - ask_clarification: Ask when something is unclear
 
 ## Rules
 - Only act on the current user message
 - Previous messages are context only - don't re-execute
 - Be direct and concise
+- When adding papers, use search_arxiv first to get the URL
 """
 
 def load_persona():
@@ -207,6 +223,70 @@ def get_task_tools():
                 },
                 required=["question"]
             )
+        ),
+        # Reads functions
+        types.FunctionDeclaration(
+            name="add_read",
+            description="Add a paper or book to the reading list",
+            parameters=types.Schema(
+                type=types.Type.OBJECT,
+                properties={
+                    "title": types.Schema(type=types.Type.STRING, description="Paper/book title"),
+                    "url": types.Schema(type=types.Type.STRING, description="URL to the paper/book"),
+                    "author": types.Schema(type=types.Type.STRING, description="Author(s)"),
+                    "notes": types.Schema(type=types.Type.STRING, description="Optional notes")
+                },
+                required=["title"]
+            )
+        ),
+        types.FunctionDeclaration(
+            name="update_read",
+            description="Update a reading list item",
+            parameters=types.Schema(
+                type=types.Type.OBJECT,
+                properties={
+                    "id": types.Schema(type=types.Type.INTEGER, description="Read ID"),
+                    "title": types.Schema(type=types.Type.STRING),
+                    "url": types.Schema(type=types.Type.STRING),
+                    "author": types.Schema(type=types.Type.STRING),
+                    "notes": types.Schema(type=types.Type.STRING),
+                    "status": types.Schema(type=types.Type.STRING, enum=["unread", "reading", "read"])
+                },
+                required=["id"]
+            )
+        ),
+        types.FunctionDeclaration(
+            name="delete_read",
+            description="Remove a paper/book from the reading list",
+            parameters=types.Schema(
+                type=types.Type.OBJECT,
+                properties={
+                    "id": types.Schema(type=types.Type.INTEGER, description="Read ID")
+                },
+                required=["id"]
+            )
+        ),
+        types.FunctionDeclaration(
+            name="mark_read_done",
+            description="Mark a paper/book as read",
+            parameters=types.Schema(
+                type=types.Type.OBJECT,
+                properties={
+                    "id": types.Schema(type=types.Type.INTEGER, description="Read ID")
+                },
+                required=["id"]
+            )
+        ),
+        types.FunctionDeclaration(
+            name="search_arxiv",
+            description="Search arxiv for a paper and get its URL. Use this to find paper URLs before adding to reading list.",
+            parameters=types.Schema(
+                type=types.Type.OBJECT,
+                properties={
+                    "query": types.Schema(type=types.Type.STRING, description="Search query (paper title or keywords)")
+                },
+                required=["query"]
+            )
         )
     ])]
 
@@ -308,6 +388,94 @@ def execute_function_call(func_call: dict[str, Any], conn: Any, user_email: str)
             # No DB action - clarification is in the AI's text response
             return {'type': 'clarification'}
 
+        elif name == 'add_read':
+            title = args.get('title', '').strip()
+            if not title:
+                return {'type': 'error', 'message': 'Read title is required'}
+
+            if USE_CLOUD_SQL:
+                cursor = execute_query(conn,
+                    'INSERT INTO reads (title, url, author, notes, added_by) VALUES (?, ?, ?, ?, ?) RETURNING id',
+                    (title, args.get('url', ''), args.get('author', ''), args.get('notes', ''), user_email))
+                read_id = cursor.fetchone()[0]
+            else:
+                cursor = execute_query(conn,
+                    'INSERT INTO reads (title, url, author, notes, added_by) VALUES (?, ?, ?, ?, ?)',
+                    (title, args.get('url', ''), args.get('author', ''), args.get('notes', ''), user_email))
+                read_id = cursor.lastrowid
+            conn.commit()
+            cursor = execute_query(conn, 'SELECT * FROM reads WHERE id = ?', (read_id,))
+            new_read = fetchone(cursor)
+            if new_read is None:
+                return {'type': 'error', 'message': 'Failed to retrieve created read'}
+            return {'type': 'read_added', 'read': task_to_dict(new_read)}
+
+        elif name == 'update_read':
+            read_id = args.get('id')
+            if not read_id:
+                return {'type': 'error', 'message': 'Read ID is required'}
+
+            cursor = execute_query(conn, 'SELECT * FROM reads WHERE id = ?', (read_id,))
+            read = fetchone(cursor)
+            if not read:
+                return {'type': 'error', 'message': f'Read #{read_id} not found'}
+
+            execute_query(conn,
+                'UPDATE reads SET title = ?, url = ?, author = ?, notes = ?, status = ?, updated_at = ? WHERE id = ?',
+                (args.get('title', read['title']), args.get('url', read['url']),
+                 args.get('author', read['author']), args.get('notes', read['notes']),
+                 args.get('status', read['status']), datetime.now(), read_id))
+            conn.commit()
+            cursor = execute_query(conn, 'SELECT * FROM reads WHERE id = ?', (read_id,))
+            updated_read = fetchone(cursor)
+            if updated_read is None:
+                return {'type': 'error', 'message': 'Failed to retrieve updated read'}
+            return {'type': 'read_updated', 'read': task_to_dict(updated_read)}
+
+        elif name == 'delete_read':
+            read_id = args.get('id')
+            if not read_id:
+                return {'type': 'error', 'message': 'Read ID is required'}
+
+            cursor = execute_query(conn, 'SELECT * FROM reads WHERE id = ?', (read_id,))
+            read = fetchone(cursor)
+            if not read:
+                return {'type': 'error', 'message': f'Read #{read_id} not found'}
+
+            read_dict = task_to_dict(read)
+            execute_query(conn, 'DELETE FROM reads WHERE id = ?', (read_id,))
+            conn.commit()
+            return {'type': 'read_deleted', 'read': read_dict}
+
+        elif name == 'mark_read_done':
+            read_id = args.get('id')
+            if not read_id:
+                return {'type': 'error', 'message': 'Read ID is required'}
+
+            cursor = execute_query(conn, 'SELECT * FROM reads WHERE id = ?', (read_id,))
+            read = fetchone(cursor)
+            if not read:
+                return {'type': 'error', 'message': f'Read #{read_id} not found'}
+
+            execute_query(conn, 'UPDATE reads SET status = ?, updated_at = ? WHERE id = ?',
+                          ('read', datetime.now(), read_id))
+            conn.commit()
+            cursor = execute_query(conn, 'SELECT * FROM reads WHERE id = ?', (read_id,))
+            done_read = fetchone(cursor)
+            if done_read is None:
+                return {'type': 'error', 'message': 'Failed to retrieve completed read'}
+            return {'type': 'read_done', 'read': task_to_dict(done_read)}
+
+        elif name == 'search_arxiv':
+            query = args.get('query', '').strip()
+            if not query:
+                return {'type': 'error', 'message': 'Search query is required'}
+
+            result = search_arxiv(query)
+            if 'error' in result:
+                return {'type': 'arxiv_result', 'result': result}
+            return {'type': 'arxiv_result', 'result': result}
+
         return {'type': 'error', 'message': f'Unknown function: {name}'}
 
     except Exception as e:
@@ -356,6 +524,49 @@ def get_calendar_events() -> list[dict[str, Any]]:
         # Log minimal info to avoid leaking credentials
         print("Calendar fetch failed")
         return []
+
+
+def search_arxiv(query: str) -> dict[str, Any]:
+    """Search arxiv for paper and return URL, title, authors"""
+    try:
+        search_url = f"http://export.arxiv.org/api/query?search_query=all:{urllib.parse.quote(query)}&max_results=1"
+        with urllib.request.urlopen(search_url, timeout=10) as response:
+            xml_data = response.read().decode('utf-8')
+
+        # Parse XML response
+        root = ET.fromstring(xml_data)
+        ns = {'atom': 'http://www.w3.org/2005/Atom'}
+
+        entry = root.find('atom:entry', ns)
+        if entry is None:
+            return {'error': 'No results found'}
+
+        title = entry.find('atom:title', ns)
+        title_text = title.text.strip().replace('\n', ' ') if title is not None and title.text else 'Unknown'
+
+        # Get arxiv URL (prefer abs link)
+        url = ''
+        for link in entry.findall('atom:link', ns):
+            if link.get('type') == 'text/html':
+                url = link.get('href', '')
+                break
+            if link.get('rel') == 'alternate':
+                url = link.get('href', '')
+
+        # Get authors
+        authors = []
+        for author in entry.findall('atom:author', ns):
+            name = author.find('atom:name', ns)
+            if name is not None and name.text:
+                authors.append(name.text)
+
+        return {
+            'url': url,
+            'title': title_text,
+            'authors': ', '.join(authors[:3]) + ('...' if len(authors) > 3 else '')
+        }
+    except Exception as e:
+        return {'error': str(e)}
 
 
 class RowLike(Protocol):
@@ -474,6 +685,19 @@ def init_db():
                 CREATE INDEX IF NOT EXISTS idx_chat_history_user_email
                 ON chat_history(user_email)
             ''')
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS reads (
+                    id SERIAL PRIMARY KEY,
+                    title TEXT NOT NULL,
+                    url TEXT,
+                    author TEXT,
+                    notes TEXT,
+                    status TEXT DEFAULT 'unread',
+                    added_by TEXT NOT NULL,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            ''')
             conn.commit()
         except Exception:
             # Tables already exist or concurrent init - safe to ignore
@@ -520,6 +744,18 @@ def init_db():
 
             CREATE INDEX IF NOT EXISTS idx_chat_history_user_email
             ON chat_history(user_email);
+
+            CREATE TABLE IF NOT EXISTS reads (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                title TEXT NOT NULL,
+                url TEXT,
+                author TEXT,
+                notes TEXT,
+                status TEXT DEFAULT 'unread',
+                added_by TEXT NOT NULL,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
         ''')
         conn.commit()
         conn.close()
@@ -756,6 +992,105 @@ def delete_task(task_id):
     return '', 204
 
 
+# Reads API endpoints
+@app.route('/api/reads', methods=['GET'])
+@login_required
+def get_reads():
+    status = request.args.get('status')
+    conn = get_db()
+
+    if status:
+        cursor = execute_query(conn,
+            'SELECT * FROM reads WHERE status = ? ORDER BY created_at DESC',
+            (status,))
+    else:
+        cursor = execute_query(conn, 'SELECT * FROM reads ORDER BY created_at DESC')
+
+    reads = [task_to_dict(r) for r in fetchall(cursor)]
+    conn.close()
+    return jsonify(reads)
+
+
+@app.route('/api/reads', methods=['POST'])
+@login_required
+def create_read():
+    data = request.json
+    title = data.get('title')
+    url = data.get('url', '')
+    author = data.get('author', '')
+    notes = data.get('notes', '')
+    added_by = session.get('email', 'Unknown')
+
+    if not title:
+        return jsonify({'error': 'Title is required'}), 400
+
+    conn = get_db()
+    if USE_CLOUD_SQL:
+        cursor = execute_query(conn,
+            'INSERT INTO reads (title, url, author, notes, added_by) VALUES (?, ?, ?, ?, ?) RETURNING id',
+            (title, url, author, notes, added_by)
+        )
+        read_id = cursor.fetchone()[0]
+    else:
+        cursor = execute_query(conn,
+            'INSERT INTO reads (title, url, author, notes, added_by) VALUES (?, ?, ?, ?, ?)',
+            (title, url, author, notes, added_by)
+        )
+        read_id = cursor.lastrowid
+    cursor = execute_query(conn, 'SELECT * FROM reads WHERE id = ?', (read_id,))
+    read = fetchone(cursor)
+    conn.commit()
+    conn.close()
+
+    if read is None:
+        return jsonify({'error': 'Read not found'}), 404
+    return jsonify(task_to_dict(read)), 201
+
+
+@app.route('/api/reads/<int:read_id>', methods=['PUT'])
+@login_required
+def update_read(read_id):
+    data = request.json
+
+    conn = get_db()
+    cursor = execute_query(conn, 'SELECT * FROM reads WHERE id = ?', (read_id,))
+    read = fetchone(cursor)
+
+    if not read:
+        conn.close()
+        return jsonify({'error': 'Read not found'}), 404
+
+    title = data.get('title', read['title'])
+    url = data.get('url', read['url'])
+    author = data.get('author', read['author'])
+    notes = data.get('notes', read['notes'])
+    status = data.get('status', read['status'])
+
+    execute_query(conn,
+        'UPDATE reads SET title = ?, url = ?, author = ?, notes = ?, status = ?, updated_at = ? WHERE id = ?',
+        (title, url, author, notes, status, datetime.now(), read_id)
+    )
+    conn.commit()
+
+    cursor = execute_query(conn, 'SELECT * FROM reads WHERE id = ?', (read_id,))
+    updated_read = fetchone(cursor)
+    conn.close()
+
+    if updated_read is None:
+        return jsonify({'error': 'Read not found'}), 404
+    return jsonify(task_to_dict(updated_read))
+
+
+@app.route('/api/reads/<int:read_id>', methods=['DELETE'])
+@login_required
+def delete_read(read_id):
+    conn = get_db()
+    execute_query(conn, 'DELETE FROM reads WHERE id = ?', (read_id,))
+    conn.commit()
+    conn.close()
+    return '', 204
+
+
 # Internal maintenance endpoint - requires secret token
 @app.route('/api/internal/clear-all-chats/<token>', methods=['POST'])
 def internal_clear_all_chats(token):
@@ -825,6 +1160,14 @@ def chat():
         for t in tasks
     ]) if tasks else "No tasks yet."
 
+    # Get current reads
+    cursor = execute_query(conn, 'SELECT * FROM reads ORDER BY created_at DESC LIMIT 20')
+    reads = fetchall(cursor)
+    reads_context = "\n".join([
+        f"- [#{r['id']}] [{r['status']}] {r['title']}" + (f" ({r['url']})" if r['url'] else "")
+        for r in reads
+    ]) if reads else ""
+
     # Get user's chat history for conversation continuity
     cursor = execute_query(conn,
         'SELECT role, content FROM chat_history WHERE user_email = ? ORDER BY id ASC LIMIT 20',
@@ -841,8 +1184,8 @@ def chat():
         ))
 
     try:
-        # Build full system prompt with persona + current tasks
-        system_prompt = build_system_prompt(tasks_context)
+        # Build full system prompt with persona + current tasks + reads
+        system_prompt = build_system_prompt(tasks_context, reads_context)
 
         # Create chat with history and tools
         gemini_chat = gemini_client.chats.create(
@@ -899,6 +1242,17 @@ def chat():
                     action_descriptions.append(f"Deleted task: {result['task']['title']}")
                 elif result.get('type') == 'done':
                     action_descriptions.append(f"Completed task: {result['task']['title']}")
+                elif result.get('type') == 'read_added':
+                    action_descriptions.append(f"Added to reading list: {result['read']['title']}")
+                elif result.get('type') == 'read_updated':
+                    action_descriptions.append(f"Updated read #{result['read']['id']}")
+                elif result.get('type') == 'read_deleted':
+                    action_descriptions.append(f"Removed from reading list: {result['read']['title']}")
+                elif result.get('type') == 'read_done':
+                    action_descriptions.append(f"Marked as read: {result['read']['title']}")
+                elif result.get('type') == 'arxiv_result':
+                    if 'error' not in result.get('result', {}):
+                        action_descriptions.append(f"Found on arxiv: {result['result'].get('title', 'Unknown')}")
 
         # Build response for history - ALWAYS include action descriptions so AI remembers what it did
         history_response = ai_response.strip()
