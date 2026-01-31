@@ -707,9 +707,13 @@
             try {
                 const res = await fetch('/api/chat/history');
                 const history = await res.json();
-                if (history.length > 0) {
+                if (Array.isArray(history) && history.length > 0) {
                     output.innerHTML = '';
-                    history.forEach(msg => addLine(msg.role, msg.content));
+                    history.forEach(msg => {
+                        if (msg && msg.role && msg.content) {
+                            addLine(msg.role, msg.content);
+                        }
+                    });
                 }
             } catch (err) {
                 console.error('Failed to load history:', err);
@@ -737,8 +741,8 @@
                     summary += 'No tasks yet.';
                 } else {
                     tasks.forEach(t => {
-                        const status = { pending: '○', in_progress: '◐', done: '●' }[t.status];
-                        summary += `${status} #${t.id} ${t.title}\n`;
+                        const status = { pending: '○', in_progress: '◐', done: '●' }[t.status] || '○';
+                        summary += `${status} #${t.id || '?'} ${t.title || 'Untitled'}\n`;
                     });
                 }
                 addLine('assistant', summary.trim());
@@ -894,11 +898,14 @@
         async function loadTasks() {
             try {
                 const res = await fetch('/api/tasks');
-                tasks = await res.json();
+                const data = await res.json();
+                tasks = Array.isArray(data) ? data : [];
                 renderTasks();
                 updateStats();
             } catch (err) {
                 console.error('Failed to load tasks:', err);
+                tasks = [];
+                renderTasks();
             }
         }
 
@@ -920,23 +927,27 @@
             }
 
             list.innerHTML = filtered.map(task => {
-                const isEvent = task.status === 'EVENT';
+                if (!task) return '';
+                const status = task.status || 'pending';
+                const isEvent = status === 'EVENT';
                 const eventTime = isEvent && task.event_start ? formatEventTime(task.event_start) : '';
                 const taskId = isEvent ? `'${task.id}'` : task.id;
+                const title = task.title || 'Untitled';
+                const assignedBy = task.assigned_by || 'unknown';
 
                 return `
-                <div class="task ${task.status === 'done' ? 'done' : ''} ${isEvent ? 'event' : ''}" data-id="${task.id}" onclick="toggleDescription(${taskId})">
+                <div class="task ${status === 'done' ? 'done' : ''} ${isEvent ? 'event' : ''}" data-id="${task.id}" onclick="toggleDescription(${taskId})">
                     <div class="task-row">
-                        <div class="task-check ${task.status === 'done' ? 'checked' : ''}" ${isEvent ? '' : `onclick="event.stopPropagation(); toggleTask(${task.id}, ${task.status !== 'done'})"`}>
+                        <div class="task-check ${status === 'done' ? 'checked' : ''}" ${isEvent ? '' : `onclick="event.stopPropagation(); toggleTask(${task.id}, ${status !== 'done'})"`}>
                             ${isEvent ? '📅' : `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
                             </svg>`}
                         </div>
                         <div class="task-info">
-                            <div class="task-title">${escapeHtml(task.title)}</div>
+                            <div class="task-title">${escapeHtml(title)}</div>
                             <div class="task-meta">
-                                ${isEvent ? eventTime : `#${task.id} · ${task.assigned_by} · ${formatDate(task.created_at)}`}
-                                <span class="task-status ${task.status}">${formatStatus(task.status)}</span>
+                                ${isEvent ? eventTime : `#${task.id} · ${assignedBy} · ${formatDate(task.created_at)}`}
+                                <span class="task-status ${status}">${formatStatus(status)}</span>
                             </div>
                         </div>
                     </div>
