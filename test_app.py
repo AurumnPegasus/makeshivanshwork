@@ -1,4 +1,4 @@
-"""Tests for the Make Arjo Work app - focusing on new reads feature and UI fixes."""
+"""Tests for the Make Shivansh Work app - focusing on new reads feature and UI fixes."""
 
 import pytest
 import os

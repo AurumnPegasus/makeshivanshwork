@@ -49,7 +49,7 @@ USE_CLOUD_SQL = os.environ.get('USE_CLOUD_SQL', 'false').lower() == 'true'
 CLOUD_SQL_CONNECTION = os.environ.get('CLOUD_SQL_CONNECTION', '')  # e.g., project:region:instance
 DB_USER = os.environ.get('DB_USER', 'appuser')
 DB_PASS = os.environ.get('DB_PASS', '')
-DB_NAME = os.environ.get('DB_NAME', 'makearjowork')
+DB_NAME = os.environ.get('DB_NAME', 'makeshivanshwork')
 DATABASE = 'tasks.db'  # SQLite fallback for local dev
 
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY', '')
@@ -74,7 +74,7 @@ def build_system_prompt(tasks_context, reads_context="", user_email=""):
     """Build full system prompt with persona, current tasks, and reads"""
     persona = load_persona()
     persona_context = build_persona_context(persona)
-    name = persona.get('identity', {}).get('name', 'Arjo')
+    name = persona.get('identity', {}).get('name', 'Shivansh')
 
     reads_section = f"\n## Current Reads\n{reads_context}\n" if reads_context else ""
 
@@ -140,7 +140,7 @@ def load_persona():
 
 def get_default_persona():
     return {
-        "identity": {"name": "Arjo"},
+        "identity": {"name": "Shivansh"},
         "voice": {"style": "friendly", "characteristics": ["Be helpful and direct"]}
     }
 
@@ -795,7 +795,7 @@ def send_magic_link(email, token):
     msg = MIMEMultipart()
     msg['From'] = FROM_EMAIL
     msg['To'] = email
-    msg['Subject'] = 'Your login link for Make Arjo Work'
+    msg['Subject'] = 'Your login link for Make Shivansh Work'
 
     body = f'''
     Click here to log in: {link}

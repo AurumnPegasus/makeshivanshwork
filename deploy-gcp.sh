@@ -6,8 +6,8 @@ set -e
 
 PROJECT_ID=${1:-$(gcloud config get-value project)}
 REGION=${2:-us-central1}
-SERVICE_NAME="makearjowork"
-CLOUD_SQL_INSTANCE="$PROJECT_ID:$REGION:makearjowork-db"
+SERVICE_NAME="makeshivanshwork"
+CLOUD_SQL_INSTANCE="$PROJECT_ID:$REGION:makeshivanshwork-db"
 
 echo "=== Deploying to Cloud Run (builds from source) ==="
 gcloud run deploy $SERVICE_NAME \
@@ -16,7 +16,7 @@ gcloud run deploy $SERVICE_NAME \
     --region $REGION \
     --allow-unauthenticated \
     --add-cloudsql-instances $CLOUD_SQL_INSTANCE \
-    --set-env-vars "USE_CLOUD_SQL=true,CLOUD_SQL_CONNECTION=$CLOUD_SQL_INSTANCE,DB_USER=appuser,DB_NAME=makearjowork,DOMAIN=https://makearjowork.com" \
+    --set-env-vars "USE_CLOUD_SQL=true,CLOUD_SQL_CONNECTION=$CLOUD_SQL_INSTANCE,DB_USER=appuser,DB_NAME=makeshivanshwork,DOMAIN=https://makeshivanshwork.com" \
     --set-secrets "SECRET_KEY=secret-key:latest,DB_PASS=db-password:latest,SMTP_USER=smtp-user:latest,SMTP_PASS=smtp-pass:latest,GEMINI_API_KEY=gemini-api-key:latest"
 
 echo ""
@@ -26,4 +26,4 @@ gcloud run services describe $SERVICE_NAME --region $REGION --format 'value(stat
 
 echo ""
 echo "=== Next steps ==="
-echo "1. Configure Cloudflare DNS to point makearjowork.com to Cloud Run"
+echo "1. Configure Cloudflare DNS to point makeshivanshwork.com to Cloud Run"

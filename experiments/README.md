@@ -4,7 +4,7 @@
 
 **Discover the most ROBUST, SCALABLE, GENERALIZED, and BEST-PERFORMING memory system for AI.**
 
-This is not just about building a memory system for makearjowork.com. We are conducting fundamental research to answer:
+This is not just about building a memory system for makeshivanshwork.com. We are conducting fundamental research to answer:
 
 > What is the optimal architecture for AI memory?
 

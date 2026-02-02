@@ -1,4 +1,4 @@
-"""End-to-end integration tests for Make Arjo Work."""
+"""End-to-end integration tests for Make Shivansh Work."""
 
 import pytest
 import os
@@ -225,7 +225,7 @@ class TestDashboard:
         """Dashboard should load for authenticated users."""
         resp = auth_client.get('/dashboard')
         assert resp.status_code == 200
-        assert b'Make Arjo Work' in resp.data
+        assert b'Make Shivansh Work' in resp.data
 
     def test_dashboard_has_theme_toggle(self, auth_client):
         """Dashboard should have theme toggle."""
