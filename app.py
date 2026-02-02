@@ -1241,6 +1241,9 @@ def chat():
                     if candidate.content and candidate.content.parts:
                         for part in candidate.content.parts:
                             if hasattr(part, 'text') and part.text:
+                                # Add space between parts if needed
+                                if ai_response and not ai_response.endswith((' ', '\n')):
+                                    ai_response += ' '
                                 ai_response += part.text
                             if hasattr(part, 'function_call') and part.function_call:
                                 function_calls.append({
