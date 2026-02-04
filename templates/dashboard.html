@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Make Shivansh Work</title>
-    <link rel="icon" type="image/png" href="/static/favicon.png">
+    <link rel="icon" type="image/gif" href="/static/shivansh.gif">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -527,6 +527,27 @@
         .task.event { border-left: 3px solid #6366f1; }
         .task.event .task-check { background: rgba(99, 102, 241, 0.1); border-color: #6366f1; }
 
+        /* Admin delete button */
+        .task-delete {
+            width: 20px;
+            height: 20px;
+            border: none;
+            background: transparent;
+            color: var(--text-system);
+            cursor: pointer;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.15s;
+            flex-shrink: 0;
+        }
+
+        .task:hover .task-delete { opacity: 1; }
+        .task-delete:hover { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        .task-delete svg { width: 14px; height: 14px; }
+
         .empty-tasks {
             text-align: center;
             padding: 32px 16px;
@@ -831,6 +852,10 @@
         // Theme handling - set immediately to prevent flash
         const savedTheme = localStorage.getItem('theme') || 'dark';
         document.documentElement.setAttribute('data-theme', savedTheme);
+
+        // Admin check - only shivansh@fydy.ai can delete tasks via UI
+        const currentUserEmail = '{{ user.email }}';
+        const isAdmin = currentUserEmail === 'shivansh@fydy.ai';
 
         let tasks = [];
         let reads = [];
@@ -1203,6 +1228,15 @@
                 const title = task.title || 'Untitled';
                 const assignedBy = task.assigned_by || 'unknown';
 
+                // Delete button only for admin (shivansh@fydy.ai) and non-event tasks
+                const deleteBtn = (isAdmin && !isEvent) ? `
+                    <button class="task-delete" onclick="event.stopPropagation(); deleteTask(${task.id})" title="Delete task">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        </svg>
+                    </button>` : '';
+
                 return `
                 <div class="task ${status === 'done' ? 'done' : ''} ${isEvent ? 'event' : ''}" data-id="${task.id}" onclick="toggleDescription(${taskId})">
                     <div class="task-row">
@@ -1218,6 +1252,7 @@
                                 <span class="task-status ${status}">${formatStatus(status)}</span>
                             </div>
                         </div>
+                        ${deleteBtn}
                     </div>
                     ${task.description ? `<div class="task-description">${escapeHtml(task.description)}</div>` : ''}
                 </div>`;
@@ -1275,6 +1310,23 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ status: done ? 'done' : 'pending' })
             }).then(() => loadTasks()); // Refresh in background
+        }
+
+        async function deleteTask(id) {
+            if (!isAdmin) return; // Safety check
+            if (!confirm('Delete this task?')) return;
+
+            try {
+                const res = await fetch(`/api/tasks/${id}`, { method: 'DELETE' });
+                const data = await res.json();
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    loadTasks();
+                }
+            } catch (err) {
+                alert('Failed to delete task');
+            }
         }
 
         function toggleDescription(id) {
